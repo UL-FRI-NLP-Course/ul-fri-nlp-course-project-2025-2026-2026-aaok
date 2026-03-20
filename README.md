@@ -1,3 +1,3 @@
-# Natural language processing course: AI assistant for Slovenian legal analysis
+# Natural language processing course: Slovenian law AI assistant
 
 Large language models (LLMs) are powerful but often lack the domain-specific knowledge required for accurate legal advising, particularly in localized contexts such as Slovenian law. In this work, we outline the design of a specialized conversational AI assistant aimed at addressing these limitations. The proposed approach combines the COLESLAW 1.0 legal corpus with techniques such as Retrieval-Augmented Generation (RAG) and parameter-efficient fine-tuning (PEFT) to enable context-aware and reliable responses grounded in authoritative sources.
