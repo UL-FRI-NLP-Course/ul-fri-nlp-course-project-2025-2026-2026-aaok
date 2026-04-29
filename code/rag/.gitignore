@@ -1,0 +1,4 @@
+pisrs.csv
+similarities.csv
+doc_embs.npy
+faiss_index/*
