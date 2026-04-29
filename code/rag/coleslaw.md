@@ -25,8 +25,12 @@ has api for downloading stuff, needs application for access: https://pisrs.si/sw
 pisrs_tematsko_kazalo_delovno_pravo.csv - documents from pisrs tematsko kazalo under delovno pravo
 
 pisrs.py - collect all documents into one pisrs.csv and embed them into doc_embs.npy
+
 query_similarity.py - embed queries and save similarity for each document for each query in similarities.csv
+
 filter_pisrs.py - use similarities.csv to filter pisrs.csv into filtered_pisrs.csv
+
 build_index.py - use filtered_pisrs.csv to chunk the documents and create FAISS index 
+
 run_rag.py - run simple rag test
 
