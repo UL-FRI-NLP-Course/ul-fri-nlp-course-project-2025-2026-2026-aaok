@@ -1,0 +1,30 @@
+{
+  "question": "Kako dolgo se hranijo evidence o delovnem času?",
+  "answer": "Podatki iz evidence o delovnem času se hranijo na sedežu prevoznika najmanj dve leti po preteku obdobja, na katerega se nanašajo (Pravilnik o prepisovanju podatkov o delovnem času iz zapisovalnih naprav in vodenju evidence, 2. člen, 1. odstavnik).",
+  "chunks": [
+    {
+      "source": "Pravilnik o prepisovanju podatkov o delovnem času iz zapisovalnih naprav in vodenju evidence",
+      "content": "TITLE: Pravilnik o prepisovanju podatkov o delovnem času iz zapisovalnih naprav in vodenju evidence\n\n2. člen\n(evidence)\n(1) Delodajalci evidentirajo delovni čas oseb, ki opravljajo mobilne dejavnosti v cestnem prevozu, ter v ta namen vzpostavijo in vodijo pisno evidenco delovnega časa (v nadaljnjem besedilu: evidenca). Podatki iz evidence se hranijo na sedežu prevoznika najmanj dve leti po preteku obdobja, na katerega se nanašajo.\n(2) Podatki za posamezno osebo, ki opravlja mobilno dejavnost, se v evidenco vpisujejo sproti, nikakor pa ne kasneje kot 28 dni po prejšnjem vpisu podatkov za isto osebo.\n(3) V evidenci se na obrazcu iz priloge, ki je sestavni del tega pravilnika, vodijo ločeno za vsako osebo, ki opravlja mobilno dejavnost, naslednji podatki:\n-        osebno ime, EMŠO;\n-        delovni čas, v katerem so zajeta časovna obdobja iz 2. točke prvega odstavka 3. člena Zakona o delovnem času in obveznih počitkih mobilnih delavcev ter o zapisovalni opremi v cestnih prevozih (Uradni list RS, št. 76/05; v nadaljnjem besedilu: zakon);\n-        nočno delo;\n-        skupni delovni čas;\n-        skupni tedenski delovni čas, iz katerega mora biti posebej razvidno, ali je bilo najvišje povprečje delovnega tedna preseženo.\n(4) Vsak delodajalec pisno pozove osebo, ki opravlja mobilno dejavnost, k predložitvi evidence delovnega časa, opravljenega pri drugem delodajalcu. Vsaka oseba, ki opravlja mobilno dejavnost in je zaposlena pri več delodajalcih, pridobi podatke o delovnem času pri vsakem izmed njih in jih v pisni obliki posreduje ostalim delodajalcem.\n(5) Ne glede na določbo prejšnjega odstavka lahko delodajalci zaradi lažjega in enostavnejšega poslovanja, s privolitvijo osebe, ki opravlja mobilno dejavnost, vzpostavijo sistem medsebojne izmenjave podatkov o delovnem času osebe, ki opravlja mobilno dejavnost."
+    },
+    {
+      "source": "Zakon o delavcih v državnih organih (ZDDO)",
+      "content": "TITLE: Zakon o delavcih v državnih organih (ZDDO)\n\n35. člen\nDelavcem pripada glede na delovno dobo največ 24 dni letnega dopusta, in sicer:\n-do 3 let delovne dobe16 dni,-nad 3 do 7 let delovne dobe17 dni,-nad 7 do 10 let delovne dobe18 dni,-nad 10 do 15 let delovne dobe20 dni,-nad 15 do 20 let delovne dobe22 dni,-nad 20 do 25 let delovne dobe23 dni,-nad 25 let delovne dobe24 dni.\n-do 3 let delovne dobe\n16 dni,\n-nad 3 do 7 let delovne dobe\n17 dni,\n-nad 7 do 10 let delovne dobe\n18 dni,\n-nad 10 do 15 let delovne dobe\n20 dni,\n-nad 15 do 20 let delovne dobe\n22 dni,\n-nad 20 do 25 let delovne dobe\n23 dni,\n-nad 25 let delovne dobe\n24 dni."
+    },
+    {
+      "source": "Kolektivna pogodba za dejavnost kovinskih materialov in livarn Slovenije",
+      "content": "TITLE: Kolektivna pogodba za dejavnost kovinskih materialov in livarn Slovenije\n\n21. člen\n(delovni čas)\nPoleg plačanih odmorov med delom po zakonu, ki ureja delovna razmerja, se v delovni čas štejejo še tehnološke pavze za dodaten počitek in osebne potrebe ter potrebne priprave na delo (kot npr. pospravljanje, čiščenje in podobno)."
+    },
+    {
+      "source": "Zakon o urejanju trga dela (ZUTD)",
+      "content": "TITLE: Zakon o urejanju trga dela (ZUTD)\n\n126. člen\n(hramba in arhiv)\n(1) Podatki se hranijo:\n-        v evidenci brezposelnih oseb: 50 let po vnosu podatkov;\n-        v evidenci oseb, ki so začasno nezaposljive: pet let po vnosu podatkov;\n-        v evidenci oseb, vključenih v programe APZ: pet let po vnosu podatkov;\n-        v evidenci iskalcev zaposlitve: pet let po vnosu podatkov;\n-        v evidenci delodajalcev z negativnimi referencami: pet let po vnosu podatkov;\n-        v evidenci poslovnih subjektov, prejemnikov javnih sredstev na podlagi določb tega zakona: pet let po vnosu podatkov.\n(2) Po poteku rokov iz prejšnjega odstavka se podatki obravnavajo skladno s predpisi, ki urejajo poslovanje organov javne uprave s stalno zbirko dokumentarnega gradiva oziroma ravnanje z javnim arhivskim gradivom.\n2. Vpis osebe v posamezno evidenco in prenehanje vodenja osebe v posamezni evidenci\n2.1 Vpis osebe v evidenco brezposelnih oseb in evidenco oseb, vključenih v programe APZ, in prenehanje vodenja osebe v evidenci brezposelnih oseb in evidenci oseb, vključenih v programe APZ"
+    },
+    {
+      "source": "Zakon o evidencah na področju dela in socialne varnosti (ZEPDSV)",
+      "content": "TITLE: Zakon o evidencah na področju dela in socialne varnosti (ZEPDSV)\n\n18. člen\n(evidenca o izrabi delovnega časa)\nDelodajalec dnevno vpisuje v evidenco o izrabi delovnega časa za posameznega delavca naslednje podatke:\n-        podatke o številu ur,\n-        skupno število opravljenih delovnih ur s polnim delovnim časom in s krajšim delovnim časom od polnega z oznako vrste opravljenega delovnega časa,\n-        opravljene ure v času nadurnega dela,\n-        neopravljene ure, za katere se prejema nadomestilo plače iz sredstev delodajalca, z oznako vrste nadomestila,\n-        neopravljene ure, za katere se prejema nadomestilo plače v breme drugih organizacij ali delodajalcev in organov z oznako vrste nadomestila,\n-        neopravljene ure, za katere se ne prejema nadomestilo plače,\n-        število ur pri delih na delovnem mestu, za katera se šteje zavarovalna doba s povečanjem, oziroma na katerih je obvezno dodatno pokojninsko zavarovanje, z oznako vrste statusa."
+    }
+  ],
+  "query": "Kako dolgo se hranijo evidence o delovnem času?",
+  "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+  "index": 4,
+  "timestamp": "2026-05-01T11:50:03.326348"
+}
