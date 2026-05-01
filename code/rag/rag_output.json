@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-04-29T17:27:24.186042",
-  "question": "Se lahko študentje zaposlijo v več delovnih mestin naenkrat?",
+  "timestamp": "2026-05-01T03:18:19.350736",
+  "question": "Se lahko študentje zaposlijo v več delovnih mestih naenkrat?",
   "chunks": [
     {
       "source": "Zakon o delovnih razmerjih (ZDR)",
@@ -19,8 +19,8 @@
       "content": "TITLE: Zakon o zaposlovanju in delu tujcev (ZZDT-1)\n\n30. člen\n(zaposlitev pri dveh ali več delodajalcih)\n(1) Za tujca z najmanj visokošolsko izobrazbo, za katerega je že izdano dovoljenje za zaposlitev ali dovoljenje za delo za tujega zastopnika, se lahko po najmanj enomesečni neprekinjeni zaposlitvi pri prvem delodajalcu izdajo dovoljenja za zaposlitev pri drugih delodajalcih.\n(2) Tujec se lahko v skladu z določbami zakona, ki ureja delovna razmerja, zaposli pri drugem delodajalcu, če delodajalec in tujec izpolnjujeta pogoje za izdajo dovoljenja za zaposlitev. Delodajalec k vlogi priloži sporazum med njim, tujcem in delodajalcem, pri katerem je tujec že zaposlen.\n3. Modra karta EU"
     },
     {
-      "source": "Zakon o visokem šolstvu (ZViS)",
-      "content": "TITLE: Zakon o visokem šolstvu (ZViS)\n\n60. člen\n(delovna mesta)\nDelovna mesta visokošolskih učiteljev, znanstvenih delavcev in visokošolskih sodelavcev se javno razpisujejo in zasedejo v rokih in na način, kot to določa statut visokošolskega zavoda.\nRedni profesor lahko, ne glede na izpolnjevanje predpisanih pogojev za upokojitev, zaseda delovno mesto iz prejšnjega odstavka do doseženega 65. leta starosti."
+      "source": "Kolektivna pogodba za zaposlene v zdravstveni negi",
+      "content": "TITLE: Kolektivna pogodba za zaposlene v zdravstveni negi\n\n58. člen\nČe se zaposleni izobražuje za potrebe delodajalca, ima pravico do odsotnosti z dela:\n-       tri delovne dni za vsak izpit na ravni izobraževanja do V. stopnje zahtevnosti,\n-       pet delovnih dni za vsak izpit na višji in visoki stopnji,\n-       deset delovnih dni za zaključni izpit na ravni do V. stopnje zahtevnosti,\n-       petnajst delovnih dni za diplomo na višji, visoki strokovni šoli ali univerzi,\n-       deset delovnih dni za zaključni izpit na podiplomskem študiju,\n-       en delovni dan za vsak izpit pri specializaciji,\n-       petindvajset delovnih dni za magistrski, specialistični izpit,\n-       petintrideset delovnih dni za doktorat."
     }
   ]
 }

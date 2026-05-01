@@ -132,7 +132,7 @@ print("Loading embedding model...")
 embeddings = HuggingFaceEmbeddings(
     # model_name="sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
     model_name="sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
-    model_kwargs={"device": "cpu"},  # "cuda"
+    model_kwargs={"device": "cuda"},  # "cuda" "cpu"
     encode_kwargs={"normalize_embeddings": True},
 )
 print("Embedding model loaded.")

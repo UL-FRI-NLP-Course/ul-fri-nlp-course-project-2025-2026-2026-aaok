@@ -1,0 +1,22 @@
+{
+  "question": "Kako dolgo se hranijo evidence o delovnem času?",
+  "answer": "Evidence o delovnem času se hranijo na sedežu prevoznika najmanj dve leti po preteku obdobja, na katerega se nanašajo podatki. To je določeno v 2. členu Pravilnika o prepisovanju podatkov o delovnem času iz zapisovalnih naprav in vodenju evidence (Uradni list RS, št. 76/05).",
+  "chunks": [
+    {
+      "source": "Pravilnik o prepisovanju podatkov o delovnem času iz zapisovalnih naprav in vodenju evidence",
+      "content": "TITLE: Pravilnik o prepisovanju podatkov o delovnem času iz zapisovalnih naprav in vodenju evidence\n\n2. člen\n(evidence)\n(1) Delodajalci evidentirajo delovni čas oseb, ki opravljajo mobilne dejavnosti v cestnem prevozu, ter v ta namen vzpostavijo in vodijo pisno evidenco delovnega časa (v nadaljnjem besedilu: evidenca). Podatki iz evidence se hranijo na sedežu prevoznika najmanj dve leti po preteku obdobja, na katerega se nanašajo.\n(2) Podatki za posamezno osebo, ki opravlja mobilno dejavnost, se v evidenco vpisujejo sproti, nikakor pa ne kasneje kot 28 dni po prejšnjem vpisu podatkov za isto osebo.\n(3) V evidenci se na obrazcu iz priloge, ki je sestavni del tega pravilnika, vodijo ločeno za vsako osebo, ki opravlja mobilno dejavnost, naslednji podatki:\n-        osebno ime, EMŠO;\n-        delovni čas, v katerem so zajeta časovna obdobja iz 2. točke prvega odstavka 3. člena Zakona o delovnem času in obveznih počitkih mobilnih delavcev ter o zapisovalni opremi v cestnih prevozih (Uradni list RS, št. 76/05; v nadaljnjem besedilu: zakon);\n-        nočno delo;\n-        skupni delovni čas;\n-        skupni tedenski delovni čas, iz katerega mora biti posebej razvidno, ali je bilo najvišje povprečje delovnega tedna preseženo.\n(4) Vsak delodajalec pisno pozove osebo, ki opravlja mobilno dejavnost, k predložitvi evidence delovnega časa, opravljenega pri drugem delodajalcu. Vsaka oseba, ki opravlja mobilno dejavnost in je zaposlena pri več delodajalcih, pridobi podatke o delovnem času pri vsakem izmed njih in jih v pisni obliki posreduje ostalim delodajalcem.\n(5) Ne glede na določbo prejšnjega odstavka lahko delodajalci zaradi lažjega in enostavnejšega poslovanja, s privolitvijo osebe, ki opravlja mobilno dejavnost, vzpostavijo sistem medsebojne izmenjave podatkov o delovnem času osebe, ki opravlja mobilno dejavnost."
+    },
+    {
+      "source": "Kolektivna pogodba elektrogospodarstva Slovenije",
+      "content": "TITLE: Kolektivna pogodba elektrogospodarstva Slovenije\n\n45. člen\nDelovni čas delavcev, ki se ugotavlja posredno na podlagi normativov dela, lahko traja največ 12 ur dnevno. Šteje se, da so delavci na takih delih dosegli mesečni delovni čas, ko v skladu z normativom dosežejo 100% delovni učinek, predviden glede na fond delovnega časa za posamezni mesec.\nPresežek učinka se smatra kot delo, opravljeno v rednem prerazporejenem delovnem času.\nMerila in normative za izvajanje tega člena določijo podjetja s splošnim aktom, ki se sprejme na enak način kot akt o organizaciji in sistemizaciji delovnih mest."
+    },
+    {
+      "source": "Pravilnik o delovnem času notarjev",
+      "content": "TITLE: Pravilnik o delovnem času notarjev\n\n2. člen\nUradne ure v notarskih pisarnah trajajo od ponedeljka do četrtka od 10. do 12. ure dopoldan in od 14. do 17. ure popoldan in v petek od 10. do 12. ure dopoldan in od 13. do 15. ure popoldan."
+    }
+  ],
+  "query": "Kako dolgo se hranijo evidence o delovnem času?",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "index": 4,
+  "timestamp": "2026-05-01T06:10:15.045246"
+}

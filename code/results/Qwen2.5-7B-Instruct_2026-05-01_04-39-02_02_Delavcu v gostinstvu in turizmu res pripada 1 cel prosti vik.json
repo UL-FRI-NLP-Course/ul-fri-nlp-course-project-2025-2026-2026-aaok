@@ -1,0 +1,22 @@
+{
+  "question": "Delavcu v gostinstvu in turizmu res pripada 1 cel prosti vikend na mesec po zakonu?",
+  "answer": "Nisem našel navedbe v podanih zakonskih viroh, ki bi poudarila, da delavcu v gostinstvu in turizmu mora biti zagotavljen 1 celotni prosti vikend na mesec po zakonu. Po Kolektivni pogodbi dejavnosti gostinstva in turizma Slovenije (član 43) je delavec pravilen pristojen do tedenskega počitka, ki traja najmanj 24 ur, vendar se lahko ta počitek zagotavlja tudi na kateri drug dan v tednu, če je to potrebno zaradi tehničnih ali organizacijskih razlogov. Dogovor o zagotavljanju dnevnega in tedenskega počitka (član 2) omogoča, da se dnevni in tedenski počitek zagotavlja v obdobju do 3 mesecev, v primeru, da je to potrebno zaradi narave dela. Ta dogovor pa ne naveduje specifičnega obdobja za prosti vikend. Zato je vaša vprašanja v tej pitanju odvisno od konkretne pogodbe med delodajalcem in delavci.",
+  "chunks": [
+    {
+      "source": "Kolektivna pogodba dejavnosti gostinstva in turizma Slovenije",
+      "content": "TITLE: Kolektivna pogodba dejavnosti gostinstva in turizma Slovenije\n\n43. člen\nTedenski počitek\n(1) Delavec ima poleg pravice do dnevnega počitka v obdobju sedmih zaporednih dni pravico do tedenskega počitka, ki traja nepretrgoma najmanj 24 ur. Če mora delavec zaradi objektivnih, tehničnih in organizacijskih razlogov delati na dan tedenskega počitka, se mu zagotovi tedenski počitek na kateri drug dan v tednu.\n(2) Delavec se pravici do dnevnega in tedenskega počitka ne more odpovedati.\nLETNI DOPUST"
+    },
+    {
+      "source": "Dogovor o zagotavljanju dnevnega in tedenskega počitka",
+      "content": "TITLE: Dogovor o zagotavljanju dnevnega in tedenskega počitka\n\n2. člen\nV primerih, kjer narava dela zahteva stalno prisotnost in kontinuirano zagotavljanje dela ali storitev ter v primerih predvidenega neenakomernega ali povečanega obsega dela v času sezone, se lahko dnevni in tedenski počitek v povprečnem minimalnem trajanju, kot ga določata ZDR-1 in Kolektivna pogodba dejavnosti gostinstva in turizma, zagotavlja v obdobju, ki ne sme presegati 3 mesecev. Referenčno obdobje mora delodajalec pisno določiti po predhodnem posvetovanju z reprezentativnim sindikatom.\nPodpisniki tega dogovora se hkrati zavežejo, da bodo v enem letu po njegovi uveljavitvi proučili posledice, ki jih bo imela sklenitev dogovora na delovni čas delavcev. V primeru ugotovitve, da delodajalci ne zagotavljajo dnevnih in tedenskih odmorov skladno s tem Dogovorom, lahko katerakoli od pogodbenih strank predlaga spremembo ali dopolnitev določil le-tega."
+    },
+    {
+      "source": "Kolektivna pogodba dejavnosti gostinstva in turizma Slovenije",
+      "content": "TITLE: Kolektivna pogodba dejavnosti gostinstva in turizma Slovenije\n\n6\n\nZa delo na dan državnega praznika oziroma po zakonu prostega dne pripada delavcu poleg plače dodatek za vsako opravljeno delovno uro, če mu ni mogoče zagotoviti prostega dne namesto dela na dan praznika ali na dan prostega dne, oziroma 50 %, če tega koristi.\n\n150%\n\n7\n\nDodatek za delo na silvestrovo (od 18. ure dalje)\n\n150%.\n\n(3) Dodatki se med seboj ne izključujejo, razen dodatka za delo na dan praznika oziroma dela prostega dneva po zakonu in dodatka za delo v nedeljo."
+    }
+  ],
+  "query": "Delavcu v gostinstvu in turizmu res pripada 1 cel prosti vikend na mesec po zakonu?",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "index": 2,
+  "timestamp": "2026-05-01T05:37:12.154615"
+}

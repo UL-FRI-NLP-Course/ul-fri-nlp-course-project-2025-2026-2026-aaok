@@ -34,7 +34,7 @@ pisrs.to_csv("pisrs.csv", index=False, encoding="utf-8")
 model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 
 doc_texts = pisrs["text"].fillna("").tolist()
-doc_embs = model.encode(doc_texts, batch_size=64, show_progress_bar=True)
+doc_embs = model.encode(doc_texts, batch_size=64, show_progress_bar=True, device="cuda")
 doc_embs = doc_embs / np.linalg.norm(doc_embs, axis=1, keepdims=True)
 np.save("doc_embs.npy", doc_embs)
 

@@ -21,8 +21,8 @@ vectorstore = FAISS.load_local(
     embeddings,
     allow_dangerous_deserialization=True
 )
-print(vectorstore.index.d)
-print(len(embeddings.embed_query("test")))
+# print(vectorstore.index.d)
+# print(len(embeddings.embed_query("test")))
 
 retriever = vectorstore.as_retriever(
     search_type="mmr",

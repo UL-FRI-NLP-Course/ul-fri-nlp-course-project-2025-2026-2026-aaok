@@ -1,4 +1,5 @@
 pisrs.csv
 similarities.csv
 doc_embs.npy
-faiss_index/*
+faiss_index/index.faiss
+faiss_index/index.pkl

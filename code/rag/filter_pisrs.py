@@ -130,7 +130,7 @@ plt.scatter(df[df["delovno_pravo"]]["pc1"], df[df["delovno_pravo"]]["pc2"], mark
 plt.colorbar(label="Maximum similarity")
 plt.legend()
 plt.savefig("pisrs_pca.png", dpi=300, bbox_inches="tight")
-plt.show()
+# plt.show()
 
 filtered_pisrs = _pisrs[_pisrs["sop"].isin(top_df["sop"]) | (_pisrs["delovno_pravo"] == True)]
 filtered_pisrs.to_csv("filtered_pisrs.csv", index=False)

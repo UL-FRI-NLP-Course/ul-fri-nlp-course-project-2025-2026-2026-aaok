@@ -1,0 +1,22 @@
+{
+  "question": "Si po dopolnjenem 55 letu res starejši delavec in kakšne so tvoje pravice?",
+  "answer": "Po dopolnjenem 55 letu ste res starejši delavec glede na Zakon o delovnih razmerjih (ZDR), član 201. To pomeni, da uživate posebno varstvo. Vendar so vaše pravice odvisne od konkretnega podjetja in kategorije delovnega odnosa. Na primer, po Kolektivni pogodbi za zaposlene v zdravstveni negi (član 40) lahko starejšemu zaposlenemu, ki mu do izpolnitve pogojev manjka do 5 let zavarovalne dobe, preneha delovno razmerje le, če se mu zagotovi dokup zavarovalne dobe ali je zagotovljeno denarno nadomestilo iz naslova zavarovanja za primer brezposelnosti do izpolnitve pogojev za upokojitev, ali z njegovim soglasjem pravica do ustrezne odpravnine. Ta pravila pa so zlasti relevantna za zaposlene v zdravstveni negi.",
+  "chunks": [
+    {
+      "source": "Zakon o delovnih razmerjih (ZDR)",
+      "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n201. člen\n(opredelitev)\nDelavci, starejši od 55 let, uživajo posebno varstvo (v nadaljnjem besedilu: starejši delavec)."
+    },
+    {
+      "source": "Kolektivna pogodba za zaposlene v zdravstveni negi",
+      "content": "TITLE: Kolektivna pogodba za zaposlene v zdravstveni negi\n\n40. člen\nStarejšemu zaposlenemu, ki mu do izpolnitve pogojev manjka do 5 let zavarovalne dobe, lahko preneha delovno razmerje le, če se mu zagotovi dokup zavarovalne dobe, če mu je zagotovljeno denarno nadomestilo iz naslova zavarovanja za primer brezposelnosti do izpolnitve pogojev za upokojitev, ali z njegovim soglasjem pravica do ustrezne odpravnine."
+    },
+    {
+      "source": "Zakon o socialnem varstvu (ZSV)",
+      "content": "TITLE: Zakon o socialnem varstvu (ZSV)\n\n22. člen\nTrajno nezmožnost za delo dokazuje oseba, ki je mlajša od 60 let, z izvedenskim mnenjem pristojne komisije v skladu s posebnim zakonom."
+    }
+  ],
+  "query": "Si po dopolnjenem 55 letu res starejši delavec in kakšne so tvoje pravice?",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "index": 1,
+  "timestamp": "2026-05-01T05:12:33.341814"
+}
