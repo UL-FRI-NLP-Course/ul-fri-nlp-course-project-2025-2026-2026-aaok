@@ -1,0 +1,482 @@
+[
+  {
+    "question": "Ali mora delodajalec delavcu izplačati regres za letni dopust?",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "131. člen",
+    "retrieved_chunks": [
+      {
+        "source": "Kolektivna pogodba komunalnih dejavnosti",
+        "content": "TITLE: Kolektivna pogodba komunalnih dejavnosti\n\n49. člen\nRegres za letni dopust\n(1) Delavcu pripada regres za letni dopust v enkratnem izplačilu.\n(2) Regres za letni dopust se pri nelikvidnih delodajalcih lahko izplača do 1. oktobra tekočega leta. Družba ni likvidna, če iz poslovnih knjig izhaja, da začasno ni sposobna tekoče poravnavati dolgove."
+      },
+      {
+        "source": "Kolektivna pogodba za obrt in podjetništvo",
+        "content": "TITLE: Kolektivna pogodba za obrt in podjetništvo\n\n72. člen\n(regres za letni dopust)\n(1) Regres za letni dopust se izplača najmanj v višini vsakokratne minimalne plače povečane za 5 %.\n(2) V primeru nelikvidnosti delodajalca se lahko regres za letni dopust izplača v več obrokih, vendar najkasneje do 1. novembra tekočega koledarskega leta."
+      },
+      {
+        "source": "Zakon o delavcih v državnih organih (ZDDO)",
+        "content": "TITLE: Zakon o delavcih v državnih organih (ZDDO)\n\n41. člen\nDelavec je lahko odsoten z dela s pravico do nadomestila osebnega dohodka največ sedem dni v posameznem koledarskem letu, in sicer:\n-        do sedem dni zaradi nege ožjega družinskega člana v primerih, ko nima pravice do nadomestila osebnega dohodka za odsotnost zaradi nege družinskega člana po predpisih o zdravstvenem zavarovanju, in sicer na podlagi zdravniškega potrdila, in zaradi aktivnega sodelovanja pri kulturnih, športnih in podobnih prireditvah;\n-        tri dni zaradi sklenitve zakonske zveze, rojstva otroka, smrti ožjega družinskega člana in selitve v drugo stanovanje;\n-        en dan zaradi smrti bližnjih sorodnikov, zaradi vpoklica k vojaškim vajam, ki trajajo nad šest dni, in drugih neodložljivih opravkov."
+      },
+      {
+        "source": "Uredba o znižani višini povračila prispevkov",
+        "content": "TITLE: Uredba o znižani višini povračila prispevkov\n\n3. člen\nDelodajalec iz prvega člena te uredbe, ki zaposli brezposelno osebo, ki ni navedena v prejšnjih členih in je neprekinjeno do 6 mesecev prijavljena na zavodu, je upravičen do povrnitve prispevkov, in sicer za prvo leto v višini 25%, za drugo in tretje leto pa 12,5%.\nČe ta delodajalec zaposli brezposelno osebo, ki je neprekinjeno 6 in več mesecev prijavljena na zavodu, je upravičen do povrnitve prispevkov za prvo in drugo leto v višini 50%, za tretje leto pa 25%."
+      },
+      {
+        "source": "Pravilnik o obračunu bruto nadomestil plač med začasno zadržanostjo od dela v breme obveznega zdravstvenega zavarovanja in o načinu vlaganja zahtevkov delodajalcev za povračilo izplačanih nadomestil",
+        "content": "TITLE: Pravilnik o obračunu bruto nadomestil plač med začasno zadržanostjo od dela v breme obveznega zdravstvenega zavarovanja in o načinu vlaganja zahtevkov delodajalcev za povračilo izplačanih nadomestil\n\n5. člen\nZavod delodajalcu ne poravna obračunanih nadomestil plač:\n-        če jih ni izplačal delavcem, ki so bili do njih upravičeni;\n-        če ni izkazano, da je delodajalec plačal delavcu iz lastnih sredstev nadomestilo plače za 120 delovnih dni v koledarskem letu v primeru začasne nezmožnosti delavca za delo zaradi njegove bolezni ali poškodbe, ali če ne izkaže, da gre za dve ali več zaporednih odsotnosti z dela zaradi iste bolezni ali poškodbe, ki ni povezana z delom, do 30 dni, in je v posameznem primeru prekinitev med in eno in drugo odsotnostjo manj kot 10 delovnih dni (recidiv);\n-        če v primerih začasne nezmožnosti za delo, ko gre nadomestilo plače v breme obveznega zdravstvenega zavarovanja, ni odločal imenovani zdravnik ali zdravstvena komisija, da je zadržanost od dela utemeljena, razen če gre za nego, spremstvo ali izolacijo zavarovane osebe, o kateri odloča njen osebni zdravnik ali če gre za nego otroka, o kateri odloča otrokov osebni zdravnik ali če gre za odsotnost z dela zaradi prostovoljnega darovanja krvi.\nDelovna obveznost"
+      },
+      {
+        "source": "Kolektivna pogodba za obrt in podjetništvo",
+        "content": "TITLE: Kolektivna pogodba za obrt in podjetništvo\n\n67. člen\n(regres za letni dopust)\n(1) Regres za letni dopust se izplača najmanj v višini vsakokratne minimalne plače povečane za 1 %.\n(2) V primeru nelikvidnosti delodajalca se lahko regres za letni dopust izplača v več obrokih, vendar najkasneje do 1. novembra tekočega koledarskega leta."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n131. člen\n(regres)\n(1) Delodajalec je dolžan delavcu, ki ima pravico do letnega dopusta, izplačati regres za letni dopust najmanj v višini minimalne plače.\n(2) Regres se mora delavcu izplačati najkasneje do 1. julija tekočega koledarskega leta.\n(3) S kolektivno pogodbo na ravni dejavnosti se lahko v primeru nelikvidnosti delodajalca določi kasnejši rok izplačila regresa, vendar najkasneje do 1. novembra tekočega koledarskega leta.\n(4) V primeru, da ima delavec pravico le do sorazmernega dela letnega dopusta, ima pravico le do sorazmernega dela regresa."
+      },
+      {
+        "source": "Kolektivna pogodba med delavci in družbami drobnega gospodarstva (KPdg)",
+        "content": "TITLE: Kolektivna pogodba med delavci in družbami drobnega gospodarstva (KPdg)\n\n53. člen\n(letni dopust zaradi težkih pogojev dela)\nV primeru, da delavec večino delovnega časa opravlja delo, ki je posebno težko, naporno ali zdravju škodljivo ter kot tako opredeljeno v Izjavi o varnosti, mu pripada dodatno najmanj dva dni letnega dopusta."
+      },
+      {
+        "source": "Tarifna priloga h Kolektivni pogodbi komunalnih dejavnosti",
+        "content": "TITLE: Tarifna priloga h Kolektivni pogodbi komunalnih dejavnosti\n\n2. člen\n(regres za letni dopust)\nDelavcu pripada regres za letni dopust v višini najmanj 1.550,00 EUR od 1. 1. 2025 dalje."
+      },
+      {
+        "source": "Kolektivna pogodba med delavci in družbami drobnega gospodarstva (KPdg)",
+        "content": "TITLE: Kolektivna pogodba med delavci in družbami drobnega gospodarstva (KPdg)\n\n89. člen\n(regres za letni dopust)\n(1) Višina regresa za letni dopust je določena v tarifni prilogi te kolektivne pogodbe.\n(2) V primeru nelikvidnosti delodajalca oziroma v primeru, ko bi izplačilo celotnega regresa povzročilo nelikvidnost delodajalca, se lahko regres za letni dopust izplača v več delih in sicer tako, da se do 30. junija tekočega koledarskega leta izplača najmanj polovica, preostanek pa do 1. novembra tekočega koledarskega leta."
+      }
+    ],
+    "retrieval_correct": false
+  },
+  {
+    "question": "Ali ima delavec pravico do plačanega odmora med delom?",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "154. člen",
+    "retrieved_chunks": [
+      {
+        "source": "Zakon o delavcih v državnih organih (ZDDO)",
+        "content": "TITLE: Zakon o delavcih v državnih organih (ZDDO)\n\n41. člen\nDelavec je lahko odsoten z dela s pravico do nadomestila osebnega dohodka največ sedem dni v posameznem koledarskem letu, in sicer:\n-        do sedem dni zaradi nege ožjega družinskega člana v primerih, ko nima pravice do nadomestila osebnega dohodka za odsotnost zaradi nege družinskega člana po predpisih o zdravstvenem zavarovanju, in sicer na podlagi zdravniškega potrdila, in zaradi aktivnega sodelovanja pri kulturnih, športnih in podobnih prireditvah;\n-        tri dni zaradi sklenitve zakonske zveze, rojstva otroka, smrti ožjega družinskega člana in selitve v drugo stanovanje;\n-        en dan zaradi smrti bližnjih sorodnikov, zaradi vpoklica k vojaškim vajam, ki trajajo nad šest dni, in drugih neodložljivih opravkov."
+      },
+      {
+        "source": "Kolektivna pogodba med delavci in družbami drobnega gospodarstva (KPdg)",
+        "content": "TITLE: Kolektivna pogodba med delavci in družbami drobnega gospodarstva (KPdg)\n\n53. člen\n(letni dopust zaradi težkih pogojev dela)\nV primeru, da delavec večino delovnega časa opravlja delo, ki je posebno težko, naporno ali zdravju škodljivo ter kot tako opredeljeno v Izjavi o varnosti, mu pripada dodatno najmanj dva dni letnega dopusta."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n155. člen\n(počitek med zaporednima delovnima dnevoma)\n(1) Delavec ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 12 ur.\n(2) Delavec, ki mu je delovni čas neenakomerno razporejen ali začasno prerazporejen, ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 11 ur."
+      },
+      {
+        "source": "Kolektivna pogodba za zaposlene v zdravstveni negi",
+        "content": "TITLE: Kolektivna pogodba za zaposlene v zdravstveni negi\n\n50. člen\nZaposleni ima pravico do odsotnosti z dela brez nadomestila plače (neplačan dopust) do 30 dni v posameznem koledarskem letu pod pogojem, da odsotnost ne bo bistveno motila delovnega procesa, v naslednjih primerih:\n-       neodložljivega osebnega opravka,\n-       zasebnega potovanja,\n-       nege družinskega člana, ki ni medicinsko indicirana,\n-       zdravljenja na lastne stroške,\n-       strokovnega izpopolnjevanja, kadar zaposleni nima pravice do odsotnosti z nadomestilom plače,\n-       za sodelovnaje na kulturnih in športnih prireditvah kot izvajalec,\n-       sodelovanje na kongresih, konferencah kot delegat ali član vodstva.\nV primeru odsotnosti z dela brez pravice do nadomestila plače zaposlenemu pravice in obveznosti iz delovnega razmerja mirujejo.\nPrispevke iz delovnega razmerja zaposlenega za ta čas lahko plača delodajalec, razen v primerih iz prve in druge alinee.\nZaposleni je lahko odsoten z dela brez nadomestila plače tudi nad 30 dni v posameznem koledarskem letu, če to dopušča delovni proces.\nV primeru odsotnosti z dela nad 30 dni brez pravice do nadomestila plače se zaposlenemu ta čas všteva v zavarovalno dobo, če sam poravna ustrezne prispevke.\nO odsotnosti z dela po 49. in 50. členu odloča direktor na podlagi zahteve zaposlenega in ustrezne dokumentacije.\n14. Izobraževanje zaposlenih"
+      },
+      {
+        "source": "Zakon o delavcih v državnih organih (ZDDO)",
+        "content": "TITLE: Zakon o delavcih v državnih organih (ZDDO)\n\n42. člen\nDelavec je lahko odsoten z dela brez pravice do nadomestila osebnega dohodka največ 30 dni v posameznem koledarskem letu zaradi sodelovanja na seminarjih, kongresih in podobnih prireditvah, katerih vsebina ni povezana z delom v organu, zaradi zdravljenja v zdravilišču na lastne stroške in v primerih iz prejšnjega člena tega zakona, če posebne okoliščine zahtevajo daljšo odsotnost.\nDisciplinska odgovornost"
+      },
+      {
+        "source": "Zakon o delavcih v državnih organih (ZDDO)",
+        "content": "TITLE: Zakon o delavcih v državnih organih (ZDDO)\n\n69. člen\nDelavci imajo pravico do nadomestila osebnega dohodka za čas odsotnosti z dela, pravico do prejemkov iz sredstev skupne porabe ter do povračil za določene stroške pri opravljanju dela v skladu s splošnim aktom organa, v katerem delajo."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n159. člen\n(trajanje letnega dopusta)\n(1) Delavec ima pravico do letnega dopusta v posameznem koledarskem letu, ki ne more biti krajši kot štiri tedne, ne glede na to, ali dela polni delovni čas ali krajši delovni čas od polnega. Minimalno število dni letnega dopusta delavca je odvisno od razporeditve delovnih dni v tednu za posameznega delavca.\n(2) Starejši delavec, invalid, delavec z najmanj 60% telesno okvaro in delavec, ki neguje in varuje otroka s telesno ali duševno prizadetostjo, ima pravico do najmanj treh dodatnih dni letnega dopusta.\n(3) Delavec ima pravico do enega dodatnega dneva letnega dopusta za vsakega otroka, ki še ni dopolnil 15 let starosti."
+      },
+      {
+        "source": "Kolektivna pogodba za obrt in podjetništvo",
+        "content": "TITLE: Kolektivna pogodba za obrt in podjetništvo\n\n35. člen\n(počitek med zaporednima delovnima dnevoma)\n(1) Delavec ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 12 ur.\n(2) Delavec, ki mu je delovni čas neenakomerno razporejen ali začasno prerazporejen, ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 11 ur."
+      },
+      {
+        "source": "Kolektivna pogodba med delavci in družbami drobnega gospodarstva (KPdg)",
+        "content": "TITLE: Kolektivna pogodba med delavci in družbami drobnega gospodarstva (KPdg)\n\n43. člen\n(odmor med delom)\n(1) Odmor med delom se določi skladno z zakonom.\n(2) Delodajalec ne sme delavcu določiti izrabe odmora med delom na začetku ali na koncu delovnega časa.\n(3) Trajanje odmora med delom se določi v sorazmerju s časom, prebitim na delu."
+      },
+      {
+        "source": "Zakon o delavcih v državnih organih (ZDDO)",
+        "content": "TITLE: Zakon o delavcih v državnih organih (ZDDO)\n\n40. člen\nV dneve letnega dopusta se ne vštevajo sobote, ko državni organ ne dela, oziroma drugi dnevi tedenskega počitka delavca.\nPravica do posameznih dni letnega dopusta po kriterijih iz 35., 38. in 39. člena tega zakona se prizna delavcu v koledarskem letu, ko izpolni pogoje za njihovo pridobitev."
+      }
+    ],
+    "retrieval_correct": false
+  },
+  {
+    "question": "Ali se letni dopust lahko izrabi v več delih?",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "162. člen",
+    "retrieved_chunks": [
+      {
+        "source": "Kolektivna pogodba za zavarovalstvo Slovenije",
+        "content": "TITLE: Kolektivna pogodba za zavarovalstvo Slovenije\n\n18. člen\nLetni dopust\n(1) Letni dopust v posameznem koledarskem letu traja najmanj štiri tedne, ne glede na to, ali delavec dela polni delovni čas ali krajši delovni čas od polnega. Prazniki in dela prosti dnevi, odsotnost zaradi bolezni ali poškodbe ter drugi primeri opravičene odsotnosti z dela se ne vštevajo v dneve letnega dopusta. Letni dopust se določa in izrablja v delovnih dnevih. Kot dan letnega dopusta se šteje vsak delovni dan, ki je po razporeditvi delovnega časa pri delodajalcu za posameznega delavca določen kot delovni dan.\n(2) Dolžina letnega dopusta se določi glede na naslednje kriterije:\n– razvrstitev delovnega mesta v tarifno skupino (raven strokovne izobrazbe),\n– dosežena delovna doba,\n– posebne socialne in zdravstvene razmere,\n– posebni delovni pogoji,\n– starost delavca.\n(3) Skupna dolžina letnega dopusta ne glede na odmero po kriterijih iz tega člena, je največ 35 dni.\n(4) Delodajalec pisno obvesti delavca o dolžini letnega dopusta najkasneje do 31. marca tekočega leta. Delodajalec lahko delavca obvesti tudi po elektronski poti na elektronski naslov delavca, ki ga zagotavlja in uporabo nalaga delodajalec.\n(5) V skladu z drugim odstavkom tega člena pripadajo delavcu dnevi letnega dopusta po naslednjih kriterijih:\na) V odvisnosti od razvrstitve dela v tarifno skupino in dosežene delovne dobe, in sicer:\nDelovna dobaTarifna skupinaI., II., III., IV., V., VI.Tarifna skupinaVII., VIII.Do 10 let202110 do 15 let212215 do 20 let222320 do 25 let232425 do 30 let2425nad 30 let2526\nPri odmeri letnega dopusta po tem kriteriju se upoštevajo polna leta delovne dobe, ki je dosežena kadarkoli do 31. 12. tekočega koledarskega leta.\nb) V odvisnosti od posebnih socialnih in zdravstvenih razmer delavca in njegove družine se delavcu odmeri dodatni letni dopust v trajanju:\n– invalidu in delavcu z najmanj 60 % telesno okvaro 3 dni,\n– delavcu, ki neguje in varuje otroka, ki potrebuje posebno nego in varstvo v skladu s predpisi, ki urejajo družinske prejemke 3 dni,\n– delavcu, ki varuje ali neguje telesno ali duševno prizadeto osebo 2 dni,\n– za vsakega otroka, ki je v celem letu odmere mlajši od 15 let 1 dan.\nc) V odvisnosti od posebnih pogojev dela:\nDelavci, ki v večini leta, v katerem se dopust odmerja, opravljajo nočno delo, imajo v tem letu pravico do dodatnih 3 dni letnega dopusta, če je to določeno s podjetniško kolektivno pogodbo ali s splošnim aktom delodajalca.\nč) V odvisnosti od starosti delavca:\nDelavcu, mlajšemu od 18 let, pripada dodatnih 7 dni letnega dopusta.\nDelavcu – mlademu zaposlenemu (18–30 let), pripada dodatni dan letnega dopusta.\nStarejšemu delavcu pripadajo dodatni 3 dnevi letnega dopusta od koledarskega leta, v katerem dopolni starost, ki je pogoj za status starejšega delavca kot ga določa zakon.\nPri odmeri letnega dopusta po tem kriteriju se upoštevajo dopolnjena leta starosti do 31. 12. tekočega koledarskega leta.\n(6) Delavec je dolžan do konca tekočega koledarskega leta izrabiti najmanj dva tedna letnega dopusta, preostanek pa v dogovoru z delodajalcem do 30. junija naslednjega koledarskega leta. Delavec ima pravico izrabiti ves letni dopust, ki ni bil izrabljen v tekočem koledarskem letu, oziroma do 30. junija naslednjega leta zaradi odsotnosti zaradi bolezni ali poškodbe, porodniškega dopusta ali dopusta za nego in varstvo otroka, do 31. marca leta, ki sledi letu, v katerega je možen prenos letnega dopusta. Delavec ima pravico en dan dopusta izrabiti na tisti dan, ki ga sam določi. O izrabi tega dopusta mora obvestiti neposrednega vodjo najkasneje 3 dni pred izrabo. Delodajalec lahko delavcu odreče izrabo letnega dopusta, če bi odsotnost delavca resneje ogrozila delovni proces."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n162. člen\n(izraba letnega dopusta)\n(1) Letni dopust je mogoče izrabiti v več delih, s tem, da mora en del trajati najmanj dva tedna.\n(2) Delodajalec lahko zahteva od delavca, da planira izrabo najmanj dveh tednov letnega dopusta za tekoče koledarsko leto.\n(3) Delodajalec je dolžan delavcu zagotoviti izrabo letnega dopusta v tekočem koledarskem letu, delavec pa je dolžan do konca tekočega koledarskega leta izrabiti najmanj dva tedna, preostanek letnega dopusta pa v dogovoru z delodajalcem do 30. junija naslednjega leta.\n(4) Delavec ima pravico izrabiti ves letni dopust, ki ni bil izrabljen v tekočem koledarskem letu oziroma do 30. junija naslednjega leta zaradi odsotnosti zaradi bolezni ali poškodbe, porodniškega dopusta ali dopusta za nego in varstvo otroka, do 31. decembra naslednjega leta.\n(5) Delavec, ki dela v tujini, lahko v celoti izrabi letni dopust do konca naslednjega koledarskega leta, če je tako določeno s kolektivno pogodbo, ki zavezuje delodajalca.\n(6) Delavec, ki ima v prvem letu zaposlitve pravico do izrabe sorazmernega dela letnega dopusta, pridobi pravico do izrabe letnega dopusta za naslednje koledarsko leto ob začetku naslednjega koledarskega leta."
+      },
+      {
+        "source": "Kolektivna pogodba za dejavnosti pridobivanja in predelave nekovinskih rudnin Slovenije",
+        "content": "TITLE: Kolektivna pogodba za dejavnosti pridobivanja in predelave nekovinskih rudnin Slovenije\n\n23. člen\n(1) Letni dopust je mogoče izrabiti v več delih s tem, da mora en del trajati najmanj dva tedna.\n(2) Pri določitvi izrabe letnega dopusta v času šolskih oziroma študijskih počitnic imajo praviloma prednost delavci, ki imajo in vzdržujejo otroke, ki se šolajo."
+      },
+      {
+        "source": "Kolektivna pogodba za zavarovalstvo Slovenije",
+        "content": "TITLE: Kolektivna pogodba za zavarovalstvo Slovenije\n\n18. člen\nLetni dopust\n(1) Letni dopust v posameznem koledarskem letu traja najmanj štiri tedne, ne glede na to, ali delavec dela polni delovni čas ali krajši delovni čas od polnega. Prazniki in dela prosti dnevi, odsotnost zaradi bolezni ali poškodbe ter drugi primeri opravičene odsotnosti z dela se ne vštevajo v dneve letnega dopusta. Letni dopust se določa in izrablja v delovnih dnevih. Kot dan letnega dopusta se šteje vsak delovni dan, ki je po razporeditvi delovnega časa pri delodajalcu za posameznega delavca določen kot delovni dan.\n(2) Dolžina letnega dopusta se določi glede na naslednje kriterije:\n-        razvrstitev delovnega mesta v tarifno skupino (raven strokovne izobrazbe),\n-        dosežena delovna doba,\n-        posebne socialne in zdravstvene razmere,\n-        posebni delovni pogoji,\n-        starost delavca.\n(3) Skupna dolžina letnega dopusta ne glede na odmero po kriterijih iz tega člena, je največ 35 dni.\n(4) Delodajalec pisno obvesti delavca o dolžini letnega dopusta najkasneje do 31. marca tekočega leta. Delodajalec lahko delavca obvesti tudi po elektronski poti na elektronski naslov delavca, ki ga zagotavlja in uporabo nalaga delodajalec.\n(5) V skladu z drugim odstavkom tega člena pripadajo delavcu dnevi letnega dopusta po naslednjih kriterijih:\na)     V odvisnosti od razvrstitve dela v tarifno skupino in dosežene delovne dobe, in sicer:\nDelovna dobaTarifna skupinaI., II., III., IV., V., VI.Tarifna skupinaVII., VIII.Do 10 let202110 do 15 let212215 do 20 let222320 do 25 let232425 do 30 let2425nad 30 let2526\nDelovna doba\nTarifna skupinaI., II., III., IV., V., VI.\nTarifna skupinaVII., VIII.\nDo 10 let\n20\n21\n10 do 15 let\n21\n22\n15 do 20 let\n22\n23\n20 do 25 let\n23\n24\n25 do 30 let\n24\n25\nnad 30 let\n25\n26\nPri odmeri letnega dopusta po tem kriteriju se upoštevajo polna leta delovne dobe, ki je dosežena kadarkoli do 31. 12. tekočega koledarskega leta.\nb)     V odvisnosti od posebnih socialnih in zdravstvenih razmer delavca in njegove družine se delavcu odmeri dodatni letni dopust v trajanju:\n-  invalidu in delavcu z najmanj 60 % telesno okvaro 3 dni\n-  delavcu, ki neguje in varuje otroka, ki potrebuje posebno nego in varstvo v skladu s predpisi, ki urejajo družinske prejemke 3 dni\n-  delavcu, ki varuje ali neguje telesno ali duševno prizadeto osebo 2 dni\n-  za vsakega otroka, ki je v celem letu odmere mlajši od 15 let 1 dan.\nc)     V odvisnosti od posebnih pogojev dela:\nDelavci, ki v večini leta, v katerem se dopust odmerja, opravljajo nočno delo, imajo v tem letu pravico do dodatnih 3 dni letnega dopusta, če je to določeno s podjetniško kolektivno pogodbo ali s splošnim aktom delodajalca.\nč)    V odvisnosti od starosti delavca:\nDelavcu, mlajšemu od 18 let, pripada dodatnih 7 dni letnega dopusta.\nDelavcu – mlademu zaposlenemu (18–30 let), pripada dodatni dan letnega dopusta.\nStarejšemu delavcu pripadajo dodatni 3 dnevi letnega dopusta od koledarskega leta, v katerem dopolni starost, ki je pogoj za status starejšega delavca kot ga določa zakon.\nPri odmeri letnega dopusta po tem kriteriju se upoštevajo dopolnjena leta starosti do 31. 12. tekočega koledarskega leta.\n(6) Delavec je dolžan do konca tekočega koledarskega leta izrabiti najmanj dva tedna letnega dopusta, preostanek pa v dogovoru z delodajalcem do 30. junija naslednjega koledarskega leta. Delavec ima pravico izrabiti ves letni dopust, ki ni bil izrabljen v tekočem koledarskem letu, oziroma do 30. junija naslednjega leta zaradi odsotnosti zaradi bolezni ali poškodbe, porodniškega dopusta ali dopusta za nego in varstvo otroka, do 31. decembra naslednjega leta. Delavec ima pravico en dan dopusta izrabiti na tisti dan, ki ga sam določi. O izrabi tega dopusta mora obvestiti neposrednega vodjo najkasneje 3 dni pred izrabo. Delodajalec lahko delavcu odreče izrabo letnega dopusta, če bi odsotnost delavca resneje ogrozila delovni proces."
+      },
+      {
+        "source": "Kolektivna pogodba dejavnosti gostinstva in turizma Slovenije",
+        "content": "TITLE: Kolektivna pogodba dejavnosti gostinstva in turizma Slovenije\n\n45. člen\nPlan izrabe letnega dopusta\n(1) Plan izrabe letnih dopustov za vse delavce pripravi delodajalec najkasneje do konca aprila tekočega leta.\n(2) Pri planu izrabe letnega dopusta se v največji možni meri upoštevajo želje in potrebe zaposlenih, predvsem njihove družinske obveznosti.\n(3) O planiranem terminu izrabe letnega dopusta delodajalec obvesti delavca na dokazljiv način.\n(4) Delavec ima pravico trikrat letno po en dan letnega dopusta izrabiti na tisti dan, ki ga sam določi, če o tem obvesti nadrejenega vodjo oziroma pooblaščenega delavca najkasneje 2 delovna dneva pred nastopom dopusta."
+      },
+      {
+        "source": "Kolektivna pogodba za zavarovalstvo Slovenije",
+        "content": "TITLE: Kolektivna pogodba za zavarovalstvo Slovenije\n\n15. člen\nLetni dopust\n(1) Letni dopust v posameznem koledarskem letu traja najmanj 4 tedne, ne glede na to, ali delavec dela poln delovni čas ali krajši delovni čas od polnega. Prazniki in dela prosti dnevi, odsotnost zaradi bolezni ali poškodbe ter drugi primeri opravičene odsotnosti z dela se ne vštevajo v dneve letnega dopusta. Letni dopust se določa in izrablja v delovnih dnevih. Kot dan letnega dopusta se šteje vsak delovni dan, ki je po razporeditvi delovnega časa pri delodajalcu za posameznega delavca določen kot delovni dan.\n(2) Dolžina letnega dopusta se določi glede na naslednje kriterije:\n-        zahtevnosti dela, to je stopnje zahtevane strokovne izobrazbe,\n-        delovne dobe,\n-        posebnih delovnih pogojev,\n-        posebnih socialnih in zdravstvenih razmer,\n-        starosti delavca.\nSkupna dolžina letnega dopusta, odmerjena po kriterijih iz tega člena, ne more preseči 35 dni.\nDelodajalec pisno obvesti delavca o dolžini letnega dopusta najkasneje do 31. marca tekočega leta.\n(3) V skladu s kriteriji iz prejšnje točke tega člena pripadajo delavcu dnevi letnega dopusta po naslednjih merilih:\na)     V odvisnosti od zahtevnosti dela in delovne dobe, in sicer:\nDelovna dobaStopnja zahtevnostiDelaI., II., III., IV., V., VI.VII., VIII.do 10 let202110 do 15 let212215 do 20 let222320 do 25 let232425 do 30 let2425nad 30 let2526\nDelovna doba\nStopnja zahtevnosti\nDela"
+      },
+      {
+        "source": "Kolektivna pogodba za zavarovalstvo Slovenije",
+        "content": "TITLE: Kolektivna pogodba za zavarovalstvo Slovenije\n\n15. člen\nLetni dopust\n(1) Letni dopust v posameznem koledarskem letu traja najmanj 4 tedne, ne glede na to, ali delavec dela poln delovni čas ali krajši delovni čas od polnega. Prazniki in dela prosti dnevi, odsotnost zaradi bolezni ali poškodbe ter drugi primeri opravičene odsotnosti z dela se ne vštevajo v dneve letnega dopusta. Letni dopust se določa in izrablja v delovnih dnevih. Kot dan letnega dopusta se šteje vsak delovni dan, ki je po razporeditvi delovnega časa pri delodajalcu za posameznega delavca določen kot delovni dan.\n(2) Dolžina letnega dopusta se določi glede na naslednje kriterije:\n-        zahtevnosti dela, to je stopnje zahtevane strokovne izobrazbe,\n-        delovne dobe,\n-        posebnih delovnih pogojev,\n-        posebnih socialnih in zdravstvenih razmer,\n-        starosti delavca.\nSkupna dolžina letnega dopusta, odmerjena po kriterijih iz tega člena, ne more preseči 35 dni.\nDelodajalec pisno obvesti delavca o dolžini letnega dopusta najkasneje do 31. marca tekočega leta.\n(3) V skladu s kriteriji iz prejšnje točke tega člena pripadajo delavcu dnevi letnega dopusta po naslednjih merilih:\na)     V odvisnosti od zahtevnosti dela in delovne dobe, in sicer:\nDelovna dobaStopnja zahtevnostiDelaI., II., III., IV., V., VI.VII., VIII.do 10 let202110 do 15 let212215 do 20 let222320 do 25 let232425 do 30 let2425nad 30 let2526\nDelovna doba\nStopnja zahtevnosti\nDela\n\nI., II., III., IV., V., VI.\nVII., VIII.\ndo 10 let\n20\n21\n10 do 15 let\n21\n22\n15 do 20 let\n22\n23\n20 do 25 let\n23\n24\n25 do 30 let\n24\n25\nnad 30 let\n25\n26\nPri odmeri letnega dopusta se upoštevajo polna leta delovne dobe do 31. 12. tekočega koledarskega leta.\nb)     V odvisnosti od posebnih zdravstvenih in socialnih razmer delavca in njegove družine se delavcu odmeri letni dopust v trajanju:\n-  invalidu in delavcu z najmanj 60% telesno okvaro                                                 3 dni,\n-  delavcu, ki varuje ali neguje telesno ali duševno prizadetega otroka                     3 dni,\n-  delavcu, ki varuje ali neguje telesno ali duševno prizadeto osebo                          2 dni,\n-  vsakemu od staršev za vsakega otroka, ki še ni dopolnil 15 let                            1 dan.\nDelavci, ki v večini leta, v katerem se dopust odmerja, opravljajo nočno delo imajo v tem letu pravico do dodatnih dni letnega dopusta, če je to določeno s podjetniško kolektivno pogodbo ali s splošnim aktom delodajalca.\nStarejšemu delavcu pripadajo dodatni 3 dnevi letnega dopusta v koledarskem letu, v katerem dopolni starost, ki je pogoj za status starejšega delavca kot ga določa zakon.\nc)     Delavcu, mlajšemu od 18 let, pripada letni dopust po osnovah in merilih iz prejšnjih točk tega člena, povečan za 7 dni.\n(4) Delavec je dolžan do konca tekočega koledarskega leta izrabiti najmanj dva tedna letnega dopusta, preostanek pa do 30. junija naslednjega koledarskega leta. Delavec ima pravico en dan dopusta izrabiti na tisti dan, ki ga sam določi. O izrabi tega dopusta mora obvestiti neposrednega vodjo najkasneje 3 dni pred izrabo. Delodajalec lahko delavcu odreče izrabo letnega dopusta, če bi odsotnost delavca resneje ogrozila delovni proces."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n163. člen\n(izraba letnega dopusta)\n(1) Letni dopust je mogoče izrabiti v več delih s tem, da mora en del trajati najmanj dva tedna.\n(2) Delodajalec je dolžan delavcu zagotoviti izrabo letnega dopusta do konca tekočega koledarskega leta, delavec pa je dolžan do konca tekočega koledarskega leta izrabiti najmanj dva tedna, preostanek letnega dopusta pa v dogovoru z delodajalcem do 30. junija naslednjega leta.\n(3) Delavec ima pravico izrabiti ves letni dopust, ki ni bil izrabljen v tekočem koledarskem letu zaradi odsotnosti zaradi bolezni ali poškodbe, porodniškega dopusta ali dopusta za nego in varstvo otroka, do 30. junija naslednjega koledarskega leta, če je v koledarskem letu, v katerem mu je bil odmerjen dopust, delal vsaj šest mesecev. Če je delavec v koledarskem letu, v katerem mu je bil odmerjen dopust, delal manj kot šest mesecev, ima pravico izrabiti letni dopust v skladu s prejšnjim odstavkom.\n(4) Delavec, ki dela v tujini, lahko v celoti izrabi letni dopust do konca naslednjega koledarskega leta, če je tako določeno s kolektivno pogodbo delodajalca."
+      },
+      {
+        "source": "Kolektivna pogodba za dejavnost vodenja in kontrole zračnega prometa št. 171-1/24-2023",
+        "content": "TITLE: Kolektivna pogodba za dejavnost vodenja in kontrole zračnega prometa št. 171-1/24-2023\n\n57. člen\nOpredelitev trajanja letnega dopusta\nLetni dopust v posameznem koledarskem letu znaša najmanj štiri tedne, ne glede na to, ali dela delavec polni delovni čas ali krajši delovni čas od polnega. Minimalno število dni letnega dopusta delavca je odvisno od razporeditve delovnih dni v tednu za posameznega delavca.\nV primeru neenakomerne razporeditve delovnega časa delavcem, ki delajo polni delovni čas, pripada letni dopust v višini najmanj 20 delovnih dni. Delavcem, ki v primeru neenakomerne razporeditve delovnega časa delajo krajši delovni čas od polnega, njihova delovna obveznost pa ni razporejena na celotne delovne cikluse, se letni dopust iz prejšnjega stavka odmeri v sorazmernem delu glede na čas, za katerega ima sklenjeno pogodbo o zaposlitvi (npr. v primeru polovičnega delovnega časa pripada delavcu letni dopust v trajanju polovice od 20 delovnih dni, to je 10 delovnih dni letnega dopusta).\nLetni dopust za posameznega delavca se izračuna tako, da se najprej odmeri minimalno število dni letnega dopusta iz predhodnih dveh odstavkov, nato se pa prištevajo dodatni dnevi glede na kriterije, ki jih opredeljuje vsakokrat veljaven zakon, ki ureja delovna razmerja ali kolektivne pogodbe, ki zavezujejo delodajalca."
+      },
+      {
+        "source": "Kolektivna pogodba za dejavnost železniškega prometa",
+        "content": "TITLE: Kolektivna pogodba za dejavnost železniškega prometa\n\n115. člen\nDelodajalec sestavi načrt izrabe letnega dopusta, tako da omogoči delavcem izrabo dopusta:\n-        v mesecih: januar, februar, marec, april                                           30% letnega dopusta\n-        v mesecih: maj, junij, julij, avgust, september                                   40% letnega dopusta\n-        v mesecih: oktober, november, december                                       30% letnega dopusta.\nStarši šoloobveznih otrok imajo pravico izrabiti najmanj teden dni letnega dopusta v času šolskih počitnic."
+      }
+    ],
+    "retrieval_correct": true
+  },
+  {
+    "question": "Ali mora biti pogodba o zaposlitvi sklenjena v pisni obliki?",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "17. člen",
+    "retrieved_chunks": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n15. člen\n(pisnost pogodbe o zaposlitvi)\n(1) Pogodba o zaposlitvi se sklene v pisni obliki.\n(2) Delodajalec mora delavcu izročiti pisen predlog pogodbe o zaposlitvi praviloma tri dni pred predvideno sklenitvijo, pisno pogodbo o zaposlitvi pa ob njeni sklenitvi.\n(3) Če delavcu ni izročena pisna pogodba o zaposlitvi, lahko kadarkoli v času trajanja delovnega razmerja zahteva njeno izročitev od delodajalca in sodno varstvo.\n(4) Če stranki nista sklenili pogodbe o zaposlitvi v pisni obliki ali če niso v pisni obliki izražene vse sestavine pogodbe o zaposlitvi iz prvega odstavka 29. člena tega zakona, to ne vpliva na obstoj in veljavnost pogodbe o zaposlitvi."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n17. člen\n(pisnost pogodbe o zaposlitvi)\n(1) Pogodba o zaposlitvi se sklene v pisni obliki.\n(2) Delodajalec mora delavcu izročiti pisni predlog pogodbe o zaposlitvi praviloma tri dni pred predvideno sklenitvijo, pisno pogodbo o zaposlitvi pa ob njeni sklenitvi.\n(3) Če delavcu ni izročena pisna pogodba o zaposlitvi, lahko kadarkoli v času trajanja delovnega razmerja zahteva njeno izročitev od delodajalca in sodno varstvo.\n(4) Če stranki nista sklenili pogodbe o zaposlitvi v pisni obliki ali če niso v pisni obliki izražene vse sestavine pogodbe o zaposlitvi iz prvega odstavka 31. člena tega zakona, to ne vpliva na obstoj in veljavnost pogodbe o zaposlitvi."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n26. člen\n(izjeme od obveznosti objave)\n(1) Izjemoma se lahko pogodba o zaposlitvi sklene brez javne objave, če gre za:\n-        sklenitev nove pogodbe o zaposlitvi med delavcem in delodajalcem zaradi spremenjenih okoliščin,\n-        obveznosti delodajalca iz naslova štipendiranja,\n-        zaposlitev invalida po zakonu, ki ureja zaposlovanje invalidov,\n-        zaposlitev za določen čas, ki po svoji naravi traja največ tri mesece v koledarskem letu ali zaposlitev za določen čas za nadomeščanje začasno odsotnega delavca,\n-        zaposlitev za nedoločen čas osebe, ki je pri delodajalcu opravljala pripravništvo, oziroma ki je bila pri delodajalcu zaposlena za določen čas, razen v primeru zaposlitve za določen čas iz tretjega odstavka 22. člena tega zakona in v primeru zaposlitve za določen čas za nadomeščanje začasno odsotnega delavca,\n-        zaposlitev zaradi dela v prilagoditvenem obdobju na podlagi dokončne odločbe in potrdila pristojnega organa, izdane v postopku priznavanja kvalifikacij po posebnem zakonu,\n-        zaposlitev s polnim delovnim časom osebe, ki je bila pri delodajalcu zaposlena s krajšim delovnim časom,\n-        zaposlitev družbenikov v pravni osebi,\n-        zaposlitev družinskih članov delodajalca, ki je fizična oseba,\n-        zaposlitev voljenih in imenovanih funkcionarjev oziroma drugih delavcev, ki so vezani na mandat organa ali funkcionarja v lokalnih skupnostih, političnih strankah, sindikatih, zbornicah, društvih in njihovih zvezah,\n-        poslovodne osebe, prokuriste in vodilne delavce iz drugega odstavka 74. člena tega zakona,\n-        druge primere, določene z zakonom.\n(2) Družinski člani po tem zakonu so:\n-        zakonec oziroma oseba, ki je zadnji dve leti pred sklenitvijo pogodbe o zaposlitvi živela z delodajalcem v življenjski skupnosti, ki je po predpisih o zakonski zvezi in družinskih razmerjih v pravnih posledicah izenačena z zakonsko zvezo, oziroma partner v registrirani istospolni skupnosti (v nadaljnjem besedilu: zakonec ali zunajzakonski partner),\n-        otroci, posvojenci in otroci zakonca ali zunajzakonskega partnerja,\n-        starši – oče, mati, zakonec ali zunajzakonski partner starša, posvojitelj ter\n-        bratje in sestre."
+      },
+      {
+        "source": "Kolektivna pogodba za dejavnost vzgoje in izobraževanja v Republiki Sloveniji",
+        "content": "TITLE: Kolektivna pogodba za dejavnost vzgoje in izobraževanja v Republiki Sloveniji\n\n23. člen\nZavod in delavec skleneta pisno pogodbo o zaposlitvi, najkasneje z dnem nastopa dela.\nPred podpisom pogodbe o zaposlitvi je potrebno delavca seznaniti z vsebino kolektivnih pogodb, ki urejajo njegove pravice in obveznosti.\nDelavec lahko kadarkoli zahteva vpogled v vsebino kolektivnih pogodb in se mu te pravice ne sme odreči.\nPogodbeni stranki se zavezujeta, da bosta izdelali enoten obrazec pogodbe o zaposlitvi, ki bo vseboval minimum obveznih elementov in ga posredovali vsem vzgojnoizobraževalnim zavodom.\n5. Poskusno delo"
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n10. člen\n(pogodba o zaposlitvi za nedoločen čas)\n(1) Pogodba o zaposlitvi se sklepa za nedoločen čas, če s tem zakonom ni drugače določeno.\n(2) Če s pogodbo o zaposlitvi čas trajanja ni pisno določen oziroma če pogodba o zaposlitvi za določen čas ni sklenjena v pisni obliki ob nastopu dela, se domneva, da je pogodba o zaposlitvi sklenjena za nedoločen čas."
+      },
+      {
+        "source": "Kolektivna pogodba za papirno in papirno-predelovalno dejavnost",
+        "content": "TITLE: Kolektivna pogodba za papirno in papirno-predelovalno dejavnost\n\n43. člen\n(opravičeni razlogi, zaradi katerih delavec ne začne delati)\nDelavec, ki dela ni nastopil na dan, ki je določen v pogodbi o zaposlitvi, je razlog za to dolžan nemudoma sporočiti, razen če tega iz objektivnih razlogov ne more storiti."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n81. člen\n(splošno)\n(1) Pogodba o zaposlitvi preneha veljati s pisnim sporazumom med strankama.\n(2) Sporazum, ki ni sklenjen v pisni obliki, je neveljaven.\n(3) Ob prenehanju delovnega razmerja mora delodajalec delavca pisno obvestiti o pravicah iz naslova zavarovanja za primer brezposelnosti. Opustitev tega obvestila nima vpliva na samo veljavnost sporazuma.\n4. Odpoved pogodbe o zaposlitvi\nA) Splošno"
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n12. člen\n(pogodba o zaposlitvi za nedoločen čas)\n(1) Pogodba o zaposlitvi se sklepa za nedoločen čas, če s tem zakonom ni drugače določeno.\n(2) Če s pogodbo o zaposlitvi čas trajanja ni pisno določen oziroma če pogodba o zaposlitvi za določen čas ni sklenjena v pisni obliki ob nastopu dela, se domneva, da je pogodba o zaposlitvi sklenjena za nedoločen čas."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n41. člen\n(zagotavljanje dela)\n(1) Delodajalec mora delavcu zagotavljati delo, za katerega sta se stranki dogovorili v pogodbi o zaposlitvi.\n(2) Če ni drugače dogovorjeno, mora delodajalec delavcu zagotoviti vsa potrebna sredstva in delovni material, da lahko nemoteno izpolnjuje svoje obveznosti, in mu omogočiti prost dostop do poslovnih prostorov.\nb) Obveznost plačila"
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n96. člen\n(denarno povračilo namesto odpovednega roka)\n(1) Delavec in delodajalec se lahko dogovorita o ustreznem denarnem povračilu namesto dela ali celotnega odpovednega roka.\n(2) Dogovor iz prejšnjega odstavka mora biti v pisni obliki."
+      }
+    ],
+    "retrieval_correct": true
+  },
+  {
+    "question": "Ali lahko delodajalec odpove pogodbo o zaposlitvi ustno?",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "86. člen",
+    "retrieved_chunks": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n123. člen\n(omejitev odpovedi pripravniku s strani delodajalca)\nV času trajanja pripravništva delodajalec pripravniku ne sme odpovedati pogodbe o zaposlitvi, razen če so podani razlogi za izredno odpoved ali v primeru uvedbe postopka za prenehanje delodajalca ali prisilne poravnave."
+      },
+      {
+        "source": "Kolektivna pogodba za papirno in papirno-predelovalno dejavnost",
+        "content": "TITLE: Kolektivna pogodba za papirno in papirno-predelovalno dejavnost\n\n60. člen\n(način izrabe odsotnosti z dela brez nadomestila plače)\n(1) Delavec mora pisno zaprositi delodajalca za odobritev odsotnosti z dela brez nadomestila plače najmanj sedem delovnih dni pred nameravano odsotnostjo.\n(2) Delodajalec lahko delavčevo zahtevo po neplačani odsotnosti z dela zavrne, če zahteve delovnega procesa tega ne dopuščajo.\n(3) Glede plačila prispevkov se delavec in delodajalec pisno dogovorita pred nastopom odsotnosti."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n91. člen\n(odpovedni roki)\nDelavec in delodajalec lahko odpovesta pogodbo o zaposlitvi v zakonsko ali pogodbeno določenem odpovednem roku, pri določitvi katerega morata pogodbeni stranki upoštevati minimalni čas trajanja odpovednega roka, določen s tem zakonom, razen če je za manjše delodajalce s kolektivno pogodbo na ravni dejavnosti drugače dogovorjeno."
+      },
+      {
+        "source": "Kolektivna pogodba za zaposlene v zdravstveni negi",
+        "content": "TITLE: Kolektivna pogodba za zaposlene v zdravstveni negi\n\n61. člen\nZaposleni, ki ga je delodajalec poslal na daljše izobraževanje, je dolžan na poziv delodajalca prekiniti izobraževanje, če je neobhodno potrebno, da se vrne na delo.\nOdločitev sprejme direktor v soglasju s pristojnim organom."
+      },
+      {
+        "source": "Zakon o javnih uslužbencih (ZJU)",
+        "content": "TITLE: Zakon o javnih uslužbencih (ZJU)\n\n155. člen\n(odpoved s strani delodajalca)\n(1) Predstojnik pisno odpove pogodbo o zaposlitvi:\n1.      če je postalo delo javnega uslužbenca nepotrebno iz poslovnega razloga in ga ni mogoče premestiti v skladu z zakonom;\n2.      če je v posebnem postopku ugotovljeno, da je javni uslužbenec nesposoben za svoje delovno mesto, in ga ni mogoče premestiti v skladu z zakonom;\n3.      z izrekom disciplinskega ukrepa;\n4.      če je javni uslužbenec neuspešno opravil poskusno delo in ga ni mogoče premestiti v skladu z zakonom;\n5.      če je bil javni uslužbenec neopravičeno odsoten z dela zaporedoma pet delovnih dni.\n(2) Uradniku se lahko odpove pogodba o zaposlitvi, če je s pravnomočno sodbo obsojen za naklepno kaznivo dejanje, ki se preganja po uradni dolžnosti, z nepogojno kaznijo več kot šest mesecev.\n(3) V primeru obsodbe za kaznivo dejanje iz prejšnjega odstavka mora sodišče pravnomočno sodbo poslati po uradni dolžnosti predstojniku."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n111. člen\n(razlogi na strani delodajalca)\n(1) Delavec lahko izredno odpove pogodbo o zaposlitvi, če:\n-        mu delodajalec več kot dva meseca ni zagotavljal dela in mu tudi ni izplačal zakonsko določenega nadomestila plače,\n-        mu ni bilo omogočeno opravljanje dela zaradi odločbe pristojne inšpekcije o prepovedi opravljanja delovnega procesa ali prepovedi uporabe sredstev za delo dalj kot 30 dni in mu delodajalec ni plačal zakonsko določenega nadomestila plače,\n-        mu delodajalec vsaj dva meseca ni izplačeval plače oziroma mu je izplačeval bistveno zmanjšano plačo,\n-        mu delodajalec dvakrat zaporedoma ali v obdobju šestih mesecev ni izplačal plače ob zakonsko oziroma pogodbeno dogovorjenem roku,\n-        delodajalec zanj tri mesece zaporedoma ali v obdobju šestih mesecev ni v celoti plačal prispevkov za socialno varnost,\n-        delodajalec ni zagotavljal varnosti in zdravja delavcev pri delu in je delavec od delodajalca predhodno zahteval odpravo grozeče neposredne in neizogibne nevarnosti za življenje ali zdravje,\n-        mu delodajalec ni zagotavljal enake obravnave v skladu s 6. členom tega zakona,\n-        delodajalec ni zagotovil varstva pred spolnim in drugim nadlegovanjem ali trpinčenjem na delovnem mestu v skladu s 47. členom tega zakona.\n(2) Pred izredno odpovedjo pogodbe o zaposlitvi mora delavec delodajalca pisno opomniti na izpolnitev obveznosti in o kršitvah pisno obvestiti inšpektorat za delo. Če delodajalec v roku treh delovnih dni po prejemu pisnega opomina ne izpolni svoje obveznosti iz delovnega razmerja oziroma ne odpravi kršitve, lahko delavec izredno odpove pogodbo o zaposlitvi v nadaljnjem 30-dnevnem roku iz drugega odstavka 109. člena tega zakona.\n(3) Delavec je v primeru odpovedi zaradi ravnanj iz prvega odstavka tega člena upravičen do odpravnine, določene za primer redne odpovedi pogodbe o zaposlitvi iz poslovnih razlogov, in do odškodnine najmanj v višini izgubljenega plačila za čas odpovednega roka.\nČ) Posebno pravno varstvo pred odpovedjo"
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n95. člen\n(pravice in obveznosti strank v času odpovednega roka)\nČe odpove pogodbo o zaposlitvi delodajalec, ima delavec v času odpovednega roka pravico do odsotnosti z dela zaradi iskanja nove zaposlitve s pravico do nadomestila plače v trajanju najmanj dve uri na teden.\nc) Odpoved večjemu številu delavcev iz poslovnih razlogov"
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n17. člen\n(pisnost pogodbe o zaposlitvi)\n(1) Pogodba o zaposlitvi se sklene v pisni obliki.\n(2) Delodajalec mora delavcu izročiti pisni predlog pogodbe o zaposlitvi praviloma tri dni pred predvideno sklenitvijo, pisno pogodbo o zaposlitvi pa ob njeni sklenitvi.\n(3) Če delavcu ni izročena pisna pogodba o zaposlitvi, lahko kadarkoli v času trajanja delovnega razmerja zahteva njeno izročitev od delodajalca in sodno varstvo.\n(4) Če stranki nista sklenili pogodbe o zaposlitvi v pisni obliki ali če niso v pisni obliki izražene vse sestavine pogodbe o zaposlitvi iz prvega odstavka 31. člena tega zakona, to ne vpliva na obstoj in veljavnost pogodbe o zaposlitvi."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n82. člen\n(splošno)\n(1) Pogodbeni stranki lahko odpovesta pogodbo o zaposlitvi z odpovednim rokom – redna odpoved.\n(2) V primerih, določenih v zakonu, lahko pogodbeni stranki odpovesta pogodbo o zaposlitvi brez odpovednega roka – izredna odpoved.\n(3) Vsaka stranka lahko odpove pogodbo o zaposlitvi le v celoti."
+      },
+      {
+        "source": "Kolektivna pogodba za papirno in papirno-predelovalno dejavnost",
+        "content": "TITLE: Kolektivna pogodba za papirno in papirno-predelovalno dejavnost\n\n43. člen\n(opravičeni razlogi, zaradi katerih delavec ne začne delati)\nDelavec, ki dela ni nastopil na dan, ki je določen v pogodbi o zaposlitvi, je razlog za to dolžan nemudoma sporočiti, razen če tega iz objektivnih razlogov ne more storiti."
+      }
+    ],
+    "retrieval_correct": false
+  },
+  {
+    "question": "Koliko ur znaša polni delovni čas na teden?",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "143. člen",
+    "retrieved_chunks": [
+      {
+        "source": "Uredba o delovnem času v organih državne uprave",
+        "content": "TITLE: Uredba o delovnem času v organih državne uprave\n\n13. člen\n(Razporejanje polnega delovnega časa)\nJavni uslužbenec lahko razporeja polni delovni čas v okviru posameznega tedna tako, da ta traja več ali manj kot 40 ur, vendar v posameznem tednu ne več kot 48 ur."
+      },
+      {
+        "source": "Uredba o upravnem poslovanju",
+        "content": "TITLE: Uredba o upravnem poslovanju\n\n41. člen\n(Razporejanje polnega delovnega časa)\nJavni uslužbenec lahko razporeja polni delovni čas v okviru posameznega tedna tako, da ta traja več ali manj kot 40 ur, vendar v posameznem tednu ne več kot 50 ur."
+      },
+      {
+        "source": "Kolektivna pogodba za obrt in podjetništvo",
+        "content": "TITLE: Kolektivna pogodba za obrt in podjetništvo\n\n31. člen\n(splošno)\nPolni delovni čas znaša najmanj 36 ur in največ 40 ur tedensko."
+      },
+      {
+        "source": "Kolektivna pogodba za dejavnost železniškega prometa",
+        "content": "TITLE: Kolektivna pogodba za dejavnost železniškega prometa\n\n82. člen\nPolni delovni čas delavcev traja največ 40 ur na teden.\nZa delavce, ki opravljajo posebno težka, naporna in za zdravje škodljiva dela, traja polni delovni čas 38 ur na teden. Delovna mesta, na katerih se opravljajo taka dela, se določijo s splošnim aktom.\nV polni delovni čas se, poleg dela, ki ga delavec opravlja, šteje še:\n-        čas odmora med delom,\n-        čas odmora za dojenje otrok,\n-        čas odsotnosti z dela, v skladu z zakonom in to pogodbo,\n-        čas, porabljen za redne in izredne občasne zdravstvene preglede na katere delavca napoti delodajalec,\n-        čas izobraževanja delavcev, ki je v interesu delodajalca iz 136. člena te pogodbe,\n-        čas porabljen za delo in udeležbo na sejah organov, komisij in drugih delovnih teles družbe,\n-        čas priprave in posprave ter čas primopredaje iz 92. člena te pogodbe,\n-        režijska potovanja,\n-        čas dežurstva na delovnem mestu.\nZa režijsko potovanje iz 8. alinee prejšnjega odstavka se šteje vsako potovanje v odhodu in povratku iz mesta nastopa na delo in nazaj, ki je potrebno zaradi izvršitve posameznih del in nalog.\nČe je v povratku po opravljenem delu kraj stalnega ali začasnega bivanja delavca pred mestom nastopa dela, v katerega naj bi se vrnil, se mu režijsko potovanje zaključi v tem kraju.\nb) Skupni delovni čas"
+      },
+      {
+        "source": "Kolektivna pogodba za dejavnost poslovanja z nepremičninami",
+        "content": "TITLE: Kolektivna pogodba za dejavnost poslovanja z nepremičninami\n\n33. člen\n(delovni čas)\nPolni delovni čas znaša najmanj 36 ur in največ 40 ur tedensko."
+      },
+      {
+        "source": "Kolektivna pogodba dejavnosti za storitvene dejavnosti v kopenskem prometu",
+        "content": "TITLE: Kolektivna pogodba dejavnosti za storitvene dejavnosti v kopenskem prometu\n\n9. člen\nPolni delovni čas\nPolni delovni čas po tej kolektivni pogodbi je 40 ur tedensko. Delodajalec lahko določi tudi krajši polni delovni čas, vendar ne krajši kot 36 ur na teden."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n143. člen\n(polni delovni čas)\n(1) Polni delovni čas ne sme biti daljši od 40 ur na teden.\n(2) Z zakonom oziroma kolektivno pogodbo se lahko določi kot polni delovni čas delovni čas, ki je krajši od 40 ur na teden, vendar ne manj kot 36 ur na teden.\n(3) Z zakonom ali drugim predpisom v skladu z zakonom ali kolektivno pogodbo se lahko določi za delovna mesta, pri katerih obstajajo večje nevarnosti za poškodbe ali zdravstvene okvare, polni delovni čas, ki traja manj kot 36 ur na teden.\n(4) Če polni delovni čas ni določen z zakonom ali kolektivno pogodbo, se šteje kot polni delovni čas delovni čas 40 ur na teden."
+      },
+      {
+        "source": "Kolektivna pogodba premogovništva Slovenije",
+        "content": "TITLE: Kolektivna pogodba premogovništva Slovenije\n\n57. člen\nDelovni čas delavcev traja 40 ur na teden.\nDelovni teden ima pet delovnih dni z 8-urno delovno obveznostjo.\nDelovni čas se lahko razporedi tudi drugače, in sicer z uvedbami turnusov in dnevnega gibljivega delovnega časa. Pri uvedbi turnusa mora biti upoštevan 24-urni tedenski počitek.\nDelavec je dolžan delati v delovnem času, ki je določen v pogodbi o zaposlitvi."
+      },
+      {
+        "source": "Kolektivna pogodba za raziskovalno dejavnost",
+        "content": "TITLE: Kolektivna pogodba za raziskovalno dejavnost\n\n25. člen\nPolni delovni čas traja največ 40 ur tedensko. V zavodih, kjer delovni čas traja več kot 40 ur tedensko, uveljavijo 40-urni teden v dveh mesecih po uveljavitvi te kolektivne pogodbe.\nDelovni, čas je praviloma enakomerno razporejen na pet delovnih dni v tednu.\nČe tako zahtevajo razmere in delovni proces, se delovni čas lahko prerazporeja tako, da se doseže poprečna tedenska delovna obremenitev v okviru 6 mesecev.\n7. Delo preko polnega delovnega časa"
+      },
+      {
+        "source": "Kolektivna pogodba za dejavnost železniškega prometa",
+        "content": "TITLE: Kolektivna pogodba za dejavnost železniškega prometa\n\n86. člen\nDelodajalec lahko glede na naravo dela polni delovni čas razporedi tako, da se delo opravlja:\n-        dopoldne, in sicer tako, da traja delovni teden 5 delovnih dni, od ponedeljka do petka, vsak dan po 8 ur, s pričetkom dela med 6. in 8. uro,\n-        v dopoldanskem času, in sicer tako, da mora biti delavec navzoč na svojem delovnem mestu od 8. do 15. ure, ob petkih pa od 8. do 13. ure. Gibljivi delovni čas znaša 90 minut v prihodu in odhodu, razen ob petkih, ko znaša ta čas v prihodu 90, v odhodu pa 210 minut, obračuna pa se povprečna 40 urna tedenska delovna obveznost v enem mesecu, delavec pa lahko v naslednji mesec prenese največ 12 urni presežek oziroma primanjkljaj,\n-        popoldne, in sicer tako, da traja delovni teden 5 delovnih dni, od ponedeljka do petka, vsak dan po 8 ur, s pričetkom dela med 13. in 15. uro,\n-        v izmenah, in sicer tako, da traja delovni teden 5 delovnih dni, od ponedeljka do petka, in da se delo opravlja izmenično dopoldne in popoldne, vsak dan po 8 ur, s pričetkom dela med 6. in 8. uro, oziroma 14. in 16. uro,\n-        v izmenah, in sicer tako, da traja delovni teden 5 delovnih dni, od ponedeljka do petka, in da se delo opravlja izmenično dopoldne, popoldne in ponoči in traja 8 ur, s pričetkom dela med 6. in 7. uro, 14. in 15. uro oziroma 22. In 23. uro. Nočna izmena se lahko pojavlja neprekinjeno največ 5 dni in ponovno šele po 5 dnevni dopoldanski in 5 dnevni popoldanski izmeni,\n-        v izmenah, in sicer tako da se delo opravlja vsak drugi dan po 12 ur, pri čemer se delo lahko opravlja največ eno uro ponoči (12/36 – 12/36),\n-        v izmenah, in sicer tako da se delo opravlja v izmenah 12/24 – 12/48 oziroma 12/24 – 12/24, pri čemer se delo opravlja tudi ponoči,\n-        v izmenah z različnimi časi nastopov dela in različnimi časi konca dela v nepravilnem zaporedju, kar se lahko določi le za osebje vlečnih vozil in vlakospremno osebje,\n-        v deljenem delovnem času od ponedeljka do petka, ki se lahko določi med 5. in 22. uro z delitvijo delovnega časa s tem, da skupni delovni čas od prihoda delavca na delo do odhoda, vključno z deljenim delovnim časom, ne sme trajati več kot 12 ur,\n-        na druge načine.\nRazporeditev delovnega časa se praviloma izvede v okviru od 1. do 9. alinee prejšnjega odstavka, če to ni smiselno, pa v skladu z 10. alineo prejšnjega odstavka.\nV primeru iz 6. in 7. alinee je delodajalec dolžan v razporedu delovnega časa določiti začetek in konec izmene le med 5. in 23. uro, razen zaradi storitev v potniškem prometu, kjer se lahko določi začetek in konec izmene med 3. in 23. uro."
+      }
+    ],
+    "retrieval_correct": true
+  },
+  {
+    "question": "Koliko tednov znaša minimalni letni dopust?",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "159. člen",
+    "retrieved_chunks": [
+      {
+        "source": "Kolektivna pogodba komunalnih dejavnosti",
+        "content": "TITLE: Kolektivna pogodba komunalnih dejavnosti\n\n28. člen\nDnevni in tedenski počitek v primeru izmenskega dela\nV primeru izmenskega dela se dnevni in tedenski počitek v povprečnem minimalnem trajanju kot ga določa zakon zagotavlja v obdobju, ki ni daljši od 6 mesecev."
+      },
+      {
+        "source": "Kolektivna pogodba za kmetijstvo in živilsko industrijo Slovenije",
+        "content": "TITLE: Kolektivna pogodba za kmetijstvo in živilsko industrijo Slovenije\n\n29. člen\n(Dnevni in tedenski počitek v primeru izmenskega dela)\nV primeru izmenskega dela se dnevni in tedenski počitek v povprečnem minimalnem trajanju, kot ga določa zakon, zagotavlja v obdobju, ki ni daljši od 6 mesecev."
+      },
+      {
+        "source": "Kolektivna pogodba za kmetijstvo in živilsko industrijo Slovenije",
+        "content": "TITLE: Kolektivna pogodba za kmetijstvo in živilsko industrijo Slovenije\n\n29. člen\n(Dnevni in tedenski počitek v primeru izmenskega dela)\nV primeru izmenskega dela se dnevni in tedenski počitek v povprečnem minimalnem trajanju, kot ga določa zakon, zagotavlja v obdobju, ki ni daljši od 6 mesecev."
+      },
+      {
+        "source": "Kolektivna pogodba za kmetijstvo in živilsko industrijo Slovenije",
+        "content": "TITLE: Kolektivna pogodba za kmetijstvo in živilsko industrijo Slovenije\n\n29. člen\n(Dnevni in tedenski počitek v primeru izmenskega dela)\nV primeru izmenskega dela se dnevni in tedenski počitek v povprečnem minimalnem trajanju, kot ga določa zakon, zagotavlja v obdobju, ki ni daljši od 6 mesecev."
+      },
+      {
+        "source": "Kolektivna pogodba za kmetijstvo in živilsko industrijo Slovenije",
+        "content": "TITLE: Kolektivna pogodba za kmetijstvo in živilsko industrijo Slovenije\n\n30. člen\n(Dnevni in tedenski počitek v primeru izmenskega dela)\nV primeru izmenskega dela se dnevni in tedenski počitek v povprečnem minimalnem trajanju, kot ga določa zakon, zagotavlja v obdobju, ki ni daljši od 6 mesecev."
+      },
+      {
+        "source": "Kolektivna pogodba dejavnosti bančništva Slovenije",
+        "content": "TITLE: Kolektivna pogodba dejavnosti bančništva Slovenije\n\n93. člen\n(1) Minimalno število dni letnega dopusta znaša 4 (štiri) tedne, kar pomeni 16 delovnih dni v 4 (štiri) dnevnem delovnem tednu, 20 delovnih dni v 5 (pet) dnevnem delovnem tednu in 24 delovnih dni v 6 (šest) dnevnem delovnem tednu.\n(2) O dolžini letnega dopusta mora biti delavec pisno obveščen najkasneje do 31. 3. tekočega leta.\n(3) Način odreditve in evidentiranja izrabe letnega dopusta določi delodajalec.\n(4) Delodajalec lahko delavcu odreče izrabo letnega dopusta v času delavčevega predlaganega časovnega termina, če bi odsotnost delavca resneje ogrozila delovni proces."
+      },
+      {
+        "source": "Kolektivna pogodba za poštne in kurirske dejavnosti",
+        "content": "TITLE: Kolektivna pogodba za poštne in kurirske dejavnosti\n\n19. člen\nDnevni in tedenski počitek\nZaradi narave dejavnosti oziroma v primerih predvidenega neenakomernega ali povečanega obsega dela se v skladu z določbami 158. člena Zakona o delovnih razmerjih določa, da se dnevni in tedenski počitek v povprečnem minimalnem trajanju, kot je določen z zakonom, zagotavlja v določenem časovnem obdobju, ki ne sme biti daljše od šest (6) mesecev."
+      },
+      {
+        "source": "Kolektivna pogodba za dejavnost kovinskih materialov in livarn Slovenije",
+        "content": "TITLE: Kolektivna pogodba za dejavnost kovinskih materialov in livarn Slovenije\n\n25. člen\n(dnevni in tedenski počitek v primeru izmenskega dela)\nV primeru izmenskega dela se dnevni in tedenski počitek v povprečnem minimalnem trajanju kot ga določa zakon, ki ureja delovna razmerja, zagotavlja v obdobju 6 mesecev."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n163. člen\n(izraba letnega dopusta)\n(1) Letni dopust je mogoče izrabiti v več delih s tem, da mora en del trajati najmanj dva tedna.\n(2) Delodajalec je dolžan delavcu zagotoviti izrabo letnega dopusta do konca tekočega koledarskega leta, delavec pa je dolžan do konca tekočega koledarskega leta izrabiti najmanj dva tedna, preostanek letnega dopusta pa v dogovoru z delodajalcem do 30. junija naslednjega leta.\n(3) Delavec ima pravico izrabiti ves letni dopust, ki ni bil izrabljen v tekočem koledarskem letu zaradi odsotnosti zaradi bolezni ali poškodbe, porodniškega dopusta ali dopusta za nego in varstvo otroka, do 30. junija naslednjega koledarskega leta, če je v koledarskem letu, v katerem mu je bil odmerjen dopust, delal vsaj šest mesecev. Če je delavec v koledarskem letu, v katerem mu je bil odmerjen dopust, delal manj kot šest mesecev, ima pravico izrabiti letni dopust v skladu s prejšnjim odstavkom.\n(4) Delavec, ki dela v tujini, lahko v celoti izrabi letni dopust do konca naslednjega koledarskega leta, če je tako določeno s kolektivno pogodbo delodajalca."
+      },
+      {
+        "source": "Kolektivna pogodba komunalnih dejavnosti",
+        "content": "TITLE: Kolektivna pogodba komunalnih dejavnosti\n\n24. člen\nLetni dopust\n(1) Minimalni dopust znaša štiri tedne.\n(2) Za komunalno dejavnost se poleg minimalnega dopusta iz prvega odstavka določi daljše trajanje letnega dopusta na podlagi naslednjih kriterijev:\na)   Za skupno delovno dobo\nZa skupno delovno dobo, ki jo bo delavec dosegel do konca leta, za katerega se mu določa letni dopust:\n- nad 1 do 3 let                                 1 dan\n- nad 3 do 5 let                                 2 dni\n- nad 5 do 10 let                               3 dni\n- nad 10 do 15 let                             4 dni\n- nad 15 do 20 let                             5 dni\n- nad 20 do 25 let                             6 dni\n- nad 25 do 30 let                             7 dni\n- nad 30 let                                       8 dni\nb)    Za zahtevnost del delovnega mesta\n- na delovnem mestu, kjer se zahteva III. in IV. stopnja strokovne izobrazbe, za 1 dan,\n- na delovnem mestu, kjer se zahteva V. stopnja strokovne izobrazbe, za 2 dni,\n- na delovnem mestu, kjer se zahteva VI. stopnja strokovne izobrazbe, za 3 dni,\n- na delovnem mestu, kjer se zahteva VII.,VIII. ali IX. stopnja strokovne izobrazbe, za 4 dni.\nc)    Za delovno uspešnost\n- za delovno uspešnost, o kateri odloča poslovodni organ, do 1 dneva.\nd)    Za delovne pogoje\n- za delovne pogoje, kot so težko fizično delo in delo v prisiljenem položaju, večje psihomotorične in senzorične obremenitve, stalno delo na terenu, neustrezni mikroklimatski pogoji, ropot, sevanje, delo v mokroti, vlagi in umazaniji, temperaturne razlike, kemikalije, plini, prah, nevarnost nezgod, nočno delo in neugodna razporeditev delovnega časa ter neprijetnost dela (nekatera dela na področju odvoza odpadkov, čiščenja odplak, pogrebne službe ipd.) od 1 do 4 dni.\ne)    Za socialne in zdravstvene razmere\n-  delavcem, edinim hraniteljem za vsakega otroka do 15 let starosti za dva dni\n-  staršu za vsakega otroka do 15 let starosti za 1 dan\n-  delavcem, katerim je priznana najmanj 60% telesna okvara, delovnim invalidom, s pravico do skrajšanega delovnega časa in delavcem ki varujejo in negujejo težje telesno ali zmerno težje ali težko duševno prizadeto osebo do 5 dni.\nf)     Dopust mladine in starejših delavcev\n- delavcem, mlajšim od 18 let za 7 dni\n- delavcem, ki so dopolnili 50 let starosti, najmanj 3 dni."
+      }
+    ],
+    "retrieval_correct": false
+  },
+  {
+    "question": "Koliko ur počitka mora imeti delavec med dvema delovnima dnevoma?",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "155. člen",
+    "retrieved_chunks": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n155. člen\n(počitek med zaporednima delovnima dnevoma)\n(1) Delavec ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 12 ur.\n(2) Delavec, ki mu je delovni čas neenakomerno razporejen ali začasno prerazporejen, ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 11 ur."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n155. člen\n(počitek med zaporednima delovnima dnevoma)\n(1) Delavec ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 12 ur.\n(2) Delavec, ki mu je delovni čas neenakomerno razporejen ali začasno prerazporejen, ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 11 ur."
+      },
+      {
+        "source": "Kolektivna pogodba za obrt in podjetništvo",
+        "content": "TITLE: Kolektivna pogodba za obrt in podjetništvo\n\n35. člen\n(počitek med zaporednima delovnima dnevoma)\n(1) Delavec ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 12 ur.\n(2) Delavec, ki mu je delovni čas neenakomerno razporejen ali začasno prerazporejen, ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 11 ur."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n156. člen\n(tedenski počitek)\n(1) Delavec ima v obdobju sedmih zaporednih dni, poleg pravice do dnevnega počitka iz prejšnjega člena, pravico do počitka v trajanju najmanj 24 neprekinjenih ur.\n(2) Če mora delavec zaradi objektivnih, tehničnih in organizacijskih razlogov delati na dan tedenskega počitka, se mu zagotovi tedenski počitek na kakšen drug dan v tednu.\n(3) Minimalno trajanje tedenskega počitka, določeno v prvem odstavku tega člena, se upošteva kot povprečje v obdobju 14 zaporednih dni.\n7. Posebnosti urejanja delovnega časa, nočnega dela, odmorov in počitkov"
+      },
+      {
+        "source": "Uredba o merilih za delo v izmenah izvršilnih železniških delavcev",
+        "content": "TITLE: Uredba o merilih za delo v izmenah izvršilnih železniških delavcev\n\n14. člen\n(odmori)\n(1) Če delovni čas strojevodje traja dlje kot osem ur, se mu med delovnim časom zagotovi odmor najmanj 45 minut.\n(2) Če delovni čas traja med šestimi in osmimi urami, je ta odmor dolg najmanj 30 minut in je zagotovljen med delovnim časom.\n(3) Obdobje dneva in trajanje odmora morata biti taka, da se delavec lahko dejansko odpočije.\n(4) Odmori se lahko med delovnim časom prilagodijo v primeru zamude vlakov.\n(5) Del odmora se zagotovi med 3. in 6. uro dela.\n(6) Določba prvega odstavka tega člena se ne uporablja, če sta strojevodja dva. V tem primeru in za drugo vlakovno osebje, ko niso izpolnjeni pogoji iz drugega odstavka tega člena, se pogoji zagotavljanja odmora določijo na podlagi določb zakona, ki ureja varnost v železniškem prometu."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n156. člen\n(tedenski počitek)\n(1) Delavec ima v obdobju sedmih zaporednih dni, poleg pravice do dnevnega počitka iz prejšnjega člena, pravico do počitka v trajanju najmanj 24 neprekinjenih ur.\n(2) Če mora delavec zaradi objektivnih, tehničnih in organizacijskih razlogov delati na dan tedenskega počitka, se mu zagotovi tedenski počitek na kakšen drug dan v tednu.\n(3) Minimalno trajanje tedenskega počitka, določeno v prvem odstavku tega člena, se upošteva kot povprečje v obdobju 14 zaporednih dni.\n7. POSEBNOSTI UREJANJA DELOVNEGA ČASA, NOČNEGA DELA, ODMOROV IN POČITKOV"
+      },
+      {
+        "source": "Kolektivna pogodba komunalnih dejavnosti",
+        "content": "TITLE: Kolektivna pogodba komunalnih dejavnosti\n\n28. člen\nDnevni in tedenski počitek v primeru izmenskega dela\nV primeru izmenskega dela se dnevni in tedenski počitek v povprečnem minimalnem trajanju kot ga določa zakon zagotavlja v obdobju, ki ni daljši od 6 mesecev."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n154. člen\n(odmor med delovnim časom)\n(1) Med dnevnim delom ima delavec, ki dela polni delovni čas, pravico do odmora, ki traja 30 minut.\n(2) Delavec, ki dela krajši delovni čas v skladu s 65. ali 67. členom tega zakona, vendar najmanj štiri ure na dan, ima pravico do odmora med dnevnim delovnim časom v sorazmerju s časom, prebitim na delu.\n(3) Dolžina odmora se v primeru neenakomerne razporeditve ali začasne prerazporeditve delovnega časa določi sorazmerno dolžini dnevnega delovnega časa.\n(4) Odmor se lahko določi šele po eni uri dela in najkasneje eno uro pred koncem delovnega časa.\n(5) Čas odmora med dnevnim delom se všteva v delovni čas."
+      },
+      {
+        "source": "Kolektivna pogodba komunalnih dejavnosti",
+        "content": "TITLE: Kolektivna pogodba komunalnih dejavnosti\n\n61. člen\n(odmor med delom)\nOdmor med delom se lahko določi v več delih, pri tem pa mora en del trajati najmanj 20 minut neprekinjeno.\nOdmor ne sme biti na začetku ali na koncu delovnega časa."
+      },
+      {
+        "source": "Kolektivna pogodba za obrt in podjetništvo",
+        "content": "TITLE: Kolektivna pogodba za obrt in podjetništvo\n\n36. člen\n(počitek med zaporednima delovnima dnevoma)\n(1) Delavec ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 12 ur.\n(2) Delavec, ki mu je delovni čas neenakomerno razporejen ali začasno prerazporejen, ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 11 ur."
+      }
+    ],
+    "retrieval_correct": true
+  },
+  {
+    "question": "Koliko ur odmora med delom pripada delavcu pri polnem delovnem času?",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "154. člen",
+    "retrieved_chunks": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n155. člen\n(počitek med zaporednima delovnima dnevoma)\n(1) Delavec ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 12 ur.\n(2) Delavec, ki mu je delovni čas neenakomerno razporejen ali začasno prerazporejen, ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 11 ur."
+      },
+      {
+        "source": "Uredba o delovnem času v organih državne uprave",
+        "content": "TITLE: Uredba o delovnem času v organih državne uprave\n\n13. člen\n(Razporejanje polnega delovnega časa)\nJavni uslužbenec lahko razporeja polni delovni čas v okviru posameznega tedna tako, da ta traja več ali manj kot 40 ur, vendar v posameznem tednu ne več kot 48 ur."
+      },
+      {
+        "source": "Kolektivna pogodba za dejavnost železniškega prometa",
+        "content": "TITLE: Kolektivna pogodba za dejavnost železniškega prometa\n\n82. člen\nPolni delovni čas delavcev traja največ 40 ur na teden.\nZa delavce, ki opravljajo posebno težka, naporna in za zdravje škodljiva dela, traja polni delovni čas 38 ur na teden. Delovna mesta, na katerih se opravljajo taka dela, se določijo s splošnim aktom.\nV polni delovni čas se, poleg dela, ki ga delavec opravlja, šteje še:\n-        čas odmora med delom,\n-        čas odmora za dojenje otrok,\n-        čas odsotnosti z dela, v skladu z zakonom in to pogodbo,\n-        čas, porabljen za redne in izredne občasne zdravstvene preglede na katere delavca napoti delodajalec,\n-        čas izobraževanja delavcev, ki je v interesu delodajalca iz 136. člena te pogodbe,\n-        čas porabljen za delo in udeležbo na sejah organov, komisij in drugih delovnih teles družbe,\n-        čas priprave in posprave ter čas primopredaje iz 92. člena te pogodbe,\n-        režijska potovanja,\n-        čas dežurstva na delovnem mestu.\nZa režijsko potovanje iz 8. alinee prejšnjega odstavka se šteje vsako potovanje v odhodu in povratku iz mesta nastopa na delo in nazaj, ki je potrebno zaradi izvršitve posameznih del in nalog.\nČe je v povratku po opravljenem delu kraj stalnega ali začasnega bivanja delavca pred mestom nastopa dela, v katerega naj bi se vrnil, se mu režijsko potovanje zaključi v tem kraju.\nb) Skupni delovni čas"
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n155. člen\n(počitek med zaporednima delovnima dnevoma)\n(1) Delavec ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 12 ur.\n(2) Delavec, ki mu je delovni čas neenakomerno razporejen ali začasno prerazporejen, ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 11 ur."
+      },
+      {
+        "source": "Kolektivna pogodba za obrt in podjetništvo",
+        "content": "TITLE: Kolektivna pogodba za obrt in podjetništvo\n\n31. člen\n(splošno)\nPolni delovni čas znaša najmanj 36 ur in največ 40 ur tedensko."
+      },
+      {
+        "source": "Kolektivna pogodba za obrt in podjetništvo",
+        "content": "TITLE: Kolektivna pogodba za obrt in podjetništvo\n\n35. člen\n(počitek med zaporednima delovnima dnevoma)\n(1) Delavec ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 12 ur.\n(2) Delavec, ki mu je delovni čas neenakomerno razporejen ali začasno prerazporejen, ima v obdobju 24 ur pravico do počitka, ki traja nepretrgoma najmanj 11 ur."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n154. člen\n(odmor med delovnim časom)\n(1) Med dnevnim delom ima delavec, ki dela polni delovni čas, pravico do odmora, ki traja 30 minut.\n(2) Delavec, ki dela krajši delovni čas v skladu s 65. ali 67. členom tega zakona, vendar najmanj štiri ure na dan, ima pravico do odmora med dnevnim delovnim časom v sorazmerju s časom, prebitim na delu.\n(3) Dolžina odmora se v primeru neenakomerne razporeditve ali začasne prerazporeditve delovnega časa določi sorazmerno dolžini dnevnega delovnega časa.\n(4) Odmor se lahko določi šele po eni uri dela in najkasneje eno uro pred koncem delovnega časa.\n(5) Čas odmora med dnevnim delom se všteva v delovni čas."
+      },
+      {
+        "source": "Kolektivna pogodba gradbenih dejavnosti",
+        "content": "TITLE: Kolektivna pogodba gradbenih dejavnosti\n\n22. člen\n(Delovni čas in razporejanje)\n(1) Polni delovni čas traja najmanj 36 ur in največ 40 ur tedensko.\n(2) Letni razpored delovnega časa sprejema delodajalec pred začetkom koledarskega oziroma poslovnega leta. Pri razporedu delovnega časa mora upoštevati sezonske in druge vplive in zakonsko določene odmore, počitke in letne dopuste delavcev. Pri določanju letnega razporeda delovnega časa delodajalec upošteva prednosti delavcev s šoloobveznimi otroki, da izkoristijo dva tedna letnega dopusta v času šolskih počitnic.\n(3) Delodajalec o razporedu delovnega časa pred sprejemom obvesti reprezentativni sindikat ter delavce.\n(4) V letnem razporedu delovnega časa delodajalec določi, ali je delovni čas razporejen enakomerno ali neenakomerno.\n(5) V delovni čas se všteva tudi čas, prebit na poti z enega gradbišča na drugo gradbišče v primeru, ko je delavec tisti dan že pričel z delom.\n(6) V primeru, ko prevoz na kraj opravljanja dela organizira delodajalec se delavcu, ki vozi, čas vožnje vedno šteje v delovni čas."
+      },
+      {
+        "source": "Kolektivna pogodba dejavnosti za storitvene dejavnosti v kopenskem prometu",
+        "content": "TITLE: Kolektivna pogodba dejavnosti za storitvene dejavnosti v kopenskem prometu\n\n9. člen\nPolni delovni čas\nPolni delovni čas po tej kolektivni pogodbi je 40 ur tedensko. Delodajalec lahko določi tudi krajši polni delovni čas, vendar ne krajši kot 36 ur na teden."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n154. člen\n(odmor med delovnim časom)\n(1) Med dnevnim delom ima delavec, ki dela polni delovni čas, pravico do odmora, ki traja 30 minut.\n(2) Delavec, ki dela krajši delovni čas v skladu s 64. ali 66. členom tega zakona, vendar najmanj štiri ure na dan, ima pravico do odmora med dnevnim delovnim časom v sorazmerju s časom, prebitim na delu.\n(3) Dolžina odmora se v primeru neenakomerne razporeditve ali začasne prerazporeditve delovnega časa določi sorazmerno dolžini dnevnega delovnega časa.\n(4) Odmor se lahko določi šele po eni uri dela in najkasneje eno uro pred koncem delovnega časa.\n(5) Čas odmora med dnevnim delom se všteva v delovni čas."
+      }
+    ],
+    "retrieval_correct": true
+  },
+  {
+    "question": "Koliko dni ima delavec za izredno odpoved pogodbe?",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "109. člen",
+    "retrieved_chunks": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n92. člen\n(minimalni odpovedni roki)\n(1) Če odpoveduje pogodbo o zaposlitvi delavec, je odpovedni rok 30 dni. S pogodbo o zaposlitvi ali kolektivno pogodbo je lahko dogovorjen daljši odpovedni rok, vendar ne daljši kot 150 dni.\n(2) Če odpoveduje pogodbo o zaposlitvi delodajalec zaradi poslovnih razlogov, je minimalni odpovedni rok:\n-        30 dni, če ima delavec manj kot pet let delovne dobe pri delodajalcu,\n-        45 dni, če ima delavec najmanj pet let delovne dobe pri delodajalcu,\n-        75 dni, če ima delavec najmanj 15 let delovne dobe pri delodajalcu,\n-        150 dni, če ima delavec najmanj 25 let delovne dobe pri delodajalcu.\n(3) Če odpoveduje pogodbo o zaposlitvi delodajalec zaradi razloga nesposobnosti, je minimalni odpovedni rok:\n-        30 dni, če ima delavec manj kot pet let delovne dobe pri delodajalcu,\n-        45 dni, če ima delavec najmanj pet let delovne dobe pri delodajalcu,\n-        60 dni, če ima delavec najmanj 15 let delovne dobe pri delodajalcu,\n-        120 dni, če ima delavec najmanj 25 let delovne dobe pri delodajalcu.\n(4) Če odpoveduje pogodbo o zaposlitvi delodajalec zaradi krivdnih razlogov na strani delavca, je minimalni odpovedni rok 30 dni.\n(5) Za delovno dobo pri delodajalcu se šteje tudi delovna doba pri njegovih pravnih prednikih."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n85. člen\n(obveznosti delodajalca pred odpovedjo)\n(1) Pred redno odpovedjo pogodbe o zaposlitvi iz krivdnega razloga mora delodajalec najkasneje v 60 dneh od ugotovitve kršitve in najkasneje v šestih mesecih od nastanka kršitve pisno opozoriti delavca na izpolnjevanje obveznosti in možnost odpovedi, če bo delavec ponovno kršil pogodbene in druge obveznosti iz delovnega razmerja v enem letu od prejema pisnega opozorila, razen če ni s kolektivno pogodbo na ravni dejavnosti drugače določeno, vendar ne dalj kot v dveh letih. Pisno opozorilo se lahko pošlje tudi po elektronski poti na elektronski naslov delavca, ki ga zagotavlja in uporabo nalaga delodajalec.\n(2) Pred redno odpovedjo iz razloga nesposobnosti ali krivdnega razloga in pred izredno odpovedjo pogodbe o zaposlitvi mora delodajalec delavca pisno seznaniti z očitanimi kršitvami oziroma z očitanim razlogom nesposobnosti in mu omogočiti zagovor v razumnem roku, ki ne sme biti krajši od treh delovnih dni, razen če obstajajo okoliščine, zaradi katerih bi bilo od delodajalca neupravičeno pričakovati, da delavcu to omogoči. Pisna seznanitev se lahko opravi tudi po elektronski poti na elektronski naslov delavca, ki ga zagotavlja in uporabo nalaga delodajalec.\n(3) Pri zagovoru lahko po pooblastilu delavca sodeluje predstavnik sindikata ali druga, s strani delavca pooblaščena oseba."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n109. člen\n(splošno)\n(1) Delavec in delodajalec lahko izredno odpovesta pogodbo o zaposlitvi, če obstajajo razlogi, določeni s tem zakonom, in če ob upoštevanju vseh okoliščin in interesov obeh pogodbenih strank ni mogoče nadaljevati delovnega razmerja do izteka odpovednega roka oziroma do poteka časa, za katerega je bila sklenjena pogodba o zaposlitvi.\n(2) Izredno odpoved pogodbe o zaposlitvi mora pogodbena stranka podati najkasneje v 30 dneh od ugotovitve razloga za izredno odpoved in najkasneje v šestih mesecih od nastanka razloga. V primeru krivdnega razloga na strani delavca ali delodajalca, ki ima vse znake kaznivega dejanja, pogodbena stranka lahko odpove pogodbo o zaposlitvi v 30 dneh od ugotovitve razloga za izredno odpoved in storilca ves čas, ko je možen kazenski pregon.\na) Izredna odpoved delodajalca"
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n94. člen\n(minimalni odpovedni roki)\n(1) V primeru odpovedi pogodbe o zaposlitvi v času poskusnega dela s strani delavca ali delodajalca zaradi neuspešno opravljenega poskusnega dela je odpovedni rok sedem dni.\n(2) V primeru redne odpovedi pogodbe o zaposlitvi s strani delavca je odpovedni rok:\n-        do enega leta zaposlitve pri delodajalcu 15 dni,\n-        od enega leta zaposlitve pri delodajalcu 30 dni.\nS pogodbo o zaposlitvi ali kolektivno pogodbo je lahko dogovorjen daljši odpovedni rok, vendar ne daljši kot 60 dni.\n(3) V primeru redne odpovedi pogodbe o zaposlitvi s strani delodajalca iz poslovnega razloga ali iz razloga nesposobnosti je odpovedni rok:\n-        do enega leta zaposlitve pri delodajalcu 15 dni,\n-        od enega do dveh let zaposlitve pri delodajalcu 30 dni.\nNad dve leti zaposlitve pri delodajalcu odpovedni rok v trajanju 30 dni narašča za vsako izpolnjeno leto zaposlitve pri delodajalcu za dva dni, največ pa do 60 dni."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n94. člen\n(minimalni odpovedni roki)\n(1) V primeru odpovedi pogodbe o zaposlitvi v času poskusnega dela s strani delavca ali delodajalca zaradi neuspešno opravljenega poskusnega dela je odpovedni rok sedem dni.\n(2) V primeru redne odpovedi pogodbe o zaposlitvi s strani delavca je odpovedni rok:\n-        do enega leta zaposlitve pri delodajalcu 15 dni,\n-        od enega leta zaposlitve pri delodajalcu 30 dni.\nS pogodbo o zaposlitvi ali kolektivno pogodbo je lahko dogovorjen daljši odpovedni rok, vendar ne daljši kot 60 dni.\n(3) V primeru redne odpovedi pogodbe o zaposlitvi s strani delodajalca iz poslovnega razloga ali iz razloga nesposobnosti je odpovedni rok:\n-        do enega leta zaposlitve pri delodajalcu 15 dni,\n-        od enega do dveh let zaposlitve pri delodajalcu 30 dni.\nNad dve leti zaposlitve pri delodajalcu odpovedni rok v trajanju 30 dni narašča za vsako izpolnjeno leto zaposlitve pri delodajalcu za dva dni, največ pa do 60 dni.\n\nNad 25 let zaposlitve pri delodajalcu je odpovedni rok 80 dni, če ni s kolektivno pogodbo na ravni dejavnosti določen drugačen odpovedni rok, vendar ne krajši kot 60 dni.\n(4) V primeru odpovedi pogodbe o zaposlitvi s strani delodajalca iz krivdnega razloga je odpovedni rok 15 dni.\n(5) Za dobo zaposlitve pri delodajalcu se šteje tudi doba zaposlitve pri njegovih pravnih prednikih."
+      },
+      {
+        "source": "Kolektivna pogodba za obrt in podjetništvo",
+        "content": "TITLE: Kolektivna pogodba za obrt in podjetništvo\n\n43. člen\n(trajanje odpovednega roka pri odpovedi delavca)\n(1) Če redno odpoveduje pogodbo o zaposlitvi delavec, je odpovedni rok:\n-        do enega leta zaposlitve pri delodajalcu 15 dni,\n-        od enega leta zaposlitve pri delodajalcu 30 dni.\n(2) S pogodbo o zaposlitvi ali kolektivno pogodbo je lahko dogovorjen daljši odpovedni rok, vendar ne daljši kot 60 dni."
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR)\n\n112. člen\n(razlogi na strani delodajalca)\n(1) Delavec lahko v osmih dneh po tem, ko predhodno pisno opomni delodajalca na izpolnitev obveznosti in o kršitvah pisno obvesti inšpektorja za delo, izredno odpove pogodbo o zaposlitvi, če:\n-        mu delodajalec več kot dva meseca ni zagotavljal dela in mu tudi ni izplačal zakonsko določenega nadomestila plače,\n-        mu ni bilo omogočeno opravljanje dela zaradi odločbe pristojne inšpekcije o prepovedi opravljanja delovnega procesa ali prepovedi uporabe sredstev za delo dalj kot 30 dni in mu delodajalec ni plačal zakonsko določenega nadomestila plače,\n-        mu je delodajalec vsaj dva meseca izplačeval bistveno zmanjšano plačilo za delo,\n-        mu delodajalec trikrat zaporedoma ali v obdobju šestih mesecev ni izplačal plačila za delo ob zakonsko oziroma pogodbeno dogovorjenem roku,\n-        delodajalec ni zagotavljal varnosti in zdravja delavcev pri delu in je delavec od delodajalca predhodno zahteval odpravo grozeče neposredne in neizogibne nevarnosti za življenje ali zdravje,\n-        ga je delodajalec žalil ali se nasilno vedel do njega ali če kljub njegovim opozorilom ni preprečil takega ravnanja s strani drugih delavcev,\n-        mu delodajalec ni zagotavljal enake obravnave glede na spol,\n-        delodajalec ni zagotovil varstva pred spolnim nadlegovanjem v skladu s 45. členom tega zakona.\n(2) Delavec je v primeru odpovedi zaradi ravnanj iz prejšnjega odstavka upravičen do odpravnine, določene za primer redne odpovedi pogodbe o zaposlitvi iz poslovnih razlogov, in do odškodnine najmanj v višini izgubljenega plačila za čas odpovednega roka.\nD) Posebno pravno varstvo pred odpovedjo"
+      },
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "content": "TITLE: Zakon o delovnih razmerjih (ZDR-1)\n\n95. člen\n(tek odpovednega roka)\nOdpovedni rok začne teči naslednji dan po vročitvi odpovedi ali kasneje z dnem, ki ga v skladu s programom razreševanja presežnih delavcev v odpovedi pogodbe o zaposlitvi določi delodajalec."
+      },
+      {
+        "source": "Kolektivna pogodba za zaposlene v zdravstveni negi",
+        "content": "TITLE: Kolektivna pogodba za zaposlene v zdravstveni negi\n\n41. člen\nZaposlenemu, kateremu ni mogoče trajno zagotoviti dela pri delodajalcu, preneha delovno razmerje po preteku 6 mesecev po dokončnosti sklepa o prenehanju delovnega razmerja.\nŠestmesečni rok za delavce iz prve, druge in tretje alinee 38. člena začne teči, ko se delavec vrne na delo."
+      },
+      {
+        "source": "Zakon o delavcih v državnih organih (ZDDO)",
+        "content": "TITLE: Zakon o delavcih v državnih organih (ZDDO)\n\n53. člen\nDelavcu preneha delovno razmerje v državnem organu v primerih, določenih z zakonom.\nOdpovedni rok, ki se določi v sistemizaciji delovnih mest, traja najmanj en mesec in največ šest mesecev."
+      }
+    ],
+    "retrieval_correct": true
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "question": "Ali mora delodajalec delavcu izplačati regres za letni dopust?",
+    "expected_answer": "Da",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "131. člen"
+  },
+  {
+    "question": "Ali ima delavec pravico do plačanega odmora med delom?",
+    "expected_answer": "Da",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "154. člen"
+  },
+  {
+    "question": "Ali se letni dopust lahko izrabi v več delih?",
+    "expected_answer": "Da",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "162. člen"
+  },
+  {
+    "question": "Ali mora biti pogodba o zaposlitvi sklenjena v pisni obliki?",
+    "expected_answer": "Da",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "17. člen"
+  },
+  {
+    "question": "Ali lahko delodajalec odpove pogodbo o zaposlitvi ustno?",
+    "expected_answer": "Ne",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "86. člen"
+  },
+  {
+    "question": "Koliko ur znaša polni delovni čas na teden?",
+    "expected_answer": "40 ur",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "143. člen"
+  },
+  {
+    "question": "Koliko tednov znaša minimalni letni dopust?",
+    "expected_answer": "4 tedne",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "159. člen"
+  },
+  {
+    "question": "Koliko ur počitka mora imeti delavec med dvema delovnima dnevoma?",
+    "expected_answer": "12 ur",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "155. člen"
+  },
+  {
+    "question": "Koliko ur odmora med delom pripada delavcu pri polnem delovnem času?",
+    "expected_answer": "30 minut",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "154. člen"
+  },
+  {
+    "question": "Koliko dni ima delavec za izredno odpoved pogodbe?",
+    "expected_answer": "30 dni",
+    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+    "expected_clen": "109. člen"
+  }
+]
