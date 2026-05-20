@@ -12,8 +12,13 @@ Steps for generating the index:
 
 3) `filter_pisrs.py` - use `similarities.csv` to filter `pisrs.csv` into `filtered_pisrs.csv`
 
-4) `build_index.py` - use `filtered_pisrs.csv` to chunk the documents and create FAISS index inside newly created folder `faiss_index`
+4) `scrape_pisrs.py` - read `filtered_pisrs.csv` and scrape metadata like validity dates for each document and store in `pisrs_metadata.jsonl`.
 
-5) `run_rag.py` - run simple rag test
+5) `build_index.py` - use `filtered_pisrs.csv` and `pisrs_metadata.jsonl` to chunk the documents and create FAISS index inside newly created folder `faiss_chunk_index/` and `faiss_doc_index/` and a BM25 index `bm25_chunk_index.pkl`.
 
-You may also just skip these steps and unzip our pregenerated index inside `faiss_index/faiss_index.zip`.
+6) `run_rag.py` - run simple rag test
+
+You may also just skip most steps and start from 5) since `filtered_pisrs.csv` and `pisrs_metadata.jsonl` are already included.
+
+
+

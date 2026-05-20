@@ -1,5 +1,9 @@
 pisrs.csv
 similarities.csv
 doc_embs.npy
-faiss_index/index.faiss
-faiss_index/index.pkl
+faiss_*/*
+faiss_*/*
+rag_output.json
+rag_results.json
+bm25_chunk_index.pkl
+
