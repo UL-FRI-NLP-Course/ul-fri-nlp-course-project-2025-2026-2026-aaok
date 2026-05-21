@@ -3,7 +3,5 @@ similarities.csv
 doc_embs.npy
 faiss_*/*
 faiss_*/*
-rag_output.json
-rag_results.json
 bm25_chunk_index.pkl
 

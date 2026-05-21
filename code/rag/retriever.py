@@ -2,14 +2,12 @@ import pickle
 import re
 from datetime import datetime, timezone
 from langchain_community.vectorstores import FAISS
-from planner_prompt import planner_prompt
 
 class Retriever:
     def __init__(
         self,
         embeddings,
 
-        data_cutoff="2024-12-31",
         doc_index_path="faiss_doc_index",
         chunk_index_path="faiss_chunk_index",
         bm25_index_path="bm25_chunk_index.pkl",
@@ -17,9 +15,9 @@ class Retriever:
         doc_faiss_enabled=False,
         chunk_faiss_enabled=False,
         bm25_enabled=False,
-        query_rewrite_enabled=False,
         sop_expansion_enabled=False,
         time_filter_enabled=False,
+        add_year_to_query=False,
 
         doc_k=5,
         chunk_k=10,
@@ -27,27 +25,19 @@ class Retriever:
         final_top_k=10,
 
         reranker=None,
-        
-        ai_planner_enabled=False,
-        join_original_and_ai_query=False,
-        planner_llm=None,
     ):
         self.embeddings = embeddings
-        self.data_cutoff = data_cutoff
         self.doc_faiss_enabled = doc_faiss_enabled
         self.chunk_faiss_enabled = chunk_faiss_enabled
         self.bm25_enabled = bm25_enabled
-        self.query_rewrite_enabled = query_rewrite_enabled
         self.sop_expansion_enabled = sop_expansion_enabled
         self.time_filter_enabled = time_filter_enabled
+        self.add_year_to_query = add_year_to_query
         self.doc_k = doc_k
         self.chunk_k = chunk_k
         self.bm_k = bm_k
         self.final_top_k = final_top_k
         self.reranker = reranker
-        self.ai_planner_enabled = ai_planner_enabled
-        self.join_original_and_ai_query = join_original_and_ai_query
-        self.planner_llm = planner_llm
 
         self.tokenize = lambda t: re.findall(r"[a-zA-ZčšžČŠŽ0-9]+", t.lower())
 
@@ -88,34 +78,6 @@ class Retriever:
             sop = doc.metadata.get("sop")
             if sop:
                 self.sop_map.setdefault(sop, []).append(doc)
-
-    # ------------------------------------------------------------
-    # QUERY PROCESSING
-    # ------------------------------------------------------------
-    def plan_query(self, query, start_date, end_date):
-        default_plan = {
-            "rewritten_query": None,
-            "use_doc_faiss": self.doc_faiss_enabled,
-            "use_chunk_faiss": self.chunk_faiss_enabled,
-            "use_bm25": self.bm25_enabled,
-            "apply_time_filter": self.time_filter_enabled,
-            "time_window": [start_date, end_date],
-        }
-        if not self.planner_llm:
-            return default_plan
-
-        prompt = planner_prompt(self.data_cutoff, self.ai_planner_enabled, self.doc_faiss_enabled, self.chunk_faiss_enabled, self.bm25_enabled, self.time_filter_enabled, start_date, end_date, query)
-        res = self.planner_llm.invoke(prompt).content
-        matches = re.findall(r"\{.*?\}", res, re.DOTALL)
-
-        if not matches:
-            return default_plan
-
-        try:
-            return json.loads(matches[-1])
-        except json.JSONDecodeError as e:
-            print(e)
-            return default_plan
             
     # ------------------------------------------------------------
     # RETRIEVAL
@@ -183,7 +145,7 @@ class Retriever:
 
         # default: dataset cutoff
         if not years:
-            return "2024-12-31", "2024-12-31"
+            return "2024-12-31", "2024-12-31", ["2024"]
 
         # if any year is beyond dataset
         if min(years) > 2024:
@@ -193,7 +155,7 @@ class Retriever:
         start_year = min(years)
         end_year = max(years)
 
-        return f"{start_year}-01-01", f"{end_year}-12-31"
+        return f"{start_year}-01-01", f"{end_year}-12-31", years
 
     def to_ts(date_str):
         if not date_str:
@@ -280,82 +242,70 @@ class Retriever:
 
         scored = list(zip(chunks, scores))
         scored.sort(key=lambda x: x[1], reverse=True)
-
+        
         return [c for c, _ in scored]
 
     # ------------------------------------------------------------
     # MAIN PIPELINE
     # ------------------------------------------------------------
+    def retrieve(self, _query, output_mode=None, output_file=None):
+        query = _query
+        start_date, end_date, years = self.detect_time_window(query)
 
-    def retrieve(self, query, output_type=None, output_file=None):
-        start_date, end_date = self.detect_time_window(query)
-        plan = self.plan_query(query, start_date, end_date)
-        print(plan)
-
-        final_query = query
-        if plan["rewritten_query"]:
-            if self.join_original_and_ai_query:
-                final_query = plan["rewritten_query"]
-            else:
-                final_query += "\n" + plan["rewritten_query"]
+        if self.add_year_to_query and len(years) == 1:
+            query += f" {years[0]}"
 
         doc_results = []
         chunk_results = []
         bm25_results = []
 
-        if self.doc_faiss_enabled or plan.get("use_doc_faiss", False):
-            doc_results = self.retrieve_doc_chunks(final_query)
+        if self.doc_faiss_enabled:
+            doc_results = self.retrieve_doc_chunks(query)
 
-        if self.chunk_faiss_enabled or plan.get("use_chunk_faiss", False):
-            chunk_results = self.retrieve_chunks(final_query)
+        if self.chunk_faiss_enabled:
+            chunk_results = self.retrieve_chunks(query)
 
-        if self.bm25_enabled or plan.get("use_bm25", False):
-            bm25_results = self.retrieve_bm25(final_query)
+        if self.bm25_enabled:
+            bm25_results = self.retrieve_bm25(query)
 
-        if self.bm25_enabled or plan.get("sop_expansion", False):
+        if self.bm25_enabled:
             chunk_results = self.expand_sop(chunk_results)
 
         merged = self.merge(doc_results, chunk_results, bm25_results)
 
-        if self.time_filter_enabled or plan.get("apply_time_filter", False):
-            tw = plan.get("time_window") or [start_date, end_date]
-            merged = self.time_filter(merged, tw[0], tw[1])
+        if self.time_filter_enabled:
+            merged = self.time_filter(merged, start_date, end_date)
 
-        merged = self.rerank(final_query, merged)
+        merged = self.rerank(query, merged)
         final_chunks = merged[:self.final_top_k]
 
         if output_file:
-            self.dump_results(query, plan, final_chunks, output_type, output_file)
+            self.dump_results(_query, query, final_chunks, output_mode, output_file)
 
         return final_chunks
     
     def serialize_chunks(self, chunks):
-        return [
-            {
+        return [{
                 "chunk_id": c.metadata.get("chunk_id"),
                 "mopedId": c.metadata.get("mopedId"),
                 "naziv": c.metadata.get("naziv"),
                 "sop": c.metadata.get("sop"),
-
                 "text": c.page_content,
-
                 "veljaOd": c.metadata.get("veljaOd"),
                 "veljaDo": c.metadata.get("veljaDo"),
                 "uporabljaOd": c.metadata.get("uporabljaOd"),
                 "uporabljaDo": c.metadata.get("uporabljaDo"),
                 "sprejeto": c.metadata.get("sprejeto"),
                 "objavljeno": c.metadata.get("objavljeno"),
-            }
-            for c in chunks
-        ]
+            } for c in chunks]
     
-    def dump_results(self, query, plan, chunks, output_type="w", output_file="rag_results.json"):
+    def dump_results(self, og_query, query, chunks, output_mode="w", output_file="rag_results.json"):
         entry = {
-            "query": query,
+            "query": og_query,
+            "edited_query": query,
             "doc_faiss_enabled": self.doc_faiss_enabled,
             "chunk_faiss_enabled": self.chunk_faiss_enabled,
             "bm25_enabled": self.bm25_enabled,
-            "query_rewrite_enabled": self.query_rewrite_enabled,
             "sop_expansion_enabled": self.sop_expansion_enabled,
             "time_filter_enabled": self.time_filter_enabled,
             "doc_k": self.doc_k,
@@ -363,121 +313,13 @@ class Retriever:
             "bm_k": self.bm_k,
             "final_top_k": self.final_top_k,
             "results": self.serialize_chunks(chunks),
-            "ai_plan": plan
         }
 
-        with open(output_file, output_type, encoding="utf-8") as f:
+        with open(output_file, output_mode, encoding="utf-8") as f:
             f.write(json.dumps(entry, ensure_ascii=False, indent=2) + "\n")
         
         print(f"Saved results to {output_file}")
 
-
-if __name__ == "__main__":
-    import torch
-    import json
-    from langchain_huggingface import HuggingFaceEmbeddings
-    from sentence_transformers import CrossEncoder
-    from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
-
-    print("Loading embeddings...")
-
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
-        model_kwargs={
-            "device": "cuda" if torch.cuda.is_available() else "cpu"
-        },
-        encode_kwargs={
-            "normalize_embeddings": True
-        },
-    )
-
-    print("Loading reranker...")
-
-    reranker = CrossEncoder(
-        "BAAI/bge-reranker-base",
-        device="cuda" if torch.cuda.is_available() else "cpu"
-    )
-
-    print("Loading planner LLM...")
-
-    MODEL_NAME = "Qwen/Qwen2.5-3B-Instruct"
-
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-    model = AutoModelForCausalLM.from_pretrained(
-        MODEL_NAME,
-        torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-        device_map="auto"
-    )
-
-    pipe = pipeline(
-        "text-generation",
-        model=model,
-        tokenizer=tokenizer,
-    )
-
-    class PlannerWrapper:
-        def invoke(self, prompt):
-            out = pipe(
-                prompt,
-                max_new_tokens=350,
-                temperature=0.2
-            )
-            class R:
-                content = out[0]["generated_text"]
-            return R()
-
-    planner_llm = PlannerWrapper()
-
-    print("Initializing retrieval system...")
-
-    retrieval = Retriever(
-        embeddings=embeddings,
-
-        doc_faiss_enabled=False,
-        chunk_faiss_enabled=True,
-        bm25_enabled=False,
-        time_filter_enabled=False,
-
-        doc_k=10,
-        chunk_k=100,
-        bm_k=100,
-
-        reranker=reranker,
-
-        ai_planner_enabled=True,
-        planner_llm=planner_llm
-    )
-
-    # --------------------------------------------------------
-    # TEST QUESTION
-    # --------------------------------------------------------
-    question = "Koliko znaša minimalna plača v Sloveniji?"
-
-    print("\nQUESTION:")
-    print(question)
-
-    print("\nRunning retrieval...\n")
-
-    results = retrieval.retrieve(question, output_type="a", output_file="rag_results.jsonl")
-
-    print(f"Retrieved {len(results)} chunks.\n")
-
-    # --------------------------------------------------------
-    # PRINT RESULTS
-    # --------------------------------------------------------
-    for i, doc in enumerate(results):
-        print("naziv", doc.metadata["naziv"])
-        print("  sprejeto", doc.metadata["sprejeto"])
-        print("  objavljeno", doc.metadata["objavljeno"])
-        print("  veljaOd", doc.metadata["veljaOd"])
-        print("  veljaDo", doc.metadata["veljaDo"])
-        print("  uporabljaOd", doc.metadata["uporabljaOd"])
-        print("  uporabljaDo", doc.metadata["uporabljaDo"])
-
-
-
-
-exit()
 # ------------------------------------------------------------
 # TEST RUN
 # ------------------------------------------------------------
@@ -514,8 +356,9 @@ if __name__ == "__main__":
         doc_faiss_enabled=True,
         chunk_faiss_enabled=True,
         bm25_enabled=True,
-        # sop_expansion_enabled=True,
+        sop_expansion_enabled=True,
         time_filter_enabled=True,
+        add_year_to_query=True,
 
         doc_k=10,
         chunk_k=100,
@@ -534,7 +377,7 @@ if __name__ == "__main__":
 
     print("\nRunning retrieval...\n")
 
-    results = retrieval.retrieve(question, output_file="rag_results.json")
+    results = retrieval.retrieve(question, output_mode="w", output_file="rag_results.json")
 
     print(f"Retrieved {len(results)} chunks.\n")
 
