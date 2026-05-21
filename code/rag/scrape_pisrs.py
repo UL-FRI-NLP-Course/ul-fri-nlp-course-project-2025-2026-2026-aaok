@@ -4,8 +4,8 @@ import os
 import pandas as pd
 import requests
 
-INPUT_FILE = "filtered_pisrs.csv"
-OUTPUT_FILE = "pisrs_metadata.jsonl"
+INPUT_FILE = "data/filtered_pisrs.csv"
+OUTPUT_FILE = "data/pisrs_metadata.jsonl"
 API_URL = "https://pisrs.si/api/rezultat/zbirka/id/{}"
 
 SLEEP_TIME = 0.1
@@ -91,6 +91,6 @@ try:
             time.sleep(SLEEP_TIME)
 
 except KeyboardInterrupt:
-    print("\n\n🛑 Interrupted by user (Ctrl+C). Saving progress and exiting cleanly...")
+    print("\n\nInterrupted by user (Ctrl+C). Saving progress and exiting cleanly...")
 except Exception as e:
     print(e)

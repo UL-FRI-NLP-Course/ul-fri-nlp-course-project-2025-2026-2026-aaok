@@ -2,12 +2,14 @@ import pickle
 import re
 from datetime import datetime, timezone
 from langchain_community.vectorstores import FAISS
+from planner_prompt import planner_prompt
 
-class LegalRAGRetrieval:
+class Retriever:
     def __init__(
         self,
         embeddings,
 
+        data_cutoff="2024-12-31",
         doc_index_path="faiss_doc_index",
         chunk_index_path="faiss_chunk_index",
         bm25_index_path="bm25_chunk_index.pkl",
@@ -25,26 +27,27 @@ class LegalRAGRetrieval:
         final_top_k=10,
 
         reranker=None,
-        query_rewriter=None
+        
+        ai_planner_enabled=False,
+        join_original_and_ai_query=False,
+        planner_llm=None,
     ):
         self.embeddings = embeddings
-
+        self.data_cutoff = data_cutoff
         self.doc_faiss_enabled = doc_faiss_enabled
         self.chunk_faiss_enabled = chunk_faiss_enabled
         self.bm25_enabled = bm25_enabled
         self.query_rewrite_enabled = query_rewrite_enabled
         self.sop_expansion_enabled = sop_expansion_enabled
         self.time_filter_enabled = time_filter_enabled
-
         self.doc_k = doc_k
         self.chunk_k = chunk_k
         self.bm_k = bm_k
         self.final_top_k = final_top_k
-
         self.reranker = reranker
-        self.query_rewriter = query_rewriter
-
-        self.chunk_id_map = {}
+        self.ai_planner_enabled = ai_planner_enabled
+        self.join_original_and_ai_query = join_original_and_ai_query
+        self.planner_llm = planner_llm
 
         self.tokenize = lambda t: re.findall(r"[a-zA-ZčšžČŠŽ0-9]+", t.lower())
 
@@ -89,17 +92,31 @@ class LegalRAGRetrieval:
     # ------------------------------------------------------------
     # QUERY PROCESSING
     # ------------------------------------------------------------
-    def process_query(self, query):
-        rewritten = None
-
-        if self.query_rewrite_enabled and self.query_rewriter:
-            rewritten = self.query_rewriter(query)
-
-        return {
-            "original": query,
-            "rewritten": rewritten or query
+    def plan_query(self, query, start_date, end_date):
+        default_plan = {
+            "rewritten_query": None,
+            "use_doc_faiss": self.doc_faiss_enabled,
+            "use_chunk_faiss": self.chunk_faiss_enabled,
+            "use_bm25": self.bm25_enabled,
+            "apply_time_filter": self.time_filter_enabled,
+            "time_window": [start_date, end_date],
         }
+        if not self.planner_llm:
+            return default_plan
 
+        prompt = planner_prompt(self.data_cutoff, self.ai_planner_enabled, self.doc_faiss_enabled, self.chunk_faiss_enabled, self.bm25_enabled, self.time_filter_enabled, start_date, end_date, query)
+        res = self.planner_llm.invoke(prompt).content
+        matches = re.findall(r"\{.*?\}", res, re.DOTALL)
+
+        if not matches:
+            return default_plan
+
+        try:
+            return json.loads(matches[-1])
+        except json.JSONDecodeError as e:
+            print(e)
+            return default_plan
+            
     # ------------------------------------------------------------
     # RETRIEVAL
     # ------------------------------------------------------------
@@ -158,6 +175,26 @@ class LegalRAGRetrieval:
     # ------------------------------------------------------------
     # TIME FILTER
     # ------------------------------------------------------------
+    def detect_time_window(self, query):
+        years = list(
+            y for y in map(int, re.findall(r"\b\d{4}\b", query))
+            if 1991 <= y <= 2100
+        )
+
+        # default: dataset cutoff
+        if not years:
+            return "2024-12-31", "2024-12-31"
+
+        # if any year is beyond dataset
+        if min(years) > 2024:
+            return "2024-12-31", "2024-12-31"
+
+        # normal case
+        start_year = min(years)
+        end_year = max(years)
+
+        return f"{start_year}-01-01", f"{end_year}-12-31"
+
     def to_ts(date_str):
         if not date_str:
             return None
@@ -172,39 +209,48 @@ class LegalRAGRetrieval:
             return None
         return datetime.fromtimestamp(ts, tz=timezone.utc).date().isoformat()
 
-    def time_filter(self, chunks, as_of_ts="2024-12-31"):
+    def time_filter(self, chunks, query_start="2024-12-31", query_end="2024-12-31"):
         if not self.time_filter_enabled:
             return chunks
 
-        as_of_ts = LegalRAGRetrieval.to_ts(as_of_ts)
+        query_start_ts = Retriever.to_ts(query_start)
+        query_end_ts = Retriever.to_ts(query_end)
         filtered = []
         for c in chunks:
             m = c.metadata
-            start = m.get("uporabljaOd_ts") or m.get("veljaOd_ts")
-            end = m.get("uporabljaDo_ts") or m.get("veljaDo_ts")
 
-            # check validity window if exists
-            if start or end:
-                if start and as_of_ts < start:
-                    continue
-                if end and as_of_ts > end:
-                    continue
+            # PRIORITY 1: uporablja
+            start = m.get("uporabljaOd_ts")
+            end = m.get("uporabljaDo_ts")
+
+            # PRIORITY 2: velja
+            # only if both uporablja fields absent
+            if start is None and end is None:
+                start = m.get("veljaOd_ts")
+                end = m.get("veljaDo_ts")
+
+            # PRIORITY 3: objavljeno / sprejeto
+            # only if both velja fields absent too
+            if start is None and end is None:
+                start = m.get("objavljeno_ts") or m.get("sprejeto_ts")
+                end = None
+
+            # no dates = keep
+            if start is None and end is None:
                 filtered.append(c)
                 continue
 
-            # fallback to publication time
-            objavljeno = m.get("objavljeno_ts")
-            sprejeto = m.get("sprejeto_ts")
-            if objavljeno or sprejeto:
-                if sprejeto and sprejeto > as_of_ts:
-                    continue
-                if objavljeno and objavljeno > as_of_ts:
-                    continue
-                filtered.append(c)
-                continue
+            # check overlap
+            doc_start = start if start is not None else float("-inf")
+            doc_end = end if end is not None else float("inf")
+            overlaps = (
+                doc_start <= query_end_ts and
+                doc_end >= query_start_ts
+            )
 
-            # no time metadata = keep
-            filtered.append(c)
+            if overlaps:
+                filtered.append(c)
+
         return filtered
     
     # ------------------------------------------------------------
@@ -240,35 +286,48 @@ class LegalRAGRetrieval:
     # ------------------------------------------------------------
     # MAIN PIPELINE
     # ------------------------------------------------------------
-    def retrieve(self, query, output_file=None):
 
-        q = self.process_query(query)
-        final_query = q["rewritten"]
+    def retrieve(self, query, output_type=None, output_file=None):
+        start_date, end_date = self.detect_time_window(query)
+        plan = self.plan_query(query, start_date, end_date)
+        print(plan)
 
-        doc_results = self.retrieve_doc_chunks(final_query)
-        chunk_results = self.retrieve_chunks(final_query)
-        bm25_results = self.retrieve_bm25(final_query)
-        
-        # for c in doc_results:
-        #     print(c.metadata["chunk_id"], c.metadata["mopedId"], c.metadata["naziv"])
-        
-        # for c in chunk_results:
-        #     print(c.metadata["chunk_id"], c.metadata["mopedId"], c.metadata["naziv"])
-        #     for cc in self.sop_map[c.metadata["sop"]]:
-        #         print(" ", cc.metadata["chunk_id"], c.metadata["mopedId"], cc.metadata["naziv"])
-        
-        # for c in bm25_results:
-        #     print(c.metadata["chunk_id"], c.metadata["mopedId"], c.metadata["naziv"])
+        final_query = query
+        if plan["rewritten_query"]:
+            if self.join_original_and_ai_query:
+                final_query = plan["rewritten_query"]
+            else:
+                final_query += "\n" + plan["rewritten_query"]
 
-        chunk_results = self.expand_sop(chunk_results)
+        doc_results = []
+        chunk_results = []
+        bm25_results = []
+
+        if self.doc_faiss_enabled or plan.get("use_doc_faiss", False):
+            doc_results = self.retrieve_doc_chunks(final_query)
+
+        if self.chunk_faiss_enabled or plan.get("use_chunk_faiss", False):
+            chunk_results = self.retrieve_chunks(final_query)
+
+        if self.bm25_enabled or plan.get("use_bm25", False):
+            bm25_results = self.retrieve_bm25(final_query)
+
+        if self.bm25_enabled or plan.get("sop_expansion", False):
+            chunk_results = self.expand_sop(chunk_results)
+
         merged = self.merge(doc_results, chunk_results, bm25_results)
-        merged = self.time_filter(merged)
-        merged = self.rerank(final_query, merged)
-        final = merged[:self.final_top_k]
-        if output_file:
-            self.dump_results(query, final, output_file)
 
-        return final
+        if self.time_filter_enabled or plan.get("apply_time_filter", False):
+            tw = plan.get("time_window") or [start_date, end_date]
+            merged = self.time_filter(merged, tw[0], tw[1])
+
+        merged = self.rerank(final_query, merged)
+        final_chunks = merged[:self.final_top_k]
+
+        if output_file:
+            self.dump_results(query, plan, final_chunks, output_type, output_file)
+
+        return final_chunks
     
     def serialize_chunks(self, chunks):
         return [
@@ -290,7 +349,7 @@ class LegalRAGRetrieval:
             for c in chunks
         ]
     
-    def dump_results(self, query, chunks, output_file="rag_results.json"):
+    def dump_results(self, query, plan, chunks, output_type="w", output_file="rag_results.json"):
         entry = {
             "query": query,
             "doc_faiss_enabled": self.doc_faiss_enabled,
@@ -303,21 +362,22 @@ class LegalRAGRetrieval:
             "chunk_k": self.chunk_k,
             "bm_k": self.bm_k,
             "final_top_k": self.final_top_k,
-            "results": self.serialize_chunks(chunks)
+            "results": self.serialize_chunks(chunks),
+            "ai_plan": plan
         }
 
-        with open(output_file, "w", encoding="utf-8") as f:
+        with open(output_file, output_type, encoding="utf-8") as f:
             f.write(json.dumps(entry, ensure_ascii=False, indent=2) + "\n")
+        
+        print(f"Saved results to {output_file}")
 
-# ------------------------------------------------------------
-# TEST RUN
-# ------------------------------------------------------------
+
 if __name__ == "__main__":
-
     import torch
     import json
     from langchain_huggingface import HuggingFaceEmbeddings
     from sentence_transformers import CrossEncoder
+    from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
     print("Loading embeddings...")
 
@@ -338,22 +398,54 @@ if __name__ == "__main__":
         device="cuda" if torch.cuda.is_available() else "cpu"
     )
 
+    print("Loading planner LLM...")
+
+    MODEL_NAME = "Qwen/Qwen2.5-3B-Instruct"
+
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_NAME,
+        torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+        device_map="auto"
+    )
+
+    pipe = pipeline(
+        "text-generation",
+        model=model,
+        tokenizer=tokenizer,
+    )
+
+    class PlannerWrapper:
+        def invoke(self, prompt):
+            out = pipe(
+                prompt,
+                max_new_tokens=350,
+                temperature=0.2
+            )
+            class R:
+                content = out[0]["generated_text"]
+            return R()
+
+    planner_llm = PlannerWrapper()
+
     print("Initializing retrieval system...")
 
-    retrieval = LegalRAGRetrieval(
+    retrieval = Retriever(
         embeddings=embeddings,
 
-        doc_faiss_enabled=True,
+        doc_faiss_enabled=False,
         chunk_faiss_enabled=True,
-        bm25_enabled=True,
-        # sop_expansion_enabled=True,
-        time_filter_enabled=True,
+        bm25_enabled=False,
+        time_filter_enabled=False,
 
         doc_k=10,
         chunk_k=100,
         bm_k=100,
 
-        reranker=reranker
+        reranker=reranker,
+
+        ai_planner_enabled=True,
+        planner_llm=planner_llm
     )
 
     # --------------------------------------------------------
@@ -366,7 +458,7 @@ if __name__ == "__main__":
 
     print("\nRunning retrieval...\n")
 
-    results = retrieval.retrieve(question, output_file="rag_results.jsonl")
+    results = retrieval.retrieve(question, output_type="a", output_file="rag_results.jsonl")
 
     print(f"Retrieved {len(results)} chunks.\n")
 
@@ -374,7 +466,7 @@ if __name__ == "__main__":
     # PRINT RESULTS
     # --------------------------------------------------------
     for i, doc in enumerate(results):
-        print("naziv", doc.metadata["naziv"]) 
+        print("naziv", doc.metadata["naziv"])
         print("  sprejeto", doc.metadata["sprejeto"])
         print("  objavljeno", doc.metadata["objavljeno"])
         print("  veljaOd", doc.metadata["veljaOd"])
@@ -382,4 +474,5 @@ if __name__ == "__main__":
         print("  uporabljaOd", doc.metadata["uporabljaOd"])
         print("  uporabljaDo", doc.metadata["uporabljaDo"])
 
-    
+
+

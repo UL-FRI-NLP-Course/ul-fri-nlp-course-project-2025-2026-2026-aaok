@@ -5,8 +5,8 @@ from sklearn.decomposition import PCA
 pd.set_option("display.max_rows", 150)
 pd.set_option("display.max_colwidth", 110)
 
-df = pd.read_csv("similarities.csv")
-_pisrs = pd.read_csv("pisrs.csv")
+df = pd.read_csv("data/similarities.csv")
+_pisrs = pd.read_csv("data/pisrs.csv")
 pisrs = _pisrs.drop(columns=['id', 'mopedId', 'eva', 'epa', 'text'])
 
 sim_cols = [col for col in df.columns if col.startswith("sim_")]
@@ -129,10 +129,10 @@ plt.scatter(df[df["delovno_pravo"]]["pc1"], df[df["delovno_pravo"]]["pc2"], mark
 
 plt.colorbar(label="Maximum similarity")
 plt.legend()
-plt.savefig("pisrs_pca.png", dpi=300, bbox_inches="tight")
+plt.savefig("data/pisrs_pca.png", dpi=300, bbox_inches="tight")
 # plt.show()
 
 filtered_pisrs = _pisrs[_pisrs["sop"].isin(top_df["sop"]) | (_pisrs["delovno_pravo"] == True)]
-filtered_pisrs.to_csv("filtered_pisrs.csv", index=False)
+filtered_pisrs.to_csv("data/filtered_pisrs.csv", index=False)
 print(filtered_pisrs)
 

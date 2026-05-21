@@ -33,12 +33,12 @@ query_embs = model.encode(queries, show_progress_bar=True)
 query_embs = query_embs / np.linalg.norm(query_embs, axis=1, keepdims=True)
 
 print("reading pisrs.csv")
-pisrs_all = pd.read_csv("pisrs.csv", encoding="utf-8")
+pisrs_all = pd.read_csv("data/pisrs.csv", encoding="utf-8")
 print(pisrs_all)
 
 doc_texts = pisrs_all["text"].tolist()
 # doc_embs = model.encode(doc_texts, batch_size=64, show_progress_bar=True)
-doc_embs = np.load("doc_embs.npy")
+doc_embs = np.load("data/doc_embs.npy")
 
 doc_embs = doc_embs / np.linalg.norm(doc_embs, axis=1, keepdims=True)
 sim_matrix = doc_embs @ query_embs.T
@@ -51,7 +51,7 @@ df_sim["naziv"] = pisrs_all["naziv"]
 sim_cols = [f"sim_q{i+1}__{queries[i]}" for i in range(len(queries))]
 df_sim = df_sim[["sop", "naziv", "delovno_pravo"] + sim_cols]
 
-df_sim.to_csv("similarities.csv", index=False)
+df_sim.to_csv("data/similarities.csv", index=False)
 print("Saved similarities.csv")
 
 

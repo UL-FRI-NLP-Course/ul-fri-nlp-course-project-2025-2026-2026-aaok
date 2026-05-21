@@ -26,17 +26,17 @@ dfs = [to_df(f) for f in files]
 pisrs = pd.concat(dfs, ignore_index=True)
 pisrs = pisrs.drop_duplicates(subset='sop', keep='first')
 
-delovno_pravo = pd.read_csv("pisrs_tematsko_kazalo_delovno_pravo.csv")
+delovno_pravo = pd.read_csv("data/pisrs_tematsko_kazalo_delovno_pravo.csv")
 pisrs["delovno_pravo"] = pisrs["sop"].isin(delovno_pravo["SOP"])
 
-pisrs.to_csv("pisrs.csv", index=False, encoding="utf-8")
+pisrs.to_csv("data/pisrs.csv", index=False, encoding="utf-8")
 
 model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 
 doc_texts = pisrs["text"].fillna("").tolist()
 doc_embs = model.encode(doc_texts, batch_size=64, show_progress_bar=True, device="cuda")
 doc_embs = doc_embs / np.linalg.norm(doc_embs, axis=1, keepdims=True)
-np.save("doc_embs.npy", doc_embs)
+np.save("data/doc_embs.npy", doc_embs)
 
 
 

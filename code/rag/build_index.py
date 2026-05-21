@@ -19,9 +19,8 @@ embeddings = HuggingFaceEmbeddings(
     encode_kwargs={"normalize_embeddings": True},
 )
 
-CSV_PATH = "filtered_pisrs.csv"
-METADATA_PATH = "pisrs_metadata.jsonl"
-OUTPUT_PATH = "unified_pisrs.jsonl"
+CSV_PATH = "data/filtered_pisrs.csv"
+METADATA_PATH = "data/pisrs_metadata.jsonl"
 
 # --------------------------------------------------------
 # 1. LOAD CSV (TEXT SOURCE)
