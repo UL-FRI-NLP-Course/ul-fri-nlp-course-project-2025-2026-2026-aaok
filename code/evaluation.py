@@ -7,30 +7,13 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 import logging
 import warnings
+from RAG import Retriever_Full
 logging.getLogger("transformers").setLevel(logging.ERROR)
 warnings.filterwarnings("ignore")
 
-# 1. LOAD FAISS
-print("Loading FAISS index...")
-
-embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
-    model_kwargs={"device": "cuda" if torch.cuda.is_available() else "cpu"},
-    encode_kwargs={"normalize_embeddings": True},
-)
-
-vectorstore = FAISS.load_local(
-    "rag/faiss_index",
-    embeddings,
-    allow_dangerous_deserialization=True
-)
-
-retriever = vectorstore.as_retriever(
-    search_type="mmr",
-    search_kwargs={"k": 3, "fetch_k": 20, "lambda_mult": 0.5},
-)
-
-print("FAISS loaded.")
+# 1. Choose retriever
+# retriever = Retriever_Chunk()
+retriever = Retriever_Full()
 
 # 2. FORMAT CHUNKS
 def format_docs(docs):
@@ -47,6 +30,7 @@ def build_context(chunks):
         f"[Vir: {c['source']}]\n{c['content']}"
         for c in chunks
     )
+
 
 # 3. LOAD MODEL
 
@@ -114,8 +98,7 @@ def build_prompt(context, question):
 
 # 5. SINGLE QUERY FUNCTION
 def ask(question):
-
-    docs = retriever.invoke(question)
+    docs = retriever.retrieve(question, "a", "rag_results.jsonl")
     chunks = format_docs(docs)
     context = build_context(chunks)
 

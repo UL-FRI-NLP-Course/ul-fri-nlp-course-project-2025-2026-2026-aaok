@@ -2,12 +2,13 @@ import pickle
 import re
 from datetime import datetime, timezone
 from langchain_community.vectorstores import FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
+import torch
+import json
 
 class Retriever:
     def __init__(
         self,
-        embeddings,
-
         doc_index_path="faiss_doc_index",
         chunk_index_path="faiss_chunk_index",
         bm25_index_path="bm25_chunk_index.pkl",
@@ -26,7 +27,6 @@ class Retriever:
 
         reranker=None,
     ):
-        self.embeddings = embeddings
         self.doc_faiss_enabled = doc_faiss_enabled
         self.chunk_faiss_enabled = chunk_faiss_enabled
         self.bm25_enabled = bm25_enabled
@@ -41,17 +41,29 @@ class Retriever:
 
         self.tokenize = lambda t: re.findall(r"[a-zA-ZčšžČŠŽ0-9]+", t.lower())
 
+        print("Loading embeddings...")
+
+        self.embeddings = HuggingFaceEmbeddings(
+            model_name="sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
+            model_kwargs={
+                "device": "cuda" if torch.cuda.is_available() else "cpu"
+            },
+            encode_kwargs={
+                "normalize_embeddings": True
+            },
+        )
+
         print("Loading FAISS doc index...")
         self.doc_store = FAISS.load_local(
             doc_index_path,
-            embeddings,
+            self.embeddings,
             allow_dangerous_deserialization=True
         )
 
         print("Loading FAISS chunk index...")
         self.chunk_store = FAISS.load_local(
             chunk_index_path,
-            embeddings,
+            self.embeddings,
             allow_dangerous_deserialization=True
         )
 
@@ -157,7 +169,7 @@ class Retriever:
 
         return f"{start_year}-01-01", f"{end_year}-12-31", years
 
-    def to_ts(date_str):
+    def to_ts(self, date_str):
         if not date_str:
             return None
         try:
@@ -166,7 +178,7 @@ class Retriever:
         except:
             return None
             
-    def from_ts(ts):
+    def from_ts(self, ts):
         if ts is None:
             return None
         return datetime.fromtimestamp(ts, tz=timezone.utc).date().isoformat()
@@ -175,8 +187,8 @@ class Retriever:
         if not self.time_filter_enabled:
             return chunks
 
-        query_start_ts = Retriever.to_ts(query_start)
-        query_end_ts = Retriever.to_ts(query_end)
+        query_start_ts = self.to_ts(query_start)
+        query_end_ts = self.to_ts(query_end)
         filtered = []
         for c in chunks:
             m = c.metadata
@@ -248,7 +260,7 @@ class Retriever:
     # ------------------------------------------------------------
     # MAIN PIPELINE
     # ------------------------------------------------------------
-    def retrieve(self, _query, output_mode=None, output_file=None):
+    def retrieve(self, _query, output_mode="w", output_file=None):
         query = _query
         start_date, end_date, years = self.detect_time_window(query)
 
@@ -268,7 +280,7 @@ class Retriever:
         if self.bm25_enabled:
             bm25_results = self.retrieve_bm25(query)
 
-        if self.bm25_enabled:
+        if self.sop_expansion_enabled:
             chunk_results = self.expand_sop(chunk_results)
 
         merged = self.merge(doc_results, chunk_results, bm25_results)
@@ -324,22 +336,7 @@ class Retriever:
 # TEST RUN
 # ------------------------------------------------------------
 if __name__ == "__main__":
-    import torch
-    import json
-    from langchain_huggingface import HuggingFaceEmbeddings
     from sentence_transformers import CrossEncoder
-
-    print("Loading embeddings...")
-
-    embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
-        model_kwargs={
-            "device": "cuda" if torch.cuda.is_available() else "cpu"
-        },
-        encode_kwargs={
-            "normalize_embeddings": True
-        },
-    )
 
     print("Loading reranker...")
 
@@ -351,8 +348,6 @@ if __name__ == "__main__":
     print("Initializing retrieval system...")
 
     retrieval = Retriever(
-        embeddings=embeddings,
-
         doc_faiss_enabled=True,
         chunk_faiss_enabled=True,
         bm25_enabled=True,
