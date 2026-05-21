@@ -1,0 +1,62 @@
+@startuml
+
+top to bottom direction
+skinparam ranksep 30
+skinparam nodesep 20
+skinparam shadowing false
+skinparam roundcorner 12
+skinparam defaultFontName Arial
+skinparam ArrowColor #444444
+skinparam BackgroundColor transparent
+
+skinparam rectangle {
+  BorderColor #2C3E50
+  FontColor #2C3E50
+}
+
+skinparam package {
+  BorderColor #1F4E79
+  FontColor #1F4E79
+  BackgroundColor #F7F9FB
+}
+
+package "Retriever" {
+
+  rectangle "User Query" as Q
+
+  rectangle "Time Window Detection" as L
+  rectangle "<i>Query year injection</i>" as P
+
+  Q --> L
+  L --> P
+
+  package "Chunk Retrieval" {
+
+    rectangle "<i>FAISS Document Index</i>" as D
+    rectangle "<i>FAISS Chunk Index</i>" as C
+    rectangle "<i>BM25 Index</i>" as B
+
+    rectangle "<i>SOP Expansion</i>" as M
+    rectangle "Merge + Deduplication" as S
+
+    P --> D
+    P --> C
+    P --> B
+
+    D --> S
+    C --> M
+    B --> S
+
+    M --> S
+  }
+
+  rectangle "<i>Time Filtering</i>" as T
+  rectangle "<i>Reranker</i>" as R
+  rectangle "Top-K Output" as O
+
+  S --> T
+  T --> R
+  R --> O
+}
+
+@enduml

@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
+import numpy as np
 
 pd.set_option("display.max_rows", 150)
 pd.set_option("display.max_colwidth", 110)
@@ -9,12 +10,18 @@ df = pd.read_csv("data/similarities.csv")
 _pisrs = pd.read_csv("data/pisrs.csv")
 pisrs = _pisrs.drop(columns=['id', 'mopedId', 'eva', 'epa', 'text'])
 
+
 sim_cols = [col for col in df.columns if col.startswith("sim_")]
-X = df[sim_cols].values
+
+embeddings = np.load("data/doc_embs.npy")
+if len(df) != embeddings.shape[0]: 
+    print("pisrs.csv and embeddings not aligned!")
+    exit()
+
+X = embeddings
 
 pca = PCA(n_components=2)
 X_pca = pca.fit_transform(X)
-
 df["pc1"] = X_pca[:, 0]
 df["pc2"] = X_pca[:, 1]
 
@@ -121,7 +128,8 @@ print("unmatched_delovno\n", unmatched_delovno)
 # print("matched_undelovno\n", matched_undelovno)
 
 plt.scatter(rest_df["pc1"], rest_df["pc2"], c="gray", alpha=0.5, s=10)
-plt.scatter(top_df["pc1"], top_df["pc2"], c=top_df["sim"], alpha=0.5, s=10)
+plot_df = top_df.sort_values("sim", ascending=True)
+plt.scatter(plot_df["pc1"], plot_df["pc2"], c=plot_df["sim"], alpha=0.5, s=10)
 
 # plt.scatter(df["pc1"], df["pc2"], c=df["sim"], alpha=0.5, s=10)
 
@@ -130,7 +138,7 @@ plt.scatter(df[df["delovno_pravo"]]["pc1"], df[df["delovno_pravo"]]["pc2"], mark
 plt.colorbar(label="Maximum similarity")
 plt.legend()
 plt.savefig("data/pisrs_pca.png", dpi=300, bbox_inches="tight")
-# plt.show()
+plt.show()
 
 filtered_pisrs = _pisrs[_pisrs["sop"].isin(top_df["sop"]) | (_pisrs["delovno_pravo"] == True)]
 filtered_pisrs.to_csv("data/filtered_pisrs.csv", index=False)
