@@ -1,0 +1,281 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FRI Data Science_report LaTeX Template
+% Version 1.0 (28/1/2020)
+% 
+% Jure Demšar (jure.demsar@fri.uni-lj.si)
+%
+% Based on MicromouseSymp article template by:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+% With extensive modifications by:
+% Antonio Valente (antonio.luis.valente@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%------------------------------------------------
+\documentclass[fleqn,moreauthors,10pt]{ds_report}
+\usepackage[english]{babel}
+\usepackage{verbatim}
+\usepackage{seqsplit}
+
+\graphicspath{{fig/}}
+
+%------------------------------------------------
+%	ARTICLE INFORMATION
+%------------------------------------------------
+
+% Header
+\JournalInfo{FRI Natural language processing course 2026}
+
+% Interim or final report
+\Archive{Project report} 
+%\Archive{Final report} 
+
+% Article title
+\PaperTitle{AI Assistant for employment rights, contracts, and termination in Slovenia} 
+
+% Authors (student competitors) and their info
+\Authors{Anja Abramovič, Ožbej Kresal}
+
+% Advisors
+\affiliation{\textit{Advisors: Slavko Žitnik}}
+
+% Keywords
+\Keywords{AI assistant, Slovenian legislation, Retrieval-Augmented Generation}
+\newcommand{\keywordname}{Keywords}
+
+%------------------------------------------------
+%	ABSTRACT
+%------------------------------------------------
+
+\Abstract{
+% untouched since submission 1
+Large language models (LLMs) are powerful but often lack the domain-specific knowledge required for accurate legal question answering, particularly in localized contexts such as Slovenian law. In this work, we outline the design of a specialized conversational AI assistant aimed at addressing these limitations, with a focus specifically on labour and workplace-related law. Our approach combines the COLESLAW 1.0 legal corpus with techniques such as Retrieval-Augmented Generation (RAG) to enable context-aware and reliable responses grounded in authoritative sources.
+% untouched since submission 1
+}
+
+%------------------------------------------------
+
+\begin{document}
+
+% Makes all text pages the same height
+\flushbottom 
+
+% Print the title and abstract box
+\maketitle 
+
+% Removes page numbering from the first page
+\thispagestyle{empty} 
+
+%------------------------------------------------
+%	ARTICLE CONTENTS
+%------------------------------------------------
+
+\section*{Introduction}
+% untouched since submission 1
+Although modern large language models are capable of generating fluent and persuasive responses, they are not inherently equipped to handle highly specialized, institution-specific tasks. Their training is based on broad and often globally sourced datasets, which limits their ability to provide precise, localized, and up-to-date information. As a result, they may produce incomplete, inaccurate, or even hallucinated answers when faced with context-dependent queries.
+% untouched since submission 1
+
+This project addresses these limitations by developing a specialized conversational AI assistant focused on labour law within the Slovenian legal system. The system targets employment-related legal domains such as labour contracts, termination of employment, workers’ rights, social security, and related disputes. Rather than relying solely on general-purpose knowledge, the assistant integrates domain-specific legal sources through structured knowledge bases and targeted adaptation techniques, enabling reliable, context-aware legal guidance.
+
+%------------------------------------------------
+
+\section*{Related work}
+In recent years, a growing number of AI-based legal assistants have been developed, particularly in English-speaking countries. One of the most well-known examples is DoNotPay, an AI-powered legal service that automates tasks such as contesting parking tickets and generating legal documents~\cite{donotpay}. Another example is PainWorth, a Canadian platform that uses AI to automate personal injury claims~\cite{painwort}. More advanced systems such as Harvey AI employ large language models to assist legal professionals with research, document drafting, and compliance review~\cite{harveyai}. These systems illustrate a broad spectrum of AI applications in law, ranging from consumer-facing tools to professional-grade platforms.
+
+In Slovenia, such systems are less common. One notable example is Pravko~\cite{pravko}, an AI-based assistant designed to help users navigate legal and administrative procedures. Pravko understands natural language queries and retrieves answers from official sources such as Slovenian legislation and e-government portals. However, existing systems remain limited, highlighting the need for more advanced, data-driven approaches based on large-scale legal datasets and modern language models, which is the focus of our work.
+
+Unlike these systems, our approach focuses specifically on retrieval-grounded question answering for Slovenian labour law with explicit handling of temporally valid legislation.
+% untouched since submission 1
+%------------------------------------------------
+
+\section*{Methods}
+\subsection*{COLESLAW 1.0: Database of Slovene legal texts}
+For the development of our assistant, we use the COLESLAW 1.0 corpus~\cite{coleslaw}, a large-scale collection of Slovenian legal texts. The dataset was published in 2024 as part of the LLM4DH project~\cite{llm4dh} and is specifically designed to support research in legal natural language processing and domain adaptation of language models.
+
+The corpus contains a 31.12.2024 snapshot of 547,799 documents with a total of approximately 772 million words. It aggregates documents from multiple authoritative public sources, including the Legal Information System of the Republic of Slovenia (PISRS), court decisions (SodnaPraksa), the Constitutional Court (USRS), and the Official Gazette (Uradni List).
+
+The dataset covers a wide range of legal domains, including enacted and repealed laws, legislative proposals, lower court decisions, regulations, and official announcements. Documents are stored in a structured JSONL format and include full cleaned text along with source-specific metadata such as document identifiers, titles, legal basis references, document types.
+
+\subsubsection*{Adapting the corpus to labour law}
+To adapt the corpus for a retrieval-augmented generation (RAG) pipeline and to improve computational efficiency, we refined the dataset by selecting a relevant subset of documents. We first encoded all documents using a multilingual sentence embedding model, which enables semantic similarity comparison between legal texts and queries.
+
+We then defined 8 representative queries related to labour law covering key use cases such as employment contracts, termination procedures, workers’ rights, and social security benefits. For each query, we computed cosine similarity scores between the query embedding and all document embeddings in the corpus. Finally, we retrieved the top 750 most relevant documents per query, resulting in a curated subset of the original COLESLAW 1.0 dataset that is better aligned with the target domain and more suitable for efficient RAG-based retrieval. The retrieval size was chosen empirically to balance domain coverage and the size of the final document set.
+
+To guide query design and assess their coverage, we used the thematic classification available in the PISRS system, specifically the section on \textit{Delovno pravo}. This subset was treated as a proxy ground truth for relevant labour law documents. We evaluated the quality of each query by measuring how many of these reference documents were retrieved among its top-ranked results. This approach allowed us to iteratively refine the query set to better capture the target domain and improve retrieval relevance. The final split of relevant and irrelevant documents using this strategy can be seen in Figure~\ref{fig:pisrs_pca}.
+
+\subsubsection*{Scraping document validity information from the PISRS website}
+To allow us to filter documents by their validity, we implemented a simple web-scraper which gathered temporal information for all relevant PISRS documents (including fields such as: \texttt{sprejeto}, \texttt{objavljeno}, \texttt{velja\_od}, \texttt{velja\_do}, \texttt{uporablja\_od}, \texttt{uporablja\_do}). % maybe rewrite
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1.0\columnwidth]{pisrs_pca.png} % png instead of pdf cuz pdf lags
+\caption{Final split of relevant (coloured according to their maximum cosine similarity to any query embedding) and irrelevant (grey) PISRS document embeddings in a 2D PCA projection. The proxy ground truth known labour law documents are shown as red dots.}
+\label{fig:pisrs_pca}
+\end{figure}
+
+\subsection*{Retrieval-Augmented Generation}
+\subsubsection*{Document Chunking}
+To prepare the filtered PISRS documents for retrieval-augmented generation, we apply a chunking strategy tailored to legal text.
+
+Each document is first split according to its natural legal structure. When available, we segment by legal articles (člen), as these represent self-contained legal units. If no article structure is present, the document is treated as a single continuous block.
+
+Large segments are further divided along paragraph boundaries. Instead of using a fixed token or character limit, paragraphs are grouped to form chunks of approximately balanced size. This preserves semantic coherence while avoiding overly fragmented or uneven chunks. To maintain context across neighbouring chunks, chunks are overlapped by one paragraph within segments.
+
+\subsubsection*{Chunk retrieval}
+The retrieval system is composed of multiple modular components, whose information flow is shown in Figure~\ref{fig:rag_architecture}. Components that can be independently enabled or disabled to control behaviour and performance are marked in \textit{italic}.
+\begin{itemize}
+    \itemsep0em
+    \item \textbf{Time Window Detection}: detects temporal constraints in the query (years or year ranges). If no temporal signal is present, the system defaults to the dataset cutoff date (31.12.2024). Detected years are mapped to a query validity window which is later used for filtering.
+    \item \textbf{\textit{Query year injection}}: optionally appends detected year(s) to the query string to improve lexical and embedding-based retrieval performance.
+    \item \textbf{Chunk retrieval}: the system retrieves candidates using multiple independent retrieval branches:
+    \begin{itemize}
+        \itemsep0em
+        \item \textbf{\textit{FAISS document retrieval}}: retrieves relevant legal acts using document-level embeddings. Retrieved documents are expanded into their associated chunks via SOP, the unique identifier of a legal act, in PISRS grouping.
+        \item \textbf{\textit{FAISS chunk retrieval}}: retrieves relevant chunks directly using embedding similarity search over chunk-level representations.
+        \item \textbf{\textit{SOP expansion}}: post-retrieval expansion step after FAISS chunk retrieval that ensures all chunks belonging to the same legal act (SOP) as retrieved items are included in the candidate set.
+        \item \textbf{\textit{BM25 retrieval}}: retrieves chunks using sparse keyword matching based on token overlap.
+        \item \textbf{Merge + Deduplication}: all retrieved chunks from FAISS and BM25 are merged into a single candidate set, with duplicates removed.
+    \end{itemize}
+    \item \textbf{\textit{Time-based filtering}}: filters retrieved chunks based on legal validity intervals. Only chunks valid at any time during query time window are retained.
+    \item \textbf{\textit{Reranker}}: a cross-encoder model re-scores all candidate chunks and produces the final ranked list of most relevant results.
+\end{itemize}
+
+We also experimented with using an LLM to rewrite queries into more legal terminology and to dynamically select retrieval components. However, this added complexity without providing sufficiently consistent improvements in retrieval quality, so the approach was ultimately abandoned.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=1.0\columnwidth]{retriever.pdf}
+\caption{UML diagram of the retrieval architecture, showing document, chunk, and hybrid retrieval components in the RAG system. Optional components are shown in italic.}
+\label{fig:rag_architecture}
+\end{figure}
+\
+
+\subsection*{Language Model and Generation}
+We evaluated five language models for Slovenian labour law question answering, these were Meta-Llama-3.1-8B-Instruct, Mistral-7B-Instruct-v0.3, Phi-3.5-mini-instruct, GaMS3-12B-Instruct, and Qwen2.5-7B-Instruct. Phi was excluded from further evaluation as it produced responses predominantly in English rather than Slovenian. From the remaining models, GaMS3 and Qwen2.5 performed the best and are the focus of our evaluation.
+\textbf{GaMS3-12B-Instruct}~\cite{gams3} is a 12-billion parameter instruction-tuned model developed by the Centre for Language Resources and Technologies at the University of Ljubljana (CJVT), specifically designed for Slovenian and other South Slavic languages.
+\textbf{Qwen2.5-7B-Instruct}~\cite{qwen25} is a 7-billion parameter multilingual model developed by Alibaba Cloud, supporting over 29 languages including Slovenian. 
+
+Both models were prompted with the same instruction template. The prompt instructed the model to answer exclusively based on the provided legal sources, cite specific laws and article numbers, and respond in Slovenian. Retrieved chunks were included as a list.
+
+
+%------------------------------------------------
+\break % to force the uml to be before results title
+\section*{Results and discussion}
+\subsection*{RAG Evaluation}
+We evaluated eleven retriever configurations to identify the most effective setup for legal document retrieval. The configurations varied across three retrieval methods: FAISS document-level retrieval, FAISS chunk-level retrieval, and BM25 sparse keyword search. Additionally, we tested the effect of optional components including query year injection, SOP expansion, time-based validity filtering, and neural reranking using a cross-encoder model. Retrieval quality was measured on a set of 20 questions annotated with expected source documents and 25 specific legal articles (členi).
+
+From all retrieval methods, document-level retrieval performed the worst, retrieving only 1 correct article out of 25. Although document-level retrieval frequently retrieved the correct legal acts, expanding entire documents into chunks introduced many semantically similar but irrelevant articles, making it difficult for the reranker to identify the chunk containing the correct answer.
+
+BM25-only retrieval achieved 6 correct articles, as keyword-based matching struggled with legal paraphrasing and terminological variation, while chunk-level FAISS outperformed both with 15 correct articles due to its ability to capture semantic similarity between queries and legal text. Adding query year injection improved this to 16, confirming that appending temporal context to the query improves retrieval of time-sensitive documents. Time-based validity filtering further helped by excluding outdated document versions, while SOP expansion showed no consistent improvement, likely suffering from the same problem as document-level retrieval.
+
+Combining retrieval methods with a reranker did not consistently improve results. While hybrid retrievers succeeded in retrieving all correct sources, they also retrieved a significantly larger number of irrelevant articles, which reduced article-level precision, with the best combined configuration retrieving 14 correct articles. Notably, these configurations were the only ones able to retrieve the correct minimum wage article, which other methods consistently missed. However, this gain did not outweigh the overall loss in article-level precision.
+
+Based on these findings, we assembled a final configuration combining chunk FAISS and BM25 retrieval with query year injection and time-based validity filtering, without SOP expansion or reranking. This configuration achieved the best balance between document-level and article-level recall, and is used for all generation experiments. 
+
+\begin{table}[h]
+\centering
+\caption{Comparison of baseline and best retriever configurations.}
+\begin{tabular}{p{5cm}cc}
+\hline
+\textbf{Retriever} & \textbf{Sources} & \textbf{Articles} \\
+\hline
+Baseline (Chunk only) & 15/20 & 14/25 \\
+Chunk + BM25 + year + time filter & 20/20 & 19/25 \\
+\hline
+\end{tabular}
+\label{tab:retriever}
+\end{table}
+
+\subsection*{Model Evaluation}
+To evaluate generation quality independently of retrieval errors, we assessed model answers only on questions where the correct legal sources were successfully retrieved. Answers were manually evaluated on a three-point scale: correct (the answer matches the expected answer and cites the appropriate legal source), partially correct (the answer contains relevant information but is incomplete, cites a wrong article, or includes unnecessary incorrect details), or incorrect (the answer contradicts the expected answer or is based on a hallucinated legal source).
+
+\begin{table}[h]
+\centering
+\caption{Manual evaluation of model answers on questions with correct retrieval.}
+\begin{tabular}{lccc}
+\hline
+\textbf{Model} & \textbf{Correct} & \textbf{Partial} & \textbf{Incorrect} \\
+\hline
+GaMS3-12B & 13/15 & 1/15 & 1/15 \\
+Qwen2.5-7B & 11/15  & 2/15 & 2/15 \\
+\hline
+\end{tabular}
+\label{tab:model_eval}
+\end{table}
+
+Both models performed well on simple factual questions with short expected answers. For yes/no questions such as whether a contract must be in written form, whether an employee is entitled to a paid break, or whether annual leave can be taken in multiple parts, both models answered correctly and cited the appropriate legal article. Similarly, for numeric questions such as the length of the full working week (40 hours), the minimum daily rest period (12 hours), or the break entitlement during full working hours (30 minutes), both models consistently returned correct answers.
+
+On more complex questions, both models occasionally provided incomplete answers, omitting relevant details, for example, when asked about the rights of pregnant workers, neither model explicitly mentioned the prohibition on night work or the prohibition on termination of employment during pregnancy.
+
+A notable failure for both models was the question about additional leave entitlement for workers over 50 in the metal industry. Both models incorrectly stated that workers are entitled to additional days of leave based on age, with answers ranging from 3 to 5 extra days. In reality, the collective agreement for the metal industry does not define additional leave based on age, additional leave is determined solely by years of service and working conditions.
+
+GaMS3 produced more accurate and more comprehensive answers on several questions. On the question about the powers of the labour inspector, GaMS3 correctly cited the Labour Inspection Act (ZID-1), while Qwen included irrelevant information about safety on ski slopes. Similarly, on the question about conditions for fixed-term contracts, GaMS3 correctly listed all the legally defined cases from ZDR-1 Article 54, while Qwen gave a vague and incomplete answer and occasionally produced malformed multilingual text, suggesting instability in language generation.
+
+%------------------------------------------------
+
+\section*{Conclusion}
+In this work, we presented the design and evaluation of a specialized conversational AI assistant for Slovenian labour law. By combining the COLESLAW 1.0 legal corpus with a retrieval-augmented generation pipeline, the system is able to provide context-aware answers grounded in authoritative legal sources rather than relying solely on the internal knowledge of large language models.
+
+Our experiments showed that careful adaptation of the legal corpus and retrieval pipeline design are crucial for achieving reliable performance. Among the tested retrieval approaches, chunk-level semantic retrieval combined with BM25 keyword search, query year injection, and time-based filtering achieved the best balance between source recall and article-level precision. The results also demonstrate that retrieval quality has a direct impact on answer correctness, emphasizing the importance of accurate legal source selection in domain-specific AI systems.
+
+In the generation stage, both evaluated language models were capable of producing useful legal answers when provided with relevant sources, with GaMS3-12B showing the strongest overall performance and the most stable Slovenian language generation. Nevertheless, the evaluation also revealed persistent challenges, particularly on more complex legal questions where models may omit important details or hallucinate unsupported interpretations. These findings highlight that even retrieval-grounded systems still require careful validation in high-stakes legal settings.
+
+Future work could focus on expanding the evaluation dataset, improving temporal reasoning over changing legislation, and integrating stronger citation verification mechanisms. Additional improvements may also include fine-tuning models directly on Slovenian legal question-answering tasks and extending the assistant to other areas of Slovenian law. Overall, the presented system demonstrates that retrieval-augmented language models can provide a strong foundation for practical legal assistance in low-resource and highly specialized legal domains such as Slovenian labour law.
+
+%------------------------------------------------
+%	REFERENCE LIST
+%------------------------------------------------
+\bibliographystyle{unsrt}
+\bibliography{report}
+
+
+
+
+
+
+
+%------------------------------------------------
+%	COMMENTS STORAGE
+%------------------------------------------------
+\begin{comment}
+\subsection*{Evaluation}
+
+The performance of the system will be evaluated using both qualitative and comparative approaches. We will compare the generated answers with existing legal question-answering platforms, such as publicly available answers from Moj Mali Pravnik~\cite{mojmalipravnik} and the Pravko~\cite{pravko} system.
+
+%https://www.mojmalipravnik.net/index.php/objavljeni-odgovori
+%https://app.pravko.si/
+
+Evaluation will focus on:
+\begin{itemize}
+    \item \textbf{Accuracy:} correctness of the legal information
+    \item \textbf{Source support:} whether the answer is supported by retrieved documents
+    \item \textbf{Clarity:} readability and usefulness of the response
+\end{itemize}
+\end{comment}
+%\subsection*{Initial Idea}
+\begin{comment}
+We evaluated eleven retriever configurations to identify the most effective setup for legal document retrieval. The configurations varied across three retrieval methods: FAISS document-level retrieval, FAISS chunk-level retrieval, and BM25 sparse keyword search. Additionally, we tested the effect of optional components including query year injection, SOP expansion, time-based validity filtering, and neural reranking using a cross-encoder model.
+    
+To assess the behaviour of the RAG pipeline, we tested the system on a set of employment law questions and manually examined both the generated answers and the retrieved chunks. This allowed us to identify cases where retrieval works well and cases where it fails.
+\subsubsection*{Successful Retrieval Cases}
+The system performed well on questions that map directly to a single, clearly titled law present in the corpus. A representative example is the question \textit{"Katere so obveznosti delodajalca glede varnosti in zdravja pri delu?"}, for which the retriever correctly identified three relevant chunks from the Zakon o varnosti in zdravju pri delu (ZVZD-1). The generated answer accurately summarised the retrieved content, cited the correct law and article, and was written in Slovenian.
+\subsubsection*{Problematic Retrieval Cases}
+Several failures were identified. Questions requiring a specific law not well represented in the corpus produce poor results. For \textit{"Kako dolgo se hranijo evidence o delovnem času?"}, the retriever returned a chunk from a implementing regulation specifically about working hours of road transport workers, rather than a general regulation. The model produced a technically correct but overly narrow answer that does not apply to most workers. 
+
+Another problem are questions involving frequently updated legal values such as \textit{"Koliko znaša minimalna plača v Sloveniji?"}. They are problematic because the corpus contains outdated versions of the relevant documents. The retriever correctly identified a document titled \textit{Znesek minimalne plače}, but the retrieved chunk cited the 2015 value of 790.73 EUR, which is no longer current.
+
+\subsection*{Comparison with MojMaliPravnik}
+To evaluate the practical usefulness of the system, we compared its answers to legal answers published on Moj Mali Pravnik ~\cite{mojmalipravnik} . For the question \textit{"Koliko dodatnega dopusta mi pripada nad 50 let v kovinski industriji?"}, our system correctly retrieved and cited 26. člen of the 
+Collective Agreement for the Metal Industry of Slovenia including the correct table of additional leave days based on years of working. However, our system incorrectly suggested that being over 50 years old itself entitles the worker to additional leave, while the expert answer correctly clarified that age is not a criterion in this collective agreement.
+
+For \textit{"Si po dopolnjenem 55 letu res starejši delavec in kakšne so tvoje pravice?"}, the answer from Moj Mali Pravnik ~\cite{mojmalipravnik}  identified three key rights from ZDR: protection against overtime and night work without written consent, the right to part-time work upon partial retirement, and three additional days of annual leave. Our system retrieved the ZDR, but produced an incomplete answer covering only the part-time work right. It also incorrectly cited a collective agreement provision about healthcare workers over 50 as applying to starejši delavec rights, confusing two different legal concepts.
+
+For \textit{"Delavcu v gostinstvu in turizmu res pripada 1 cel prosti vikend na mesec po zakonu?"}, our system correctly retrieved the relevant Collective Agreement for the Hospitality and Tourism Sector and correctly answered that a full free weekend per month is not guaranteed by law, only 24 hours of uninterrupted weekly rest. The expert answer was more complete, also covering restrictions on irregular working hours for specific groups of workers. Overall, our system produced a concise and accurate answer for this question.
+\end{comment}
+
+\end{document}
