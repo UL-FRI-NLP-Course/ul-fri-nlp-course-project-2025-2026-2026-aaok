@@ -1,0 +1,258 @@
+[
+  {
+    "rag": "Retriever_Full_best",
+    "sources_correct": "20/21",
+    "cleni_correct": "19/25",
+    "details": [
+      {
+        "question": "Koliko dni letnega dopusta pripada delavcu?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "159. člen": false,
+              "162. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Katere so obveznosti delodajalca glede varnosti pri delu?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o varnosti in zdravju pri delu (ZVZD-1)",
+            "source_found": true,
+            "cleni": {
+              "19. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Katere so pravice nosečnice pri delu?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "184. člen": true,
+              "185. člen": true
+            }
+          },
+          {
+            "expected_source": "Pravilnik o varovanju zdravja pri delu nosečih delavk, delavk, ki so pred kratkim rodile ter doječih delavk",
+            "source_found": true,
+            "cleni": {}
+          }
+        ]
+      },
+      {
+        "question": "Koliko znaša minimalna plača v Sloveniji?",
+        "source_results": [
+          {
+            "expected_source": "Znesek minimalne plače",
+            "source_found": false,
+            "cleni": {}
+          }
+        ]
+      },
+      {
+        "question": "Kakšne so pristojnosti inšpektorja za delo pri nadzoru?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o inšpekciji dela (ZID-1)",
+            "source_found": true,
+            "cleni": {
+              "2. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Kakšni so pogoji za sklenitev pogodbe o zaposlitvi za določen čas?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "54. člen": true,
+              "55. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Koliko dodatnega dopusta mi pripada nad 50 let v kovinski industriji?",
+        "source_results": [
+          {
+            "expected_source": "Kolektivna pogodba za kovinsko industrijo Slovenije",
+            "source_found": true,
+            "cleni": {
+              "26. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Si po dopolnjenem 55 letu res starejši delavec in kakšne so tvoje pravice?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "201. člen": false,
+              "202. člen": true,
+              "203. člen": false,
+              "159. člen": false
+            }
+          }
+        ]
+      },
+      {
+        "question": "Delavcu v gostinstvu in turizmu res pripada 1 cel prosti vikend na mesec po zakonu?",
+        "source_results": [
+          {
+            "expected_source": "Kolektivna pogodba dejavnosti gostinstva in turizma Slovenije",
+            "source_found": true,
+            "cleni": {
+              "43. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Imam pogodbo za določen čas. Koliko časa vnaprej mi mora delodajalec povedati, da je ne bo podaljšal?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "79. člen": false
+            }
+          }
+        ]
+      },
+      {
+        "question": "Ali mora delodajalec delavcu izplačati regres za letni dopust?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "131. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Ali ima delavec pravico do plačanega odmora med delom?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "154. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Ali se letni dopust lahko izrabi v več delih?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "162. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Ali mora biti pogodba o zaposlitvi sklenjena v pisni obliki?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "17. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Ali lahko delodajalec odpove pogodbo o zaposlitvi ustno?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "81. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Koliko ur znaša polni delovni čas na teden?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "143. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Koliko tednov znaša minimalni letni dopust?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "159. člen": false
+            }
+          }
+        ]
+      },
+      {
+        "question": "Koliko ur počitka mora imeti delavec med dvema delovnima dnevoma?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "155. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Koliko ur odmora med delom pripada delavcu pri polnem delovnem času?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "154. člen": true
+            }
+          }
+        ]
+      },
+      {
+        "question": "Koliko dni ima delavec za izredno odpoved pogodbe?",
+        "source_results": [
+          {
+            "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
+            "source_found": true,
+            "cleni": {
+              "109. člen": true
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

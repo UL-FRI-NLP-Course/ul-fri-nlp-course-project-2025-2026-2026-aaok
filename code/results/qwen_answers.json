@@ -1,0 +1,107 @@
+[
+  {
+    "question": "Katere so obveznosti delodajalca glede varnosti pri delu?",
+    "expected_answer": "Delodajalec je dolžan zagotoviti varnost in zdravje delavcev pri delu. V ta namen mora izvajati ukrepe, potrebne za zagotovitev varnosti in zdravja delavcev, vključno s preprečevanjem nevarnosti pri delu, obveščanjem in usposabljanjem delavcev, ustrezno organiziranostjo ter potrebnimi materialnimi sredstvi. Delodajalec mora izdelati in sprejeti izjavo o varnosti z oceno tveganja v pisni obliki, v kateri opredeli načine in ukrepe za zagotovitev varnosti in zdravja pri delu.",
+    "answer": "Delodajalec je odgovoren za zagotavljanje varnosti in zdravja pri delu, kar pomeni, da mora:\n1. Usposabljalca poveriti za opravljanje nalog varnosti pri delu, medtem ko zdravstvene ukrepe izvaja izvajalec medicine dela (19. člen ZVZD-1).\n2. Obveščati delavce o novih tehnologijskih rešitvah, nevarnostih in navodilah za varno delo (19. člen ZVZD-1).\n3. Usposabljalca delavce za varno in zdravo delo (19. člen ZVZD-1).\n4. Zagotavljati osebno varovalno opremo in jo uporabljati, če sredstva za delo in delovno okolje ne zagotavljajo dostske varnosti (19. člen ZVZD-1).\n5. Preverjati delovno okolje in delovno opremo z obdobnimi preiskavami in preizkusi (19. člen ZVZD-1).",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:17:23.040633"
+  },
+  {
+    "question": "Katere so pravice nosečnice pri delu?",
+    "expected_answer": "Delavka med nosečnostjo in doječim materam ni dolžna opravljati dela ponoči, če to ni združljivo z njenim zdravstvenim stanjem, kar potrdi zdravnik. Delodajalec mora nosečo delavko, delavko, ki je rodila v zadnjih šestih mesecih ali doji otroka, prerazporediti na drugo delovno mesto, ki je zanjo primerno, če bi opravljanje dosedanjega dela ogrozilo njeno varnost ali zdravje. Delodajalec ne sme odpovedati pogodbe o zaposlitvi delavki med nosečnostjo ter ves čas, ko doji otroka.",
+    "answer": "Nosečnice pri delu imajo pravico do plačane odsotnosti za preventivne preglede v zvezi z nosečnostjo, porodom in dojenjem, ki jih ni mogoče opraviti izven rednega delovnega časa (videz 7. člen Pravilnika o varovanju zdravja pri delu nosečih delavk, delavk, ki so pred kratkim rodile ter doječih delavk). Tukaj se upošteva, da delavka ne sme opravljati del, ki bi lahko ogrozila njeno zdravje ali zdravje otroka zaradi izpostavljenosti dejavnikom tveganja ali delovnim pogojem, ki jih določa podzakonski akt (videz 184. člen Zakona o delovnih razmerjih).",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:17:34.249828"
+  },
+  {
+    "question": "Kakšne so pristojnosti inšpektorja za delo pri nadzoru?",
+    "expected_answer": "Inšpektor za delo opravlja nadzor nad izvajanjem zakonov, drugih predpisov, kolektivnih pogodb in splošnih aktov, ki urejajo delovna razmerja, plače in druge prejemke iz delovnega razmerja, zaposlovanje delavcev doma in v tujini, varnost delavcev pri delu ter v primerih, določenih z zakonom, tudi nadzor nad zaposlovanjem in delom tujcev. Inšpektor je pri opravljanju nalog inšpekcijskega nadzora pooblaščen vstopiti v prostore in objekte delodajalca ter pregledati dokumentacijo in poslovne knjige.",
+    "answer": "Inšpektor za delo ima pravico in dolžnost opravljati preglede po uradni dolžnosti in sestavljati zapisnike o opravljenem nadzoru. Morajo tudi varovati tajnost osebnih in drugih podatkov, s katerimi se seznami. Področje nadzora vključuje skladnost z zakonodajo o sistemizaciji, zaposlovanju, natečajnih postopkih, ocenjevanju delovnih kvalitet in premestitvah. Inšpektor tudi nadzira izvajanje zakonov in predpisov, ki se nanašajo na varnost na smučiščih in zdravje pri delu. Za podrobnejše pravice in dolžnosti glede inšpektorjev se obrnite na Zakon o inšpekciji dela (ZID-1) in Zakon o varnosti na smučiščih (ZVSmuč-1).",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:18:05.855888"
+  },
+  {
+    "question": "Kakšni so pogoji za sklenitev pogodbe o zaposlitvi za določen čas?",
+    "expected_answer": "Pogodba o zaposlitvi za določen čas se lahko sklene le v primerih, ki jih določa zakon: za izvrševanje dela, ki po svoji naravi traja določen čas, za nadomeščanje začasno odsotnega delavca, za začasno povečan obseg dela, za zaposlitev tujca ali osebe brez državljanstva, ki ima delovno dovoljenje za določen čas, za poslovodne osebe, za vodilne delavce, za delavce, ki delajo krajši delovni čas in v drugih primerih, ki jih določa zakon. Skupna doba trajanja pogodb o zaposlitvi za določen čas med istima strankama ne sme presegati dveh let.",
+    "answer": "Pogodba o zaposlitvi za določen čas lahko sklepa delodajalec, če je sklicovan primer iz zakona ali kolektivne pogodbe, ali pa je delavec odgovoran za izpolnjevanje pogojev za opravljanje dela, ki jih določa delodajalec ali kolektivna pogodba. Po 54. členu Zakona o delovnih razmerjih (ZDR-1) mora delodajalec delavcu izročiti pisni predlog pogodbe o zaposlitvi najmanj tri dni pred predvidenim dnem sklenitve. Pogoji za opravljanje dela morajo biti določeni z splošnim akтом ali na posameznem delovnem mestu. Za več podrobnosti se obrnite na pravničko literатuro ali pravničega poročalca.",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:18:22.237421"
+  },
+  {
+    "question": "Koliko dodatnega dopusta mi pripada nad 50 let v kovinski industriji?",
+    "expected_answer": "Kolektivna pogodba za kovinsko industrijo ne določa posebnega dodatnega dopusta glede na starost delavca. Dodatni dnevi letnega dopusta so določeni glede na skupno delovno dobo in pogoje dela. Za starost nad 50 let posebne določbe v tej kolektivni pogodbi ni.",
+    "answer": "V kovinski industriji nad 50 let starosti pripašte dodatni 5 dni letnega dopusta. To je določeno v členu 29. členu kolektivne pogodbe za dejavnost kovinskih materialov in livarn Slovenije, kjer je navedeno, da \"Delavcu, ki je dopolnil 50 let starosti, delavcu z najmanj 60% telesno okvaro ter delovnemu invalidu, delavcu, ki neguje in varuje težje telesno ali zmerno, težje ali težko duševno prizadete osebe, se letni dopust poveča za pet dni.\"",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:18:35.834311"
+  },
+  {
+    "question": "Delavcu v gostinstvu in turizmu res pripada 1 cel prosti vikend na mesec po zakonu?",
+    "expected_answer": "Ne, delavcu v gostinstvu in turizmu ne pripada cel prosti vikend (sobota in nedelja skupaj) na mesec. Delavec ima pravico do tedenskega počitka, ki traja nepretrgoma najmanj 24 ur. Če mora delavec delati na dan tedenskega počitka, se mu zagotovi tedenski počitek na kateri drug dan v tednu.",
+    "answer": "Za to vprašanje vam priporočam posvet s pravnikom. Že izvedeno pravilnik v navedenih kolektivnih pogodbah in zakonih ne vključuje obvezne postavitve za en celotni prosti vikend na mesec. Pravice delavcev glede počitkov in letnjega dopusta so opredeljene z določbami o tedenskem počitku, minimalnem letnem dopustu in odmorih med delom, vendar ni zahteva za en celotni prosti vikend na mesec.",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:18:57.912419"
+  },
+  {
+    "question": "Ali mora delodajalec delavcu izplačati regres za letni dopust?",
+    "expected_answer": "Da",
+    "answer": "Da, mora delodajalec delavcu izplačati regres za letni dopust. To je enakopravno zahtevev, ki jih zakon o delovnih razmerjih (ZDR-1) in različne kolektivne pogodbe začrtava. Po ZDR-1, član 131, mora delodajalec izplačati regres najmanj v višini minimalne plače, in to najkasneje do 1. julija tekočega koledarskega leta. V primeru nelikvidnosti delodajalca se lahko izplačilo regresa odvijalo v več delih, kot je navedeno v kolektivnih pogodbah.",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:19:15.699534"
+  },
+  {
+    "question": "Ali ima delavec pravico do plačanega odmora med delom?",
+    "expected_answer": "Da",
+    "answer": "Da, delavec ima pravico do plačanega odmora med delom. Po zakonu o delovnih razmerjih (ZDR-1) je delavec, ki dela polni delovni čas, upravičen do odmora trajajočega 30 minut med dnevnim delom. Čas odmora se vključuje v delovni čas (član 154 ZDR-1).",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:19:27.727824"
+  },
+  {
+    "question": "Ali se letni dopust lahko izrabi v več delih?",
+    "expected_answer": "Da",
+    "answer": "Da, se letni dopust lahko izrabi v več delih. Po zakonu o delovnih razmerjih (ZDR-1) je letni dopust mogoče izrabiti v več delih, s tem, da mora en del trajati najmanj dva tedna (član 162(1)). Ta pravilo velja za vse delavce, brez odličij glede na vrsto delovne skupine ali druge kriterije.",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:19:47.167674"
+  },
+  {
+    "question": "Ali mora biti pogodba o zaposlitvi sklenjena v pisni obliki?",
+    "expected_answer": "Da",
+    "answer": "Da, pogodba o zaposlitvi mora biti sklenjena v pisni obliki. To je določeno v 17. členu Zakona o delovnih razmerjih (ZDR-1), kjer je navедeno: \"Pogodba o zaposlitvi se sklene v pisni obliki.\"",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:19:56.402687"
+  },
+  {
+    "question": "Ali lahko delodajalec odpove pogodbo o zaposlitvi ustno?",
+    "expected_answer": "Ne",
+    "answer": "Delodajalec ni dovoljen odpoveti pogodbo o zaposlitvi ustno. Po Zakonu o delovnih razmerjih (ZDR-1), član 82, odstavek 1, pogodbeni stranki lahko odpovesta pogodbo o zaposlitvi z odpovednim rokom - redno odpoved, kjer je potrebnega odpovednega roka, ali pa brez odpovednega roka - izredna odpoved.",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:20:06.090539"
+  },
+  {
+    "question": "Koliko ur znaša polni delovni čas na teden?",
+    "expected_answer": "40 ur",
+    "answer": "Polni delovni čas znaša največ 40 ur tedensko. To velja običajno, vendar je možno določiti krajši polni delovni čas, vendar ne manj kot 36 ur na teden, glede na specifične pogojne ali zakonske pravice delavcev. Zакон o delovnih razmerjih (ZDR-1), статтa 143.",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:20:16.746042"
+  },
+  {
+    "question": "Koliko ur počitka mora imeti delavec med dvema delovnima dnevoma?",
+    "expected_answer": "12 ur",
+    "answer": "Delavec, ki deluje polni delovni čas, ima pravico do počitka med dvema dnevoma v trajanju najmanj 12 zaporednih ur, glede na zakon o delovnih razmerjih (ZDR-1), član 155(1). Če je delovni čas neenakomerno razporejen ali začasno prerazporejen, je ta minimalno dolžina počitka 11 zaporednih ur, še enkrat glede na isti zakon, član 155(2).",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:20:34.871599"
+  },
+  {
+    "question": "Koliko ur odmora med delom pripada delavcu pri polnem delovnem času?",
+    "expected_answer": "30 minut",
+    "answer": "Pri polnem delovnem času, ki traja 36 do 40 ur tedensko, delavec ima pravico do odmora med delom, ki traja 30 minut, glede na 154. člen Zakona o delovnih razmerjih (ZDR-1).",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:20:42.233479"
+  },
+  {
+    "question": "Koliko dni ima delavec za izredno odpoved pogodbe?",
+    "expected_answer": "30 dni",
+    "answer": "Delavec ima najkasneje 30 dni od ugotovitve razloga za izredno odpoved pogodbe o zaposlitvi, da jo poda delodajalcu. Če je razlog za izredno odpoved krivdnega razloga na strani delavca ali delodajalca, ki ima vse znake kaznivega dejanja, lahko delodajalec odpove pogodbo o zaposlitvi v 30 dneh od ugotovitve razloga za izredno odpoved in storilca ves čas, ko je možen kazenski pregon. [109. člen ZDR-1]",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "timestamp": "2026-05-22T17:20:53.317946"
+  }
+]
