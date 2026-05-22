@@ -4,7 +4,8 @@ import os
 from datetime import datetime
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, pipeline
 
-OUTPUT_FILE = "results/gams3_answers.json"
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+OUTPUT_FILE = f"results/gams3_answers_{timestamp}.json"
 RAG_RESULTS_FILE = "rag_results.jsonl"
 QUESTIONS_FILE = "questions_for_llm.json"
 MODEL_NAME = "cjvt/GaMS3-12B-Instruct"

@@ -1,62 +1,211 @@
 [
   {
+    "question": "Koliko dni letnega dopusta pripada delavcu?",
+    "expected_answer": "Delavec ima pravico do letnega dopusta v posameznem koledarskem letu, ki ne more biti krajši kot štiri tedne",
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["159. člen", "162. člen"]
+      }
+    ]
+  },
+  {
+    "question": "Katere so obveznosti delodajalca glede varnosti pri delu?",
+    "expected_answer": "Delodajalec je dolžan zagotoviti varnost in zdravje delavcev pri delu. V ta namen mora izvajati ukrepe, potrebne za zagotovitev varnosti in zdravja delavcev, vključno s preprečevanjem nevarnosti pri delu, obveščanjem in usposabljanjem delavcev, ustrezno organiziranostjo ter potrebnimi materialnimi sredstvi. Delodajalec mora izdelati in sprejeti izjavo o varnosti z oceno tveganja v pisni obliki, v kateri opredeli načine in ukrepe za zagotovitev varnosti in zdravja pri delu.",
+    "expected_sources": [
+      {
+        "source": "Zakon o varnosti in zdravju pri delu (ZVZD-1)",
+        "cleni": ["19. člen"]
+      }
+    ]
+  },
+  {
+    "question": "Katere so pravice nosečnice pri delu?",
+    "expected_answer": "Delavka med nosečnostjo in doječim materam ni dolžna opravljati dela ponoči, če to ni združljivo z njenim zdravstvenim stanjem, kar potrdi zdravnik. Delodajalec mora nosečo delavko, delavko, ki je rodila v zadnjih šestih mesecih ali doji otroka, prerazporediti na drugo delovno mesto, ki je zanjo primerno, če bi opravljanje dosedanjega dela ogrozilo njeno varnost ali zdravje. Delodajalec ne sme odpovedati pogodbe o zaposlitvi delavki med nosečnostjo ter ves čas, ko doji otroka.",
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["184. člen", "185. člen"]
+      },
+      {
+        "source": "Pravilnik o varovanju zdravja pri delu nosečih delavk, delavk, ki so pred kratkim rodile ter doječih delavk",
+        "cleni": []
+      }
+    ]
+  },
+  {
+    "question": "Koliko znaša minimalna plača v Sloveniji?",
+    "expected_answer": "Minimalna plača za delo s polnim delovnim časom, opravljeno od 1. januarja 2024, znaša 1.253,90 eura.",
+    "expected_sources": [
+      {
+        "source": "Znesek minimalne plače",
+        "cleni": []
+      }
+    ]
+  },
+  {
+    "question": "Kakšne so pristojnosti inšpektorja za delo pri nadzoru?",
+    "expected_answer": "Inšpektor za delo opravlja nadzor nad izvajanjem zakonov, drugih predpisov, kolektivnih pogodb in splošnih aktov, ki urejajo delovna razmerja, plače in druge prejemke iz delovnega razmerja, zaposlovanje delavcev doma in v tujini, varnost delavcev pri delu ter v primerih, določenih z zakonom, tudi nadzor nad zaposlovanjem in delom tujcev. Inšpektor je pri opravljanju nalog inšpekcijskega nadzora pooblaščen vstopiti v prostore in objekte delodajalca ter pregledati dokumentacijo in poslovne knjige.",
+    "expected_sources": [
+      {
+        "source": "Zakon o inšpekciji dela (ZID-1)",
+        "cleni": ["2. člen"]
+      }
+    ]
+  },
+  {
+    "question": "Kakšni so pogoji za sklenitev pogodbe o zaposlitvi za določen čas?",
+    "expected_answer": "Pogodba o zaposlitvi za določen čas se lahko sklene le v primerih, ki jih določa zakon: za izvrševanje dela, ki po svoji naravi traja določen čas, za nadomeščanje začasno odsotnega delavca, za začasno povečan obseg dela, za zaposlitev tujca ali osebe brez državljanstva, ki ima delovno dovoljenje za določen čas, za poslovodne osebe, za vodilne delavce, za delavce, ki delajo krajši delovni čas in v drugih primerih, ki jih določa zakon. Skupna doba trajanja pogodb o zaposlitvi za določen čas med istima strankama ne sme presegati dveh let.",
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["54. člen", "55. člen"]
+      }
+    ]
+  },
+  {
+    "question": "Koliko dodatnega dopusta mi pripada nad 50 let v kovinski industriji?",
+    "expected_answer": "Kolektivna pogodba za kovinsko industrijo ne določa posebnega dodatnega dopusta glede na starost delavca. Dodatni dnevi letnega dopusta so določeni glede na skupno delovno dobo in pogoje dela. Za starost nad 50 let posebne določbe v tej kolektivni pogodbi ni.",
+    "expected_sources": [
+      {
+        "source": "Kolektivna pogodba za kovinsko industrijo Slovenije",
+        "cleni": ["26. člen"]
+      }
+    ]
+  },
+  {
+  "question": "Si po dopolnjenem 55 letu res starejši delavec in kakšne so tvoje pravice?",
+  "expected_answer": "Starejši delavec je delavec, ki je dopolnil starost 55 let. Delodajalec brez pisnega soglasja starejšega delavca ne sme odrediti dela prek polnega delovnega časa ali prerazporeditve delovnega časa. Starejši delavec ima pravico do najmanj treh dodatnih dni letnega dopusta. Delodajalec mora starejšemu delavcu na njegovo zahtevo omogočiti delo s krajšim delovnim časom, če je to mogoče glede na delovni proces.",
+  "expected_sources": [
+    {
+      "source": "Zakon o delovnih razmerjih (ZDR-1)",
+      "cleni": [
+        "201. člen",
+        "202. člen",
+        "203. člen",
+        "159. člen"
+      ]
+    }
+  ]
+  },
+  {
+    "question": "Delavcu v gostinstvu in turizmu res pripada 1 cel prosti vikend na mesec po zakonu?",
+    "expected_answer": "Ne, delavcu v gostinstvu in turizmu ne pripada cel prosti vikend (sobota in nedelja skupaj) na mesec. Delavec ima pravico do tedenskega počitka, ki traja nepretrgoma najmanj 24 ur. Če mora delavec delati na dan tedenskega počitka, se mu zagotovi tedenski počitek na kateri drug dan v tednu.",
+    "expected_sources": [
+      {
+        "source": "Kolektivna pogodba dejavnosti gostinstva in turizma Slovenije",
+        "cleni": ["43. člen"]
+      }
+    ]
+  },
+  {
+    "question": "Imam pogodbo za določen čas. Koliko časa vnaprej mi mora delodajalec povedati, da je ne bo podaljšal?",
+    "expected_answer": "Pogodba o zaposlitvi za določen čas preneha veljati brez odpovednega roka s potekom časa, za katerega je bila sklenjena. Delodajalec mora delavca pisno obvestiti o prenehanju pogodbe o zaposlitvi za določen čas najkasneje 5 dni pred iztekom pogodbe. Če delodajalec tega obvestila ne pošlje pravočasno, se šteje, da je bila pogodba o zaposlitvi za določen čas sklenjena za nedoločen čas.",
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["79. člen"]
+      }
+    ]
+  },
+  {
     "question": "Ali mora delodajalec delavcu izplačati regres za letni dopust?",
     "expected_answer": "Da",
-    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
-    "expected_clen": "131. člen"
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["131. člen"]
+      }
+    ]
   },
   {
     "question": "Ali ima delavec pravico do plačanega odmora med delom?",
     "expected_answer": "Da",
-    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
-    "expected_clen": "154. člen"
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["154. člen"]
+      }
+    ]
   },
   {
     "question": "Ali se letni dopust lahko izrabi v več delih?",
     "expected_answer": "Da",
-    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
-    "expected_clen": "162. člen"
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["162. člen"]
+      }
+    ]
   },
   {
     "question": "Ali mora biti pogodba o zaposlitvi sklenjena v pisni obliki?",
     "expected_answer": "Da",
-    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
-    "expected_clen": "17. člen"
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["17. člen"]
+      }
+    ]
   },
   {
     "question": "Ali lahko delodajalec odpove pogodbo o zaposlitvi ustno?",
     "expected_answer": "Ne",
-    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
-    "expected_clen": "86. člen"
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["86. člen"]
+      }
+    ]
   },
   {
     "question": "Koliko ur znaša polni delovni čas na teden?",
     "expected_answer": "40 ur",
-    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
-    "expected_clen": "143. člen"
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["143. člen"]
+      }
+    ]
   },
   {
     "question": "Koliko tednov znaša minimalni letni dopust?",
     "expected_answer": "4 tedne",
-    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
-    "expected_clen": "159. člen"
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["159. člen"]
+      }
+    ]
   },
   {
     "question": "Koliko ur počitka mora imeti delavec med dvema delovnima dnevoma?",
     "expected_answer": "12 ur",
-    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
-    "expected_clen": "155. člen"
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["155. člen"]
+      }
+    ]
   },
   {
     "question": "Koliko ur odmora med delom pripada delavcu pri polnem delovnem času?",
     "expected_answer": "30 minut",
-    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
-    "expected_clen": "154. člen"
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["154. člen"]
+      }
+    ]
   },
   {
     "question": "Koliko dni ima delavec za izredno odpoved pogodbe?",
     "expected_answer": "30 dni",
-    "expected_source": "Zakon o delovnih razmerjih (ZDR-1)",
-    "expected_clen": "109. člen"
+    "expected_sources": [
+      {
+        "source": "Zakon o delovnih razmerjih (ZDR-1)",
+        "cleni": ["109. člen"]
+      }
+    ]
   }
 ]

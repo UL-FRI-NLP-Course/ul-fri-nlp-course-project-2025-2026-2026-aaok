@@ -7,13 +7,13 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 import logging
 import warnings
-from RAG import Retriever_Full
+from RAG import Retriever_Chunk, Retriever_Full_best
 logging.getLogger("transformers").setLevel(logging.ERROR)
 warnings.filterwarnings("ignore")
 
 # 1. Choose retriever
 # retriever = Retriever_Chunk()
-retriever = Retriever_Full()
+retriever = Retriever_Full_best()
 
 # 2. FORMAT CHUNKS
 def format_docs(docs):
@@ -35,8 +35,8 @@ def build_context(chunks):
 # 3. LOAD MODEL
 
 # MODEL_NAME = "meta-llama/Meta-Llama-3.1-8B-Instruct"
-MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
-# MODEL_NAME = "Qwen/Qwen2.5-3B-Instruct"
+#MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
+MODEL_NAME = "Qwen/Qwen2.5-3B-Instruct"
 
 print("Loading Model...", MODEL_NAME)
 
@@ -122,16 +122,26 @@ def ask(question):
 
 # 6. EVALUATION SET
 queries = [
+    "Koliko dni letnega dopusta pripada delavcu?",
+    "Katere so obveznosti delodajalca glede varnosti pri delu?",
+    "Katere so pravice nosečnice pri delu?",
+    "Koliko znaša minimalna plača v Sloveniji?",
+    "Kakšne so pristojnosti inšpektorja za delo pri nadzoru?",
+    "Kakšni so pogoji za sklenitev pogodbe o zaposlitvi za določen čas?",
     "Koliko dodatnega dopusta mi pripada nad 50 let v kovinski industriji?", # https://www.mojmalipravnik.net/index.php/objavljeni-odgovori/zaposlovanje/10022-koliko-dodatnega-dopusta-mi-pripada-nad-50-let-v-kovinski-industriji
     "Si po dopolnjenem 55 letu res starejši delavec in kakšne so tvoje pravice?", # https://mojmalipravnik.net/index.php/objavljeni-odgovori/zaposlovanje/9682-si-po-dopolnjenem-55-letu-res-starejsi-delavec-in-kaksne-so-tvoje-pravice
     "Delavcu v gostinstvu in turizmu res pripada 1 cel prosti vikend na mesec po zakonu?", # https://mojmalipravnik.net/index.php/objavljeni-odgovori/zaposlovanje/9609-delavcu-v-gostinstvu-in-turizmu-res-pripada-1-cel-prosti-vikend-na-mesec-po-zakonu
-    "Katere so osnovne obveznosti delodajalca glede varnosti pri delu?",
-    "Kako dolgo se hranijo evidence o delovnem času?",
-    "Koliko znaša minimalna plača v Sloveniji?",
-    # "Koliko minimalnega letnega dopusta pripada zaposlenemu?",
-    # "Kdo je upravičen do denarnega nadomestila za brezposelnost?",
-    # "Kako natančno mora biti evidentiran delovni čas zaposlenih?",
-    # "Kakšna pooblastila ima inšpektor za delo pri nadzoru",
+    "Imam pogodbo za določen čas. Koliko časa vnaprej mi mora delodajalec povedati, da je ne bo podaljšal?",
+    "Ali mora delodajalec delavcu izplačati regres za letni dopust?",
+    "Ali ima delavec pravico do plačanega odmora med delom?",
+    "Ali se letni dopust lahko izrabi v več delih?",
+    "Ali mora biti pogodba o zaposlitvi sklenjena v pisni obliki?",
+    "Ali lahko delodajalec odpove pogodbo o zaposlitvi ustno?",
+    "Koliko ur znaša polni delovni čas na teden?",
+    "Koliko tednov znaša minimalni letni dopust?",
+    "Koliko ur počitka mora imeti delavec med dvema delovnima dnevoma?",
+    "Koliko ur odmora med delom pripada delavcu pri polnem delovnem času?",
+    "Koliko dni ima delavec za izredno odpoved pogodbe?",
 ]
 
 # 7. RUN EVAL
@@ -156,5 +166,3 @@ for i, q in enumerate(queries):
         json.dump(result, f, ensure_ascii=False, indent=2)
 
     print(f"Saved to {filename}\n")
-
-    

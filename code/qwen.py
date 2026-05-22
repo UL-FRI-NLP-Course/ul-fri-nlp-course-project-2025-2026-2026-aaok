@@ -4,7 +4,8 @@ import os
 from datetime import datetime
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
-OUTPUT_FILE = "results/qwen_answers.json"
+timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+OUTPUT_FILE = f"results/qwen_answers_{timestamp}.json"
 RAG_RESULTS_FILE = "rag_results.jsonl"
 QUESTIONS_FILE = "questions_for_llm.json"
 MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
