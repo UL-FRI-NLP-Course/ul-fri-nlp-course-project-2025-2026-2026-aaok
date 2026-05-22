@@ -31,7 +31,7 @@ sbatch run_qwen.sh
 ```
 The results are saved in `results/`
 
-You can also write a specific question related to labour law in `question.json` and the answer will be saved `answer.json`
+You can also write a specific question related to labour law in `question.json` and the answer will be saved to `answer.json`
 ```bash
 sbatch gams3_test.sh
 ```
