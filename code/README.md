@@ -17,7 +17,6 @@ cd code/
 python -m venv legal_rag_env
 source legal_rag_env/bin/activate
 pip install -r requirements.txt
-pip install torch --index-url https://download.pytorch.org/whl/cu118
 ```
 
 ## Submit job
