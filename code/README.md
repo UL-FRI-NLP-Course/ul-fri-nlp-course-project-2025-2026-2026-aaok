@@ -1,9 +1,28 @@
-## Set-up
-First install the required dependencies for python 3.11.x:
+## Setup Instructions
 
-```sh
-pip install -r requirements.txt
-pip install torch==2.5.1+cu121 torchvision==0.20.1+cu121 torchaudio==2.5.1+cu121 --index-url https://download.pytorch.org/whl/cu121
+Run these steps once before submitting the job.
+
+### 1. Load Python module
+```bash
+module load Python/3.10
+```
+
+### 2. Run everythin in code folder
+```bash
+cd /code
+```
+
+### 3. Create virtual environment
+```bash
+python -m venv legal_rag_env
+source legal_rag_env/bin/activate
+pip install -r requirements2.txt
+pip install torch --index-url https://download.pytorch.org/whl/cu118
+```
+
+## Submit job
+```bash
+sbatch run.sh
 ```
 
 To run a model using RAG, first build/unzip the FAISS index (explained in `rag/`), then run:
