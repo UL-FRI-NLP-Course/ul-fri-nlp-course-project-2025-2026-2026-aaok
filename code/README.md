@@ -9,7 +9,7 @@ module load Python/3.10
 
 ### 2. Run everythin in code folder
 ```bash
-cd /code
+cd code/
 ```
 
 ### 3. Create virtual environment
