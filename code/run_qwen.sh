@@ -5,6 +5,7 @@
 #SBATCH --time=4:00:00
 #SBATCH --output=logs/%j_output.log
 #SBATCH --error=logs/%j_error.log
+#SBATCH --mem=64G
 
 # activate environment
 module load Python/3.10

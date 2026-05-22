@@ -5,6 +5,7 @@
 #SBATCH --time=1:00:00
 #SBATCH --output=logs/%j_output.log
 #SBATCH --error=logs/%j_error.log
+#SBATCH --mem=64G
 
 module load Python/3.10
 source "$SLURM_SUBMIT_DIR/legal_rag_env/bin/activate"
