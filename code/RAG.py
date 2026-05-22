@@ -9,7 +9,7 @@ BM25_INDEX_PATH="rag/bm25_chunk_index.pkl"
 print("Loading reranker...")
 
 reranker = CrossEncoder(
-    "BAAI/bge-reranker-base",
+    "BAAI/bge-reranker-v2-m3",
     device="cuda" if torch.cuda.is_available() else "cpu"
 )
 
@@ -185,6 +185,23 @@ class Retriever_Full(Retriever):
             final_top_k=10,
             add_year_to_query=True,
             reranker=reranker
+        )
+class Retriever_Full_best(Retriever):
+    def __init__(self):
+        super().__init__(
+            doc_index_path=DOC_INDEX_PATH,
+            chunk_index_path=CHUNK_INDEX_PATH,
+            bm25_index_path=BM25_INDEX_PATH,
+            doc_faiss_enabled=False,
+            chunk_faiss_enabled=True,
+            bm25_enabled=True,
+            sop_expansion_enabled=False,
+            time_filter_enabled=True,
+            chunk_k=100,
+            bm_k=100,
+            final_top_k=10,
+            add_year_to_query=True,
+            reranker=None
         )
 
 # EXAMPLE
