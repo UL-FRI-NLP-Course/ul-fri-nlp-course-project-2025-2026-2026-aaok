@@ -12,7 +12,6 @@ import pickle
 import re
 from datetime import datetime, timezone
 
-
 embeddings = HuggingFaceEmbeddings(
     model_name="sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
     model_kwargs={"device": "cuda" if torch.cuda.is_available() else "cpu"},
@@ -22,15 +21,9 @@ embeddings = HuggingFaceEmbeddings(
 CSV_PATH = "data/filtered_pisrs.csv"
 METADATA_PATH = "data/pisrs_metadata.jsonl"
 
-# --------------------------------------------------------
-# 1. LOAD CSV (TEXT SOURCE)
-# --------------------------------------------------------
 print("Loading CSV...")
 df = pd.read_csv(CSV_PATH)
 
-# --------------------------------------------------------
-# 2. LOAD JSONL (METADATA SOURCE)
-# --------------------------------------------------------
 print("Loading metadata JSONL...")
 
 metadata_map = {}
@@ -45,15 +38,9 @@ with open(METADATA_PATH, "r", encoding="utf-8") as f:
         evid = inner.get("evidencniPodatki", inner)
 
         metadata_map[moped_id] = evid
-
-
 print(f"Loaded metadata for {len(metadata_map)} documents")
 
-# --------------------------------------------------------
-# 3. VALIDATION CHECK (STRICT MODE)
-# --------------------------------------------------------
 print("Checking integrity...")
-
 missing = []
 for _, row in df.iterrows():
     moped_id = row["mopedId"]
@@ -68,10 +55,6 @@ if missing:
     exit(1)
 
 print("All documents have metadata. Proceeding...")
-
-# --------------------------------------------------------
-# 4. MERGE
-# --------------------------------------------------------
 
 def to_ts(date_str):
     if not date_str:
@@ -128,15 +111,12 @@ for _, row in tqdm(df.iterrows(), total=len(df)):
 
     unified_docs.append(doc)
 
-
 TARGET_SIZE = 800
 MAX_SIZE = 1200
 OVERLAP = 1
 
-
 def split_by_clen(text):
     return re.split(r'(?=\n\d+\.\s*člen)', text)
-
 
 def split_by_paragraphs(text):
     return [p.strip() for p in re.split(r'\n\s*\n', text) if p.strip()]
@@ -166,7 +146,6 @@ def pack_paragraphs(paragraphs):
         chunks.append("\n\n".join(current))
 
     return chunks
-
 
 def add_title(chunk_text, doc):
     return f"TITLE: {doc['naziv']}\n\n{chunk_text}"

@@ -10,7 +10,6 @@ df = pd.read_csv("data/similarities.csv")
 _pisrs = pd.read_csv("data/pisrs.csv")
 pisrs = _pisrs.drop(columns=['id', 'mopedId', 'eva', 'epa', 'text'])
 
-
 sim_cols = [col for col in df.columns if col.startswith("sim_")]
 
 embeddings = np.load("data/doc_embs.npy")
@@ -86,6 +85,7 @@ rest_df = pd.concat([r for ri, r in enumerate(rest_dfs) if ri in idxs]).drop_dup
 top_ids = set(top_df["sop"])
 rest_df = rest_df[~rest_df["sop"].isin(top_ids)]
 
+print("Filtering PISRS documents...")
 for ci, col in enumerate(sim_cols):
     dp_count = top_dfs[ci]["delovno_pravo"].sum()
     dp_recall = dp_count / total_positive if total_positive > 0 else 0
@@ -94,35 +94,32 @@ for ci, col in enumerate(sim_cols):
     exclusive = current - others
     exclusive_dp = df[df["sop"].isin(exclusive) & df["delovno_pravo"]]
 
-    print(f"{col}:")
-    print(f"                     used: {ci in idxs}")
-    print(f"                 dp count: {dp_count}")
-    print(f"                dp recall: {dp_recall:.4f}")
-    print(f"           exclusive docs: {len(exclusive)}")
-    print(f"  exclusive delovno_pravo: {len(exclusive_dp)}")
-    print(f"       exclusive dp ratio: {len(exclusive)} / {len(exclusive_dp)} = {(len(exclusive_dp)/len(exclusive)):.3f}")
-    print(f"entries from delovno pravo this would add:")
-    if ci not in idxs:
-        if len(exclusive_dp) > 0:
-            print(exclusive_dp)
-        else:
-            print("Empty DataFrame")
-    print()
+    # print(f"{col}:")
+    # print(f"                     used: {ci in idxs}")
+    # print(f"                 dp count: {dp_count}")
+    # print(f"                dp recall: {dp_recall:.4f}")
+    # print(f"           exclusive docs: {len(exclusive)}")
+    # print(f"  exclusive delovno_pravo: {len(exclusive_dp)}")
+    # print(f"       exclusive dp ratio: {len(exclusive)} / {len(exclusive_dp)} = {(len(exclusive_dp)/len(exclusive)):.3f}")
+    # print(f"entries from delovno pravo this would add:")
+    # if ci not in idxs:
+    #     if len(exclusive_dp) > 0:
+    #         print(exclusive_dp)
+    #     else:
+    #         print("Empty DataFrame")
+    # print()
 
-print()
-# print(top_df)
-# print(rest_df)
-print()
-print("selected:", top_df["delovno_pravo"].sum())
-print("unselected:", rest_df["delovno_pravo"].sum())
-print()
+# print()
+# print("selected:", top_df["delovno_pravo"].sum())
+# print("unselected:", rest_df["delovno_pravo"].sum())
+# print()
 
-unmatched_delovno = rest_df[rest_df["delovno_pravo"]]
-unmatched_undelovno = rest_df[~rest_df["delovno_pravo"]]
-matched_delovno = top_df[top_df["delovno_pravo"]]
-matched_undelovno = top_df[~top_df["delovno_pravo"]]
+# unmatched_delovno = rest_df[rest_df["delovno_pravo"]]
+# unmatched_undelovno = rest_df[~rest_df["delovno_pravo"]]
+# matched_delovno = top_df[top_df["delovno_pravo"]]
+# matched_undelovno = top_df[~top_df["delovno_pravo"]]
 
-print("unmatched_delovno\n", unmatched_delovno)
+# print("unmatched_delovno\n", unmatched_delovno)
 # print("unmatched_undelovno\n", unmatched_undelovno)
 # print("matched_delovno\n", matched_delovno)
 # print("matched_undelovno\n", matched_undelovno)
@@ -130,8 +127,6 @@ print("unmatched_delovno\n", unmatched_delovno)
 plt.scatter(rest_df["pc1"], rest_df["pc2"], c="gray", alpha=0.5, s=10)
 plot_df = top_df.sort_values("sim", ascending=True)
 plt.scatter(plot_df["pc1"], plot_df["pc2"], c=plot_df["sim"], alpha=0.5, s=10)
-
-# plt.scatter(df["pc1"], df["pc2"], c=df["sim"], alpha=0.5, s=10)
 
 plt.scatter(df[df["delovno_pravo"]]["pc1"], df[df["delovno_pravo"]]["pc2"], marker=".", color="red", s=10, label="Delovno pravo documents")
 
@@ -142,5 +137,7 @@ plt.show()
 
 filtered_pisrs = _pisrs[_pisrs["sop"].isin(top_df["sop"]) | (_pisrs["delovno_pravo"] == True)]
 filtered_pisrs.to_csv("data/filtered_pisrs.csv", index=False)
-print(filtered_pisrs)
+# print(filtered_pisrs)
+
+print("Successfuly filtered PISRS documents.")
 

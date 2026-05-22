@@ -24,7 +24,6 @@ class Retriever:
         chunk_k=10,
         bm_k=10,
         final_top_k=10,
-
         reranker=None,
     ):
         self.doc_faiss_enabled = doc_faiss_enabled
@@ -339,26 +338,26 @@ if __name__ == "__main__":
     from sentence_transformers import CrossEncoder
 
     print("Loading reranker...")
-
     reranker = CrossEncoder(
         "BAAI/bge-reranker-base",
+        # "BAAI/bge-reranker-v2-m3",
+        # "jinaai/jina-reranker-v2-base-multilingual",
         device="cuda" if torch.cuda.is_available() else "cpu"
     )
 
     print("Initializing retrieval system...")
 
     retrieval = Retriever(
-        doc_faiss_enabled=True,
+        # doc_faiss_enabled=True,
         chunk_faiss_enabled=True,
         bm25_enabled=True,
-        sop_expansion_enabled=True,
+        # sop_expansion_enabled=True,
         time_filter_enabled=True,
         add_year_to_query=True,
-
-        doc_k=10,
+        # doc_k=10,
         chunk_k=100,
         bm_k=100,
-
+        final_top_k=10,
         reranker=reranker
     )
 

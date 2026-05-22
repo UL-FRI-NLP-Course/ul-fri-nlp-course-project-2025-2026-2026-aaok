@@ -1,6 +1,5 @@
 import pandas as pd
 import json
-
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
@@ -34,13 +33,6 @@ pisrs.to_csv("data/pisrs.csv", index=False, encoding="utf-8")
 model = SentenceTransformer("paraphrase-multilingual-MiniLM-L12-v2")
 
 doc_texts = pisrs["text"].fillna("").tolist()
-doc_embs = model.encode(doc_texts, batch_size=64, show_progress_bar=True, device="cuda")
+doc_embs = model.encode(doc_texts, batch_size=64, show_progress_bar=True, device=("cuda" if torch.cuda.is_available() else "cpu"))
 doc_embs = doc_embs / np.linalg.norm(doc_embs, axis=1, keepdims=True)
 np.save("data/doc_embs.npy", doc_embs)
-
-
-
-# missing = delovno_pravo[~delovno_pravo["SOP"].isin(pisrs["sop"])]
-# print(missing)
-
-

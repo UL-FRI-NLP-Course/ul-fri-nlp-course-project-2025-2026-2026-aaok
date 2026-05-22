@@ -92,5 +92,9 @@ try:
 
 except KeyboardInterrupt:
     print("\n\nInterrupted by user (Ctrl+C). Saving progress and exiting cleanly...")
+    exit()
 except Exception as e:
     print(e)
+    exit()
+
+print("Done scraping PISRS")

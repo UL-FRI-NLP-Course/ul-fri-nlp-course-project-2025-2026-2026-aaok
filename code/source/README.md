@@ -6,6 +6,15 @@ Download and unzip after:
 curl --remote-name-all https://www.clarin.si/repository/xmlui/bitstream/handle/11356/2095{/COLESLAW.zip}
 ```
 
+You should end up with the following folder structure:
+```
+source/COLESLAW 1.0
+  PISRS
+  SodnaPraksa
+  UradniList
+  USRS
+```
+
 ---
 
 Example of a document entry:
@@ -24,5 +33,4 @@ Example of a document entry:
 # PISRS
 Our primary source is [PISRS (Pravni informacijski sistem Republike Slovenije - Legal Information System of the Republic of Slovenia)](https://pisrs.si/), which contains all legal documents relating to slovenian legislation.
 
- <!-- API for live data: https://pisrs.si/swagger -->
 
