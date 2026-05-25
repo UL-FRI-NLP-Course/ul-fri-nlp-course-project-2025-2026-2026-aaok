@@ -41,7 +41,7 @@ python scrape_pisrs.py
 python build_index.py
 
 # 7) (Optional) Run a simple RAG test
-python run_rag.py
+python retriever.py
 
 # Return to code/ to run the evaluation
 cd ..
